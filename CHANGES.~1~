@@ -424,4 +424,3 @@ death.c: need flock hack for HPUX
 io.c: #include <termio.h> for HPUX was inside #if 0
 ibmpc/*: fix several typos in PC-specific files, also one in config.h
 changed version to 5.5.2
-released version 5.5.2
