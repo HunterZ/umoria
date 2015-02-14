@@ -41,7 +41,7 @@ some of the system defines set up here.
 
 /* If compiling on Debian (also works on other versions of Linux), 
    define this. */
-#define DEBIAN_LINUX
+/* #define DEBIAN_LINUX */
 
 /* If you are compiling on an ultrix/4.2BSD/Dynix/etc. version of UNIX,
    define this.  It is not needed for SUNs.  */

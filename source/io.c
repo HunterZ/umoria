@@ -133,7 +133,7 @@ typedef struct { int stuff; } fpvmach;
 #include <termios.h>
 #endif
 
-#if defined(unix) || defined(__linux__) || defined(DEBIAN_LINUX)
+#if defined(unix) || defined(__linux__) || defined(DEBIAN_LINUX) || defined(__CYGWIN__)
 #include <unistd.h> /* prototype for execl */ 
 #endif
 

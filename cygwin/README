@@ -1,0 +1,7 @@
+To build in cygwin, run the following command from the source/ directory:
+
+  make -f ../cygwin/Makefile
+
+Outputs will land in cygwin/dist.
+
+At the very least, you will need ncurses, gcc, and make installed.

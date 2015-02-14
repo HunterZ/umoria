@@ -3,15 +3,15 @@
 # LIBDIR must be the same directory defined in config.h
 # OWNER is who you want the game to be chown to.
 # GROUP is who you wnat the game to be chgrp to.
-BINDIR = $(shell pwd)/dist
-LIBDIR = $(shell pwd)/dist
+BINDIR = $(shell pwd)/../cygwin/dist
+LIBDIR = $(shell pwd)/../cygwin/dist
 OWNER = $(USER)
 GROUP = None
 
 # For testing and debugging the program, it is best to use this line.
 # CFLAGS = -g
 # For playing the game, you may want to use this line
-CFLAGS = -O3 -s
+CFLAGS = -O3 -s -I../source
 
 # For BSD Systems
 # CURSES = -lcurses -ltermcap
@@ -33,17 +33,17 @@ SRCS = main.c misc1.c misc2.c misc3.c misc4.c store1.c files.c io.c \
 	eat.c help.c magic.c potions.c prayer.c save.c staffs.c wands.c \
 	scrolls.c spells.c wizard.c store2.c signals.c moria1.c moria2.c \
 	moria3.c moria4.c monsters.c treasure.c variable.c rnd.c recall.c \
-	unix.c player.c tables.c
+	../cygwin/unix.c player.c tables.c
 
 OBJS = main.o misc1.o misc2.o misc3.o misc4.o store1.o files.o io.o \
 	create.o desc.o generate.o sets.o dungeon.o creature.o death.o \
 	eat.o help.o magic.o potions.o prayer.o save.o staffs.o wands.o \
 	scrolls.o spells.o wizard.o store2.o signals.o moria1.o moria2.o \
 	moria3.o moria4.o monsters.o treasure.o variable.o rnd.o recall.o \
-	unix.o player.o tables.o
+	../cygwin/unix.o player.o tables.o
 
-LIBFILES = hours news origcmds.hlp owizcmds.hlp roglcmds.hlp rwizcmds.hlp \
-	version.hlp welcome.hlp
+LIBFILES = COPYING hours news origcmds.hlp owizcmds.hlp roglcmds.hlp \
+	rwizcmds.hlp version.hlp welcome.hlp
 
 moria : $(OBJS)
 	$(CC) -o moria $(CFLAGS) $(OBJS) $(CURSES) $(LFLAGS)
@@ -60,6 +60,7 @@ TAGS : $(SRCS)
 # you must define BINDIR and LIBDIR before installing
 # assumes that BINDIR and LIBDIR exist
 install:
+	mkdir -p $(BINDIR) $(LIBDIR)
 	chmod 755 $(BINDIR)
 	cp moria $(BINDIR)
 	chmod 4711 $(BINDIR)/moria
@@ -71,12 +72,14 @@ install:
 	chgrp $(GROUP) $(BINDIR)/moria
 	(cd $(LIBDIR); chown $(OWNER) $(LIBFILES) scores)
 	(cd $(LIBDIR); chgrp $(GROUP) $(LIBFILES) scores)
+	cp /usr/bin/cygncursesw-10.dll $(BINDIR)
+	cp /usr/bin/cygwin1.dll $(BINDIR)
+
 # If you are short on disk space, or aren't interested in debugging moria.
 #	strip $(BINDIR)/moria
 
 clean:
-	rm -r *.o
-	rm -i moria
+	rm -f ../source/*.o ../cygwin/*.o ../source/moria.exe
 
 create.o: constant.h types.h externs.h config.h
 creature.o: constant.h types.h externs.h config.h
@@ -114,7 +117,7 @@ store1.o: constant.h types.h externs.h config.h
 store2.o: constant.h types.h externs.h config.h
 tables.o: constant.h types.h config.h
 treasure.o: constant.h types.h config.h
-unix.o: constant.h config.h types.h externs.h
+../cygwin/unix.o: constant.h config.h types.h externs.h
 variable.o: constant.h types.h config.h
 wands.o: constant.h types.h externs.h config.h
 wizard.o: constant.h types.h externs.h config.h
