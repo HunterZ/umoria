@@ -38,7 +38,8 @@ OBJS = main.o misc1.o misc2.o misc3.o misc4.o store1.o files.o io.o \
 	$(SRCROOT)/cygwin/unix.o player.o tables.o
 
 LIBFILES = COPYING hours news origcmds.hlp owizcmds.hlp roglcmds.hlp \
-	rwizcmds.hlp version.hlp welcome.hlp $(SRCROOT)/cygwin/readme.txt
+	rwizcmds.hlp version.hlp welcome.hlp $(SRCROOT)/cygwin/readme.txt \
+	$(SRCROOT)/cygwin/moria.bat
 
 DOCFILES = dragon.inf ERRORS exp.doc faq FEATURES.NEW history moria.6 \
 	moria.man moria1.ms moria1.txt moria2.ms moria2.txt \
@@ -72,9 +73,11 @@ install:
 # copy cygwin dependencies
 	cp /usr/bin/cygncursesw-10.dll $(DISTDIR)
 	cp /usr/bin/cygwin1.dll $(DISTDIR)
+	mkdir -p $(DISTDIR)/terminfo/63
+	cp /usr/share/terminfo/63/cygwin $(DISTDIR)/terminfo/63/
 
 # If you are short on disk space, or aren't interested in debugging moria.
-	strip $(DISTDIR)/moria.exe
+	strip $(DISTDIR)/moria.exe $(DISTDIR)/*.dll
 
 clean:
 	rm -f $(SRCROOT)/source/*.o $(SRCROOT)/cygwin/*.o $(SRCROOT)/source/moria.exe

@@ -3,6 +3,14 @@ This is UMoria 5.6, compiled for 32-bit Windows using Cygwin GCC+ncurses.
 The files in this directory are necessary to run UMoria, while the
 documentation is in the doc subdirectory.
 
+To run without Cygwin, double-click moria.bat. To run inside of Cygwin,
+run ./moria.exe directly. In Cygwin, save files will be written to your
+Cygwin home directory by default, while in regular Windows they will be
+written to whatever the HOME variable is set to in moria.bat (which
+defaults to the directory from which the game is run, but you can change
+this to, say, 'set HOME=%USERPROFILE%' to save to your Windows user folder
+if you want to run the game from a read-only location).
+
 I decided to use Cygwin to produce this port because UMoria's source code
 contains a lot of Unix/POSIX-isms. Cygwin is ideal here, because its entire
 purpose is to provide a POSIX compatbility layer on Windows. Other than a
