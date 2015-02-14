@@ -110,7 +110,7 @@ char *getenv();
 #ifndef MAC
 #ifndef AMIGA
 #ifdef USG
-#if !defined(MSDOS) && !defined(ATARIST_TC)
+#if !defined(MSDOS) && !defined(ATARIST_TC) && !defined(__CYGWIN__)
 unsigned short getuid(), getgid();
 #endif
 #else
@@ -475,7 +475,7 @@ static void init_m_level()
     m_level[c_list[i].level]++;
 
   for (i = 1; i <= MAX_MONS_LEVEL; i++)
-#if defined(AMIGA) && !defined(LATTICE) 
+#if defined(AMIGA) && !defined(LATTICE)
     /* fix a stupid MANX Aztec C 5.0 bug again */
     m_level[i] = m_level[i] + m_level[i-1];
 #else
@@ -495,7 +495,7 @@ static void init_t_level()
   for (i = 0; i < MAX_DUNGEON_OBJ; i++)
     t_level[object_list[i].level]++;
   for (i = 1; i <= MAX_OBJ_LEVEL; i++)
-#if defined(AMIGA) && !defined(LATTICE) 
+#if defined(AMIGA) && !defined(LATTICE)
     /* fix a stupid MANX Aztec C 5.0 bug again */
     t_level[i] = t_level[i] + t_level[i-1];
 #else

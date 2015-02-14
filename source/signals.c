@@ -123,7 +123,7 @@ struct sigcontext *scp;
 
   smask = sigsetmask(0) | (1 << sig);
 #else
-#if defined(__TURBOC__) || defined(AMIGA)
+#if defined(__TURBOC__) || defined(AMIGA) || defined(__CYGWIN__)
 static void signal_handler(sig)
 #else
 static int signal_handler(sig)
@@ -304,7 +304,9 @@ void init_signals()
   (void) MSIGNAL(SIGQUIT, signal_handler);
   (void) MSIGNAL(SIGILL, signal_handler);
   (void) MSIGNAL(SIGTRAP, signal_handler);
+#ifndef __CYGWIN__
   (void) MSIGNAL(SIGIOT, signal_handler);
+#endif
 #ifdef SIGEMT  /* in BSD systems */
   (void) MSIGNAL(SIGEMT, signal_handler);
 #endif

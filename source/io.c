@@ -215,7 +215,7 @@ void sleep();
 #if !defined(MAC) && !defined(MSDOS) && !defined(ATARI_ST) && !defined(VMS)
 #ifndef AMIGA
 #ifdef USG
-#ifdef __linux__
+#if defined(__linux__) || defined(__CYGWIN__)
 static struct termios save_termio;
 #else
 static struct termio save_termio;
@@ -405,7 +405,7 @@ void moriaterm()
 #if !defined(MSDOS) && !defined(ATARI_ST) && !defined(VMS)
 #ifndef AMIGA
 #ifdef USG
-#ifdef __linux__
+#if defined(__linux__) || defined(__CYGWIN__)
   struct termios tbuf;
 #else
   struct termio tbuf;
@@ -562,7 +562,12 @@ void restore_term()
   pause_line(15);
 #endif
   /* this moves curses to bottom right corner */
+#ifdef __CYGWIN__
+  /* https://www.cygwin.com/ml/cygwin/2010-05/msg00500.html */
+  mvcur(getcury(stdscr), getcurx(stdscr), LINES-1, 0);
+#else
   mvcur(stdscr->_cury, stdscr->_curx, LINES-1, 0);
+#endif
   endwin();  /* exit curses */
   (void) fflush (stdout);
 #ifdef MSDOS
@@ -666,7 +671,7 @@ void shell_out()
 {
 #ifdef USG
 #if !defined(MSDOS) && !defined(ATARI_ST) && !defined(AMIGA)
-#ifdef __linux__
+#if defined(__linux__) || defined(__CYGWIN__)
   struct termios tbuf;
 #else
   struct termio tbuf;
@@ -1264,7 +1269,7 @@ char *str_buff;
       /* If the new message and the old message are short enough, we want
 	 display them together on the same line.  So we don't flush the old
 	 message in this case.  */
-	 
+
       if (str_buff)
 	new_len = strlen (str_buff);
       else
@@ -1312,7 +1317,7 @@ char *str_buff;
 
       /* If the new message and the old message are short enough, display
 	 them on the same line.  */
-      
+
       if (combine_messages)
 	{
 	  put_buffer (str_buff, MSG_LINE, old_len + 2);

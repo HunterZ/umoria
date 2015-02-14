@@ -239,18 +239,19 @@ some of the system defines set up here.
 #else
 
 /* Generic UNIX */
-/* This must be unix; change file names as appropriate.  */
+/* This must be unix; change MORIA_LIB as appropriate.  */
 #define MORIA_SAV	"moria-save"
-#define MORIA_HOU	"/home/dgrabiner/moria-5.6/files/hours"
-#define MORIA_MOR	"/home/dgrabiner/moria-5.6/files/news"
-#define MORIA_GPL	"/home/dgrabiner/moria-5.6/files/COPYING"
-#define MORIA_TOP	"/home/dgrabiner/moria-5.6/files/scores"
-#define MORIA_HELP	"/home/dgrabiner/moria-5.6/files/roglcmds.hlp"
-#define MORIA_ORIG_HELP	"/home/dgrabiner/moria-5.6/files/origcmds.hlp"
-#define MORIA_WIZ_HELP	"/home/dgrabiner/moria-5.6/files/rwizcmds.hlp"
-#define MORIA_OWIZ_HELP	"/home/dgrabiner/moria-5.6/files/owizcmds.hlp"
-#define MORIA_WELCOME	"/home/dgrabiner/moria-5.6/files/welcome.hlp"
-#define MORIA_VER	"/home/dgrabiner/moria-5.6/files/version.hlp"
+#define MORIA_LIB(xxx)  "./" #xxx
+#define MORIA_HOU       MORIA_LIB(hours)
+#define MORIA_MOR       MORIA_LIB(news)
+#define MORIA_MOR       MORIA_LIB(COPYING)
+#define MORIA_TOP       MORIA_LIB(scores)
+#define MORIA_HELP      MORIA_LIB(roglcmds.hlp)
+#define MORIA_ORIG_HELP MORIA_LIB(origcmds.hlp)
+#define MORIA_WIZ_HELP  MORIA_LIB(rwizcmds.hlp)
+#define MORIA_OWIZ_HELP MORIA_LIB(owizcmds.hlp)
+#define MORIA_WELCOME   MORIA_LIB(welcome.hlp)
+#define MORIA_VER       MORIA_LIB(version.hlp)
 
 #endif
 #endif
@@ -289,7 +290,7 @@ some of the system defines set up here.
 #define ATARI_ST
 #endif
 
-#if defined(__linux__) /* Linux supports System V */
+#if defined(__linux__) || defined(__CYGWIN__) /* Linux supports System V */
 #define SYS_V
 #endif
 
