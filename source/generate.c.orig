@@ -1124,6 +1124,12 @@ int row1, col1, row2, col2;
 	      wallstk[wallindex].x = col1;
 	      wallindex++;
 	    }
+	  /* RW bug fix to allow tunnel between rooms two squares apart */
+	  i=row1+row_dir; j=col1+col_dir;
+	  /* if just encountered granite wall, and 'next' space also granite
+	     wall, just punch through */
+	  if (in_bounds(i,j) && cave[i][j].fval==GRANITE_WALL)
+	    cave[i][j].fval=NULL_WALL;
 	  for (i = row1-1; i <= row1+1; i++)
 	    for (j = col1-1; j <= col1+1; j++)
 	      if (in_bounds(i, j))

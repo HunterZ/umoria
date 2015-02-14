@@ -243,6 +243,9 @@ spells.c: speed_monsters(), sleep_monsters2(), dispel_creature(),
 	turn_undead(), only affect creatures within MAX_SIGHT 
 spells.c: mass_poly(), area of effect should be <= MAX_SIGHT, was <
 spells.c: destroy_area(), remove light from player's spot
+generate.c: build_tunnel(), added code from Richard Wesson to allow
+	tunnel to go through wall that is only two spaces thick,
+	otherwise two adjacent treasure rooms could not be connected
 spells.c: enchant(), add new variable limit, chance of failure is now
 	(plusses/limit), with very slight chance of success over limit
 scrolls.c: when enchanting melee weapons to damage, set limit to weapon's
