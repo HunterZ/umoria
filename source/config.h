@@ -244,7 +244,7 @@ some of the system defines set up here.
 #define MORIA_LIB(xxx)  "./" #xxx
 #define MORIA_HOU       MORIA_LIB(hours)
 #define MORIA_MOR       MORIA_LIB(news)
-#define MORIA_MOR       MORIA_LIB(COPYING)
+#define MORIA_GPL       MORIA_LIB(COPYING)
 #define MORIA_TOP       MORIA_LIB(scores)
 #define MORIA_HELP      MORIA_LIB(roglcmds.hlp)
 #define MORIA_ORIG_HELP MORIA_LIB(origcmds.hlp)
