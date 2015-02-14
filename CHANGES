@@ -1,0 +1,221 @@
+::::::: 1991 ::::::::
+---------- 1/4
+spells.c: light_area(), always light area immediately next to player even if
+	in a room, could be standing on the edge of a room
+monsters.c: Grave Wight, no longer has confusion spell, no other wight/wraith
+	has it
+misc2.c: get_spell(), when enter invalid character, print "You don't know
+	that prayer." instead of "spell" for priests/etc.
+creature.c: make_attack(), creatures which are repelled should not be confused
+	because they did not hit the player
+death.c: exit_game(), delete #ifndef TURBOC around the restore_term() call
+io.c: restore_term(), delete the call to clear() in the MSDOS code, it was
+	trying to use curses after curses had been exited
+---------- 1/22
+files.c: call pause_line(23) after printing hours file
+constant.h, config.h: constant.h should always be included before config.h,
+	because some systems redefine constants in config.h
+rnd.c: include config.h after constant.h
+main.c, misc2.c, save.c, signals.c: include constants.h before config.h
+misc2.c, vms/getch.c: new function user_name() for VMS, fix get_name()
+	in misc2.c to call it
+------- 1/30
+moria2.c: hit_trap(), add msg_print(CNIL) for the trap door case
+-------- 2/4
+io.c: for ATARIST_MWC, use 240 instead of '#' for walls
+save.c: for ATARIST_MWC, convert 240 to '#' when saving, and '#' to 240
+	when loading, to avoid conversion problems
+--------- 2/8
+create.c: monval(), cast i to int, otherwise some compilers do the arithmetic
+	with unsigned characters
+--------- 2/19
+makefile: add new macro CURSES, define it for BSD/SYS V/and Xenix
+config.h: add config info for XENIX, define SYS_V and unix, only undefine
+	register for MSC versions less than 600 (6.00?)
+creature.c: mon_move, comment out register decl for r_ptr for XENIX systems
+	to avoid a compiler bug
+misc2.c: place_gold, comment out register decl for t_ptr for XENIX systems
+	to avoid a compiler bug
+unix.c: ifdef out include of termio.h, for XENIX add include of sys/types.h
+	and define bzero as memset, test for unix or M_XENIX at the top
+Makefile: add optional commands to install target which chown/chgrp everythin
+	to bin, and put pointer to it at the top
+---------- 2/25
+util/score: Two new utilities, prscore to print scorefiles, and delscore to
+	delete one entry from a scorefile.
+config.h: add MORIA_* macros for the Atari ST with GCC
+death.c, externs.h, io.c, main.c, signals.c, variable.c: Apply Atari ST/GCC
+	patches from Scott Kolodzieski.
+-------- 3/1
+death.c: Amiga must open/close scorefile like MSDOS&VMS
+io.c: init_curses(),restore_term(), fix bugs in AMIGA code,
+	add code to release resources
+amiga/*: updated versions of amiga source files, from
+	cg37717@lion.eng.clemson.edu, Corey Gehman
+atari_st/curscomp: complete rewrite of the curses code by Hildo Biersma
+store2.c: get_haggle(), do not accept an increment value of zero, turn off
+	increment flag instead of accepting it
+-------- 3/2
+store2.c: store_purchase(), store_prt_gold call was inside `if' now after,
+	did not update gold if store had 13 items and you bought the 13th
+-------- 3/11
+moria1.c: sub3_move_light(), don't print over old location if find_flag
+	is true, unless find_prself is also true, this speeds up movement
+	in find mode by eliminating unnecessary drawing of characters
+moria2.c: hit_trap(), call move_light() for the teleport trap case, to light
+	up the trap
+misc1.c, save.c, treasure.c: change ATARIST_MWC ifdefs for using graphic
+	character to ATARI_ST which is true for both MWC and TC
+io.c: remove all ATARIST_MWC diffs which were needed for the old non-standard
+	curses, change the rest to be ATARI_ST, since both MWC and TC need them
+-------- 3/14
+source/*: add Mac THINK C support
+mac/dumpres/*: add Mac THINK C support
+mac/scrnmgr/*: add Mac Think C support
+moria1.c: find_init(), when !light_flag and !find_prself, must erase the
+	player's '@', because sub3_move_light() won't, see 3/11 change above
+------- 3/15
+mac/*: add Mac THINK C support
+*: put file name and 1991 copyrights in all source files
+------- 3/23
+save.c: prevent resurrection of a total winner character
+constants.h, creature.c, monsters.c, recall.c: add new flag CM_ONLY_MAGIC,
+	set this flag in creature.c, check the flag in recall.c, allows
+	recall to print movement speed for Quylthulgs
+creature.c: when a wand is drained of charges, inscribe it as {empty} if
+	it is not known2
+-------- 3/24
+files.c, ibmpc/ms_misc.c: ifdefed out msdos_intro(), since that routine is
+	obsolete now
+doc/moria.6: add -S option to list at the top
+ibmpc/CONFIG.DOC: update for Umoria 5.x, remove kneller's address, and put in
+	my address
+------- 3/25
+config.h, constant.h, */*.c: move VMS definition for ESCAPE from config.h
+	to constant.h, now all files include config.h before constant.h
+*: linted all sources files, changed version numbers to 5.3
+------- 3/30
+vms/*, ibmpc/ms_misc.c, config.h, death.c, dungeon.c, externs.h, files.c,
+io.c, save.c: merge in changes from Ralph Waters, which are needed to compile
+	the sources under VMS and IBM-PC/Turbo C.
+moria2.c, store2.c, *.c: get_item(), show_inven() take new parameter mask,
+	if mask is non-zero, they only list items indicated by mask array,
+	store_sell() calculates a mask based on what store will buy
+store2.c: purchase_haggle(), sell_haggle(), if the auto increment is larger
+	than the difference between the store's offer and the player's offer,
+	then set the auto increment to the exact difference
+dungeon.c, externs.h, moria1.c, moria2.c, variable.c: eliminate search_flag,
+	it was redundant, replace all uses with (py.flags.status & PY_SEARCH)
+tables.c: remove good armor items from armory, to force players to search for
+	them in the dungeons, hard leather boots, iron helm, partial plate,
+	full plate
+misc1.c: alloc_monster(), always create dragons sleeping here, to give the
+	player a sporting chance
+moria1.c: inven_command(), when pack not empty and show_weights flag true,
+	display capacity along with weigth carried on first line of inventory
+spells.c: build_wall(), permanently light walls created within range of
+	player's lamp
+spells.c: earthquake(), fix it to act just like build_wall when a monster is
+	trapped in a wall
+creature.c, externs.h: movement_rate(), now static
+*: release 5.3.1 sources
+------- 4/27
+ms_misc.c, externs.h: change declarations of warn() to match definition,
+	change declaration and definition of error() to match warn(),
+externs.h: fix declarations for sleep(), find_init(), show_inven(), get_item()
+death.c: display_scores(), don't set player_uid for non UNIX/VMS system
+	duplicate_character(), ifdef out code which is unreachable for non
+	UNIX/VMS system, make all returns have a value
+sets.c: set_null(), add a #pragma argused for TURBO C
+ms_misc.c: fix three lines that had an assignment inside an if
+externs.h: add prototypes/declarations for VMS files getch.c and uexit.c
+moria1.c: see_wall(), change ATARIST_MWC ifdef to ATARI_ST
+atari_st/curscomp/curses.c: winsch(), first loop ran in wrong direction
+externs.h: add declarations for atari st functions
+atari_st/moria.prj: new file, TC project file for Umoria
+death.c: highscores (), change fseed to fseek, typing error
+creature.c, death.c, desc.c, dungeon.c, files.c, io.c, moria1.c, moria2.c,
+	store2.c, wizard.c, atarist.c: include stdlib.h if ATARIST_TC to get
+	prototypes for standard library functions
+generate.c: for ATARIST_TC, include <string.h>
+atarist/curscomp/curses.h: change mvadd* macros from compound statements to
+	conditional expressions, so that all returns values are error checked
+io.c: for ATARIST_TC, include ext.h to properly define (?) sleep
+config.h: for ATARIST_TC, define index strchr
+save.c: sv_write()/get_char(), define t_ptr for both MSDOS and ATARI_ST;
+	get_char(), change ATARIST_MWC ifdef around chmod call to ATARI_ST
+	include time.h for ATARIST_TC
+unix/Makefile: change ONWER to OWNER
+creature.c: creatures(), give moves to monsters trapped in rock, so that they
+	will die/dig out immediately, mon_move() if a monster in rock is
+	already dead, don't kill it again
+*: update address info in all files
+io.c: change __GNU_C_ to __GNUC__
+config.h: the test for undefining 'register' was wrong, it was undefing it
+	for all non-MSC compilers
+moria2.c: tunnel(), heavy weapon code wrong, eliminate >>2 of penalty, add
+	penalty instead of subtracting it
+help.c: ident_char(), add period after Giant Frog.
+monsters.c: novice priest, change sleep from 10 to 5 to match other novice 'p'
+moria1.c, store2.c, *.c: get_item() new parameter 'message', when invalid
+	letter hit, print this message if non-zero instead of beeping,
+	store_sell() pass message "I do not buy such items.", fix all other
+	callers to pass CNIL
+-------- 4/28
+misc2.c, files.c: put_misc2(), file_character(), when player at max level,
+	don't print a number for Exp to Adv, instead print ******
+io.c: msg_print(), put multiple messages on the same line if they are short
+	enough
+------- 5/22
+externs.h: ifdef out declaration of sprintf for NeXT
+io.c (init_curses): correct atarist/GNUC code for signal call, ifdef was wrong
+------- 7/6
+spells.c (unlight_area): Unlight all floor spaces with `lr' set, instead of
+	just the room floors spaces.  This darkens the doorways.
+moria1.c (light_room): Add code to set the fm flag, necessary so that the
+	above fix does not unlight doors that it shouldn't.
+io.c (msg_print): Don't combine NULL messages with other messages.
+save.c (get_char): Use msg_print when printing the `departed spirit' message.
+-------- 7/26
+store2.c (purchase_haggle, sell_haggle): If the automatic increment plus the
+	last offer passes the shop keepers current ask, then clear the incr.
+-------- 10/5
+*: Add changes needed to prevent warnings from the IBM-PC TURBO C compiler.
+misc[1234].c, moria[1234].c: misc[12].c and moria[12].c were each split into
+	two files, because they were too large for TURBO C's integrated
+	environment
+*: adjust all makefiles, externs.h, etc to account for new moria/misc files
+TCCONFIG.TCU, TCPICK.TCU: new files, uuencoded copies of Turbo C setup files
+config.h, ms_misc.c: New define USING_TCIO, used to prevent including curses.h
+	in ms_misc.c.  Defaults to defined if using TURBOC on an IBM-PC.
+io.c: delete special purpose AMIGA code, it now uses curses
+amiga/amiga.h: Deleted.
+amiga/amiga.c: Delete all curses stubs.
+-------- 10/6
+macrsrc.h: change type of resType, ResID to long
+macrsrc.c: eliminated search_flag from macrsrc.c (see 3/30 changes)
+config.h: put back switches RSRC, RSRC_PART1 and RSRC_PART2
+ScrnMgr.ro: changed def of MBAR #228 (fixes crash on Mac Plus) and INFO #1
+	(Make default window be full screen)
+ScrnMgr.c: check for reconfig flag enabled for THINK_C, add recognition
+	of MacClassic (and LC?) keyboard, now assumes unknown keyboard type
+	has control key, other misc cleanups
+moria.ro: changes version string
+macconf.c: config.h included for consistency
+mac.c: added support for 8-column tabs
+mac/Install.doc: new file, installation instructions for THINK C
+macconf.c, machelp.c, macscore.c scrnmgr.c: covered up error in THINK C
+	includes files OK/Cancel for ok/cancel
+death.c, save.c: delete setmode calls for IBM-PC, instead open files in binary
+	mode
+--------- 10/12
+*: Changed version number to 5.4.
+save.c: change code to accept savefiles with version numbers greater than the
+	version number of the game, savefile format frozen as of 5.2.2
+externs.h: ifdef out the troublesome sprintf declaration
+config.h: force `unix' to be defined for unix systems, since some stupid
+	systems (e.g. AIX) don't already define it
+--------- 10/15
+externs.h, moria4.c, ms_misc.c: correct typos discovered under MSDOS
+--------- 10/19
+spells.doc, exp.doc: New documentation files.
