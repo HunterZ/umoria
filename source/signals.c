@@ -101,7 +101,7 @@ struct sigcontext *scp;
 
   smask = sigsetmask(0) | (1 << sig);
 #else
-#if defined(__TURBOC__) || defined(AMIGA)
+#if defined(__TURBOC__) || defined(AMIGA) || defined(__CYGWIN__)
 static void signal_handler(sig)
 #else
 static int signal_handler(sig)
@@ -275,14 +275,15 @@ void init_signals()
   (void) signal(SIGSEGV, signal_handler);
 
 #else
-
   /* Everybody except Atari, MSDOS, and Amiga.  */
   /* Ignore HANGUP, and let the EOF code take care of this case. */
   (void) signal(SIGHUP, SIG_IGN);
   (void) signal(SIGQUIT, signal_handler);
   (void) signal(SIGILL, signal_handler);
   (void) signal(SIGTRAP, signal_handler);
+#ifndef __CYGWIN__
   (void) signal(SIGIOT, signal_handler);
+#endif
 #ifdef SIGEMT  /* in BSD systems */
   (void) signal(SIGEMT, signal_handler);
 #endif

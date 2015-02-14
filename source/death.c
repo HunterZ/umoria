@@ -165,7 +165,7 @@ char *in_str;
 }
 
 
-#ifndef __TURBOC__
+#if !defined(__TURBOC__) && !defined(__CYGWIN__)
 #if (defined(USG) || defined(atarist) || defined(HPUX)) && !defined(VMS)
 #if !defined(AMIGA) && !defined(MAC) && !defined(ATARIST_TC)
 
@@ -194,7 +194,7 @@ int f, l;
   (void) sprintf (lockname, (char *)prefix_file((char *)"moria.%d"),
 		  sbuf.st_ino);
 #else
-#ifdef __linux__
+#if defined(__linux__) || defined(__CYGWIN__)
   (void) sprintf (lockname, "/tmp/moria.%ld", sbuf.st_ino);
 #else
   (void) sprintf (lockname, "/tmp/moria.%d", sbuf.st_ino);

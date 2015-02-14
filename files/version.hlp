@@ -56,7 +56,7 @@ Eric Vaitl            - PC-Curses replacement for Turbo C
 Scott Kolodzieski     - Atari ST port for Gnu C
 Hildo Biersma         - Atari ST port for Turbo C
 Ben Schreiber         - Macintosh port for Think C
-
+Ben Shadwick          - MSDOS DJGPP port, Windows Cygwin port
 
 
 
@@ -67,4 +67,4 @@ Copyright (c) 1989-94 James E. Wilson, Robert A. Keoneke
   not for profit purposes provided that this copyright and statement are
   included in all such copies.
 
-Umoria Version 5.5, patch level 1
+Umoria Version 5.5, patch level 2

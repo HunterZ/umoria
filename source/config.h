@@ -200,7 +200,7 @@ some of the system defines set up here.
 
 /* This must be unix; change MORIA_LIB as appropriate.  */
 #define MORIA_SAV	"moria.save"
-#define MORIA_LIB(xxx)  "/home/math/grabiner/moria/files/xxx"
+#define MORIA_LIB(xxx) "./" #xxx
 #define MORIA_HOU	MORIA_LIB(hours)
 #define MORIA_MOR	MORIA_LIB(news)
 #define MORIA_TOP	MORIA_LIB(scores)
@@ -248,7 +248,7 @@ some of the system defines set up here.
 #define ATARI_ST
 #endif
 
-#if defined(__linux__) /* Linux supports System V */
+#if defined(__linux__) || defined(__CYGWIN__) /* Linux supports System V */
 #define SYS_V
 #endif
 
