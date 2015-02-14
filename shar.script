@@ -1,0 +1,35 @@
+shar README INSTALL Flexnames Highscores Int16bit.patch MISC_NOTES Makefile\
+	 constants.h create.c > Part01
+
+shar Moria.doc > Part02
+
+shar Moria.man Moria.man.alt Moria_hours Moria_news PROBLEMS io.c sets.c\
+	> Part03
+
+shar PRONOUNCE Xenix.patch config.h > Part04
+
+shar creature.c death.c desc.c > Part05
+
+shar dungeon.c eat.c externs.h > Part06
+
+shar files.c generate.c > Part07
+
+shar magic.c main.c misc1.c > Part08
+
+shar misc2.c scrolls.c > Part09
+
+shar monsters.c potions.c > Part10
+
+shar moria1.c prayer.c > Part11
+
+shar moria2.c signals.c > Part12
+
+shar spells.c > Part13
+
+shar help.c staffs.c store1.c store2.c > Part14
+
+shar treasure1.c > Part15
+
+shar save.c treasure2.c types.h > Part16
+
+shar variables.c wands.c wizard.c > Part17

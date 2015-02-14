@@ -1,0 +1,5039 @@
+--------------------------------------------
+0  Filthy Street Urchin                                   (p)
+     Speed ==1  Level     ==0  Exp ==0
+     AC    ==1  Eye-sight ==4  HD  ==1d4
+     Creature is evil.
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Creature picks up objects.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+       Can open doors.
+   --Creature attacks ==
+       Begs for money for normal damage. (0d0)
+       Touches for stealing money. (0d0)
+
+
+--------------------------------------------
+1  Blubbering Idiot                                   (p)
+     Speed ==1  Level     ==0  Exp ==0
+     AC    ==1  Eye-sight ==6  HD  ==1d2
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Creature picks up objects.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+       Can open doors.
+   --Creature attacks ==
+       Drools on you for normal damage. (0d0)
+
+
+--------------------------------------------
+2  Pitiful-Looking Beggar                                   (p)
+     Speed ==1  Level     ==0  Exp ==0
+     AC    ==1  Eye-sight ==10  HD  ==1d4
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Creature picks up objects.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+       Can open doors.
+   --Creature attacks ==
+       Begs for money for normal damage. (0d0)
+
+
+--------------------------------------------
+3  Mangy-Looking Leper                                   (p)
+     Speed ==1  Level     ==0  Exp ==0
+     AC    ==1  Eye-sight ==10  HD  ==1d1
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Creature picks up objects.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+       Can open doors.
+   --Creature attacks ==
+       Begs for money for normal damage. (0d0)
+
+
+--------------------------------------------
+4  Squint-Eyed Rogue                                   (p)
+     Speed ==1  Level     ==0  Exp ==0
+     AC    ==8  Eye-sight ==10  HD  ==2d8
+     Creature is evil.
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Creature picks up objects.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d6)
+       Touches for stealing object. (0d0)
+
+
+--------------------------------------------
+5  Singing, Happy Drunk                                   (p)
+     Speed ==1  Level     ==0  Exp ==0
+     AC    ==1  Eye-sight ==10  HD  ==2d3
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Creature picks up objects.
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Movement ==
+       20% random movement.
+       40% random movement.
+       75% random movement.
+       Can open doors.
+   --Creature attacks ==
+       Begs for money for normal damage. (0d0)
+
+
+--------------------------------------------
+6  Mean-Looking Mercenary                                   (p)
+     Speed ==1  Level     ==0  Exp ==0
+     AC    ==20  Eye-sight ==10  HD  ==5d8
+     Creature is evil.
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Creature picks up objects.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d10)
+
+
+--------------------------------------------
+7  Battle-Scarred Veteran                                   (p)
+     Speed ==1  Level     ==0  Exp ==0
+     AC    ==30  Eye-sight ==10  HD  ==7d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Creature picks up objects.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (2d6)
+
+
+--------------------------------------------
+8  Grey Mushroom patch                                   (,)
+     Speed ==1  Level     ==1  Exp ==1
+     AC    ==1  Eye-sight ==2  HD  ==1d2
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature cannot be charmed or slept.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Shoots spores for confusion. (1d4)
+
+
+--------------------------------------------
+9  Giant Yellow Centipede                                   (c)
+     Speed ==1  Level     ==1  Exp ==2
+     AC    ==12  Eye-sight ==8  HD  ==2d6
+     Creature is a monster.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Bites for normal damage. (1d3)
+       Stings for normal damage. (1d3)
+
+
+--------------------------------------------
+10  Giant White Centipede                                   (c)
+     Speed ==1  Level     ==1  Exp ==2
+     AC    ==10  Eye-sight ==7  HD  ==3d5
+     Creature is a monster.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d2)
+       Stings for normal damage. (1d2)
+
+
+--------------------------------------------
+11  White Icky-Thing                                   (i)
+     Speed ==1  Level     ==1  Exp ==2
+     AC    ==7  Eye-sight ==12  HD  ==3d5
+     Creature is a monster.
+     Creature harmed by fire.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Touches for normal damage. (1d2)
+
+
+--------------------------------------------
+12  Clear Icky-Thing                                   (i)
+     Speed ==1  Level     ==1  Exp ==1
+     AC    ==6  Eye-sight ==12  HD  ==2d5
+     Creature is a monster.
+     Creature harmed by fire.
+     Creature is invisible.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Touches for normal damage. (1d2)
+
+
+--------------------------------------------
+13  Giant White Mouse                                   (r)
+     Speed ==1  Level     ==1  Exp ==1
+     AC    ==4  Eye-sight ==8  HD  ==1d3
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature seen with Infra-Vision.
+     Creature multiplies.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d2)
+
+
+--------------------------------------------
+14  Large Brown Snake                                   (R)
+     Speed ==0  Level     ==1  Exp ==3
+     AC    ==35  Eye-sight ==4  HD  ==4d6
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by acid.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d3)
+       Crushes you for normal damage. (1d4)
+
+
+--------------------------------------------
+15  Large White Snake                                   (R)
+     Speed ==1  Level     ==1  Exp ==2
+     AC    ==30  Eye-sight ==4  HD  ==3d6
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by acid.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d1)
+
+
+--------------------------------------------
+16  Kobold                                   (k)
+     Speed ==1  Level     ==1  Exp ==5
+     AC    ==16  Eye-sight ==20  HD  ==3d7
+     Creature is a monster.
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d6)
+
+
+--------------------------------------------
+17  White Worm mass                                   (w)
+     Speed ==0  Level     ==1  Exp ==2
+     AC    ==1  Eye-sight ==6  HD  ==4d4
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature harmed by blue light.
+     Creature multiplies.
+   --Movement ==
+       Move and attack normally.
+       75% random movement.
+   --Creature attacks ==
+       Crawls on you for poison damage. (1d2)
+
+
+--------------------------------------------
+18  Floating Eye                                   (e)
+     Speed ==1  Level     ==1  Exp ==1
+     AC    ==6  Eye-sight ==2  HD  ==3d6
+     Creature is a monster.
+     Creature harmed by blue light.
+     Creature seen with Infra-Vision.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 13 turns.
+       Drains mana for healing.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Gazes for paralyzation. (0d0)
+
+
+--------------------------------------------
+19  Shrieker Mushroom patch                                   (,)
+     Speed ==1  Level     ==2  Exp ==1
+     AC    ==1  Eye-sight ==2  HD  ==1d1
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature cannot be charmed or slept.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Wails for aggravates monsters. (0d0)
+
+
+--------------------------------------------
+20  Blubbering Icky-Thing                                   (i)
+     Speed ==1  Level     ==2  Exp ==8
+     AC    ==4  Eye-sight ==10  HD  ==5d8
+     Creature Eats/kills other creatures.
+     Creature is a monster.
+     Creature harmed by fire.
+     Creature picks up objects.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Crawls on you for poison damage. (1d4)
+       Crawls on you for eating food. (0d0)
+
+
+--------------------------------------------
+21  Metallic Green Centipede                                   (c)
+     Speed ==2  Level     ==2  Exp ==3
+     AC    ==4  Eye-sight ==5  HD  ==4d4
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Crawls on you for normal damage. (1d1)
+
+
+--------------------------------------------
+22  Novice Warrior                                   (p)
+     Speed ==1  Level     ==2  Exp ==6
+     AC    ==16  Eye-sight ==20  HD  ==9d4
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d7)
+
+
+--------------------------------------------
+23  Novice Rogue                                   (p)
+     Speed ==1  Level     ==2  Exp ==6
+     AC    ==12  Eye-sight ==20  HD  ==8d4
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d6)
+       Touches for stealing money. (0d0)
+
+
+--------------------------------------------
+24  Novice Priest                                   (p)
+     Speed ==1  Level     ==2  Exp ==7
+     AC    ==10  Eye-sight ==20  HD  ==7d4
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 12 turns.
+       Cause light wounds.
+       Cause fear.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d5)
+
+
+--------------------------------------------
+25  Novice Mage                                   (p)
+     Speed ==1  Level     ==2  Exp ==7
+     AC    ==6  Eye-sight ==20  HD  ==6d4
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 12 turns.
+       Can teleport short.
+       Cause light wounds.
+       Cause confusion.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d4)
+
+
+--------------------------------------------
+26  Yellow Mushroom patch                                   (,)
+     Speed ==1  Level     ==2  Exp ==2
+     AC    ==1  Eye-sight ==2  HD  ==1d1
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature cannot be charmed or slept.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Shoots spores for fear. (1d6)
+
+
+--------------------------------------------
+27  White Jelly                                   (J)
+     Speed ==2  Level     ==2  Exp ==10
+     AC    ==1  Eye-sight ==2  HD  ==8d8
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature harmed by blue light.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Touches for poison damage. (1d2)
+
+
+--------------------------------------------
+28  Giant Green Frog                                   (f)
+     Speed ==1  Level     ==2  Exp ==6
+     AC    ==8  Eye-sight ==14  HD  ==2d8
+     Creature is a monster.
+     Creature harmed by acid.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d3)
+
+
+--------------------------------------------
+29  Giant Black Ant                                   (a)
+     Speed ==1  Level     ==2  Exp ==8
+     AC    ==20  Eye-sight ==14  HD  ==3d6
+     Creature is a monster.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d4)
+
+
+--------------------------------------------
+30  White Harpy                                   (h)
+     Speed ==1  Level     ==2  Exp ==5
+     AC    ==17  Eye-sight ==16  HD  ==2d5
+     Creature is a monster.
+     Creature is evil.
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Claws for normal damage. (1d1)
+       Claws for normal damage. (1d1)
+       Bites for normal damage. (1d2)
+
+
+--------------------------------------------
+31  Blue Yeek                                   (y)
+     Speed ==1  Level     ==2  Exp ==4
+     AC    ==14  Eye-sight ==18  HD  ==2d6
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d5)
+
+
+--------------------------------------------
+32  Green Worm mass                                   (w)
+     Speed ==0  Level     ==2  Exp ==3
+     AC    ==3  Eye-sight ==7  HD  ==6d4
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature harmed by blue light.
+     Creature multiplies.
+   --Movement ==
+       Move and attack normally.
+       75% random movement.
+   --Creature attacks ==
+       Crawls on you for corrosion damage. (1d3)
+
+
+--------------------------------------------
+33  Large Black Snake                                   (R)
+     Speed ==0  Level     ==2  Exp ==9
+     AC    ==38  Eye-sight ==5  HD  ==4d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by acid.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d4)
+       Crushes you for normal damage. (1d6)
+
+
+--------------------------------------------
+34  Poltergeist                                   (G)
+     Speed ==3  Level     ==3  Exp ==6
+     AC    ==15  Eye-sight ==8  HD  ==2d5
+     Creature is evil.
+     Creature is undead.
+     Creature cannot be charmed or slept.
+     Creature is invisible.
+     Creature picks up objects.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 15 turns.
+       Can teleport short.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+       40% random movement.
+       75% random movement.
+       Can phase through walls.
+   --Creature attacks ==
+       Hits for fear. (1d1)
+
+
+--------------------------------------------
+35  Metallic Blue Centipede                                   (c)
+     Speed ==2  Level     ==3  Exp ==7
+     AC    ==6  Eye-sight ==6  HD  ==4d5
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Crawls on you for normal damage. (1d2)
+
+
+--------------------------------------------
+36  Giant White Louse                                   (l)
+     Speed ==2  Level     ==3  Exp ==1
+     AC    ==5  Eye-sight ==6  HD  ==1d1
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature harmed by acid.
+     Creature harmed by blue light.
+     Creature multiplies.
+   --Movement ==
+       Move and attack normally.
+       75% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d1)
+
+
+--------------------------------------------
+37  Black Naga                                   (n)
+     Speed ==1  Level     ==3  Exp ==20
+     AC    ==40  Eye-sight ==16  HD  ==6d8
+     Creature is a monster.
+     Creature is evil.
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature harmed by acid.
+     Creature seen with Infra-Vision.
+     Creature picks up objects.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Crushes you for normal damage. (1d8)
+
+
+--------------------------------------------
+38  Spotted Mushroom patch                                   (,)
+     Speed ==1  Level     ==3  Exp ==3
+     AC    ==1  Eye-sight ==2  HD  ==1d1
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature cannot be charmed or slept.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Shoots spores for poison damage. (2d4)
+
+
+--------------------------------------------
+39  Yellow Jelly                                   (J)
+     Speed ==2  Level     ==3  Exp ==12
+     AC    ==1  Eye-sight ==2  HD  ==10d8
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature harmed by blue light.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 15 turns.
+       Drains mana for healing.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Touches for poison damage. (1d3)
+
+
+--------------------------------------------
+40  Scruffy-Looking Hobbit                                   (p)
+     Speed ==1  Level     ==3  Exp ==4
+     AC    ==8  Eye-sight ==16  HD  ==3d5
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+       Has object/gold 60% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d4)
+       Touches for stealing money. (0d0)
+
+
+--------------------------------------------
+41  Huge Brown Bat                                   (b)
+     Speed ==3  Level     ==3  Exp ==4
+     AC    ==12  Eye-sight ==8  HD  ==2d6
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature harmed by blue light.
+     Creature seen with Infra-Vision.
+   --Movement ==
+       Move and attack normally.
+       75% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d2)
+
+
+--------------------------------------------
+42  Giant White Ant                                   (a)
+     Speed ==1  Level     ==3  Exp ==7
+     AC    ==16  Eye-sight ==8  HD  ==3d6
+     Creature is a monster.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Bites for normal damage. (1d4)
+
+
+--------------------------------------------
+43  Yellow Mold                                   (m)
+     Speed ==1  Level     ==3  Exp ==9
+     AC    ==10  Eye-sight ==2  HD  ==8d8
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature cannot be charmed or slept.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Hits for normal damage. (1d4)
+
+
+--------------------------------------------
+44  Metallic Red Centipede                                   (c)
+     Speed ==2  Level     ==3  Exp ==12
+     AC    ==9  Eye-sight ==8  HD  ==4d8
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Crawls on you for normal damage. (1d2)
+
+
+--------------------------------------------
+45  Yellow Worm mass                                   (w)
+     Speed ==0  Level     ==3  Exp ==4
+     AC    ==4  Eye-sight ==7  HD  ==4d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature harmed by blue light.
+     Creature multiplies.
+   --Movement ==
+       Move and attack normally.
+       75% random movement.
+   --Creature attacks ==
+       Crawls on you for lose dexterity. (1d3)
+
+
+--------------------------------------------
+46  Large Grey Snake                                   (R)
+     Speed ==0  Level     ==3  Exp ==10
+     AC    ==40  Eye-sight ==5  HD  ==6d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by acid.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d4)
+       Crushes you for normal damage. (1d6)
+
+
+--------------------------------------------
+47  Radiation Eye                                   (e)
+     Speed ==1  Level     ==3  Exp ==6
+     AC    ==6  Eye-sight ==2  HD  ==3d6
+     Creature is a monster.
+     Creature harmed by blue light.
+     Creature seen with Infra-Vision.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 11 turns.
+       Drains mana for healing.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Gazes for lowering strength. (1d6)
+
+
+--------------------------------------------
+48  Drooling Harpy                                   (h)
+     Speed ==1  Level     ==3  Exp ==7
+     AC    ==22  Eye-sight ==16  HD  ==2d8
+     Creature is a monster.
+     Creature is evil.
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Claws for normal damage. (1d1)
+       Claws for normal damage. (1d1)
+       Bites for normal damage. (1d2)
+       Drools on you for normal damage. (0d0)
+
+
+--------------------------------------------
+49  Silver Mouse                                   (r)
+     Speed ==1  Level     ==4  Exp ==1
+     AC    ==5  Eye-sight ==8  HD  ==1d1
+     Creature is a monster.
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature seen with Infra-Vision.
+     Creature multiplies.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Hits for eating light source. (1d1)
+
+
+--------------------------------------------
+50  Black Mushroom patch                                   (,)
+     Speed ==1  Level     ==4  Exp ==8
+     AC    ==1  Eye-sight ==2  HD  ==8d8
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature cannot be charmed or slept.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Shoots spores for normal damage. (1d3)
+
+
+--------------------------------------------
+51  Blue Jelly                                   (J)
+     Speed ==1  Level     ==4  Exp ==14
+     AC    ==1  Eye-sight ==2  HD  ==12d8
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature harmed by blue light.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Touches for cold damage. (1d6)
+
+
+--------------------------------------------
+52  Creeping Copper Coins                                   ($)
+     Speed ==0  Level     ==4  Exp ==9
+     AC    ==24  Eye-sight ==3  HD  ==7d8
+     Creature is a monster.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Bites for normal damage. (1d4)
+       Breathes for poison damage. (2d4)
+
+
+--------------------------------------------
+53  Giant White Rat                                   (r)
+     Speed ==1  Level     ==4  Exp ==1
+     AC    ==7  Eye-sight ==8  HD  ==2d2
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature seen with Infra-Vision.
+     Creature multiplies.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for poison damage. (1d3)
+
+
+--------------------------------------------
+54  Giant Black Centipede                                   (c)
+     Speed ==1  Level     ==4  Exp ==11
+     AC    ==20  Eye-sight ==8  HD  ==5d8
+     Creature is a monster.
+   --Movement ==
+       Move and attack normally.
+       75% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d2)
+       Stings for normal damage. (1d2)
+
+
+--------------------------------------------
+55  Giant Blue Centipede                                   (c)
+     Speed ==1  Level     ==4  Exp ==10
+     AC    ==20  Eye-sight ==8  HD  ==4d8
+     Creature is a monster.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Bites for normal damage. (1d3)
+       Stings for normal damage. (1d4)
+
+
+--------------------------------------------
+56  Blue Worm mass                                   (w)
+     Speed ==0  Level     ==4  Exp ==5
+     AC    ==12  Eye-sight ==7  HD  ==5d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature harmed by blue light.
+     Creature multiplies.
+   --Movement ==
+       Move and attack normally.
+       75% random movement.
+   --Creature attacks ==
+       Crawls on you for cold damage. (1d4)
+
+
+--------------------------------------------
+57  Large Grey Snake                                   (R)
+     Speed ==0  Level     ==4  Exp ==14
+     AC    ==41  Eye-sight ==6  HD  ==6d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by acid.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d5)
+       Crushes you for normal damage. (1d8)
+
+
+--------------------------------------------
+58  Jackal                                   (j)
+     Speed ==1  Level     ==4  Exp ==8
+     AC    ==16  Eye-sight ==12  HD  ==3d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d6)
+
+
+--------------------------------------------
+59  Green Naga                                   (n)
+     Speed ==1  Level     ==5  Exp ==30
+     AC    ==40  Eye-sight ==20  HD  ==9d8
+     Creature is a monster.
+     Creature is evil.
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature seen with Infra-Vision.
+     Creature picks up objects.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Crushes you for normal damage. (1d8)
+       Spits for acid damage. (2d6)
+
+
+--------------------------------------------
+60  Green Glutton Ghost                                   (G)
+     Speed ==3  Level     ==5  Exp ==15
+     AC    ==20  Eye-sight ==10  HD  ==3d6
+     Creature is evil.
+     Creature is undead.
+     Creature cannot be charmed or slept.
+     Creature is invisible.
+     Creature picks up objects.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 15 turns.
+       Can teleport short.
+       Can teleport long.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+       75% random movement.
+       Can phase through walls.
+   --Creature attacks ==
+       Slimes you for eating food. (1d1)
+
+
+--------------------------------------------
+61  White Mushroom patch                                   (,)
+     Speed ==1  Level     ==5  Exp ==5
+     AC    ==1  Eye-sight ==2  HD  ==1d1
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature cannot be charmed or slept.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Shoots spores for paralyzation. (2d4)
+
+
+--------------------------------------------
+62  Green Jelly                                   (J)
+     Speed ==2  Level     ==5  Exp ==18
+     AC    ==1  Eye-sight ==2  HD  ==22d8
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature harmed by blue light.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Touches for corrosion damage. (1d2)
+
+
+--------------------------------------------
+63  Skeleton Kobold                                   (s)
+     Speed ==1  Level     ==5  Exp ==12
+     AC    ==26  Eye-sight ==20  HD  ==5d8
+     Creature is evil.
+     Creature is undead.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d6)
+
+
+--------------------------------------------
+64  Silver Jelly                                   (J)
+     Speed ==1  Level     ==5  Exp ==15
+     AC    ==25  Eye-sight ==2  HD  ==20d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Touches for eating light source. (1d3)
+
+
+--------------------------------------------
+65  Giant Black Frog                                   (f)
+     Speed ==1  Level     ==5  Exp ==12
+     AC    ==18  Eye-sight ==12  HD  ==4d8
+     Creature is a monster.
+     Creature harmed by fire.
+     Creature harmed by acid.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d6)
+
+
+--------------------------------------------
+66  Grey Icky-Thing                                   (i)
+     Speed ==1  Level     ==5  Exp ==10
+     AC    ==12  Eye-sight ==14  HD  ==4d8
+     Creature is a monster.
+     Creature harmed by fire.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Touches for normal damage. (1d5)
+
+
+--------------------------------------------
+67  Disenchanter Eye                                   (e)
+     Speed ==0  Level     ==5  Exp ==20
+     AC    ==10  Eye-sight ==4  HD  ==7d8
+     Creature is a monster.
+     Creature harmed by blue light.
+     Creature seen with Infra-Vision.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 9 turns.
+       Drains mana for healing.
+   --Movement ==
+       Move only to attack.
+       20% random movement.
+   --Creature attacks ==
+       Gazes for disenchants objects. (0d0)
+
+
+--------------------------------------------
+68  Black Yeek                                   (y)
+     Speed ==1  Level     ==5  Exp ==8
+     AC    ==16  Eye-sight ==18  HD  ==2d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d5)
+
+
+--------------------------------------------
+69  Red Worm mass                                   (w)
+     Speed ==0  Level     ==5  Exp ==6
+     AC    ==12  Eye-sight ==7  HD  ==5d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature harmed by blue light.
+     Creature seen with Infra-Vision.
+     Creature multiplies.
+   --Movement ==
+       Move and attack normally.
+       75% random movement.
+   --Creature attacks ==
+       Crawls on you for fire damage. (1d6)
+
+
+--------------------------------------------
+70  Giant House Fly                                   (F)
+     Speed ==3  Level     ==5  Exp ==10
+     AC    ==16  Eye-sight ==12  HD  ==3d8
+     Creature is a monster.
+     Creature harmed by fire.
+     Creature harmed by poison.
+   --Movement ==
+       Move and attack normally.
+       75% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d2)
+
+
+--------------------------------------------
+71  Copperhead Snake                                   (R)
+     Speed ==1  Level     ==5  Exp ==15
+     AC    ==20  Eye-sight ==6  HD  ==4d6
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by acid.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for poison damage. (2d4)
+
+
+--------------------------------------------
+72  Rot Jelly                                   (J)
+     Speed ==1  Level     ==5  Exp ==15
+     AC    ==30  Eye-sight ==2  HD  ==20d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Touches for eating food. (2d3)
+
+
+--------------------------------------------
+73  Purple Mushroom patch                                   (,)
+     Speed ==2  Level     ==6  Exp ==12
+     AC    ==1  Eye-sight ==2  HD  ==1d1
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature cannot be charmed or slept.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Shoots spores for lose constitution. (1d2)
+
+
+--------------------------------------------
+74  Brown Mold                                   (m)
+     Speed ==1  Level     ==6  Exp ==20
+     AC    ==12  Eye-sight ==2  HD  ==15d8
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature cannot be charmed or slept.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Hits for confusion. (1d4)
+
+
+--------------------------------------------
+75  Giant Brown Bat                                   (b)
+     Speed ==3  Level     ==6  Exp ==10
+     AC    ==15  Eye-sight ==10  HD  ==3d8
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature harmed by blue light.
+     Creature seen with Infra-Vision.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+       40% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d3)
+
+
+--------------------------------------------
+76  Creeping Silver Coins                                   ($)
+     Speed ==0  Level     ==6  Exp ==18
+     AC    ==30  Eye-sight ==4  HD  ==12d8
+     Creature is a monster.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Bites for normal damage. (1d6)
+       Breathes for poison damage. (2d6)
+
+
+--------------------------------------------
+77  Orc                                   (o)
+     Speed ==1  Level     ==6  Exp ==16
+     AC    ==32  Eye-sight ==20  HD  ==9d8
+     Creature is a monster.
+     Creature is evil.
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d8)
+
+
+--------------------------------------------
+78  Grey Harpy                                   (h)
+     Speed ==2  Level     ==6  Exp ==14
+     AC    ==20  Eye-sight ==16  HD  ==3d8
+     Creature is a monster.
+     Creature is evil.
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Claws for normal damage. (1d2)
+       Claws for normal damage. (1d2)
+       Bites for normal damage. (1d2)
+
+
+--------------------------------------------
+79  Blue Icky-Thing                                   (i)
+     Speed ==1  Level     ==6  Exp ==12
+     AC    ==14  Eye-sight ==18  HD  ==4d8
+     Creature is a monster.
+     Creature harmed by fire.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Touches for cold damage. (2d3)
+
+
+--------------------------------------------
+80  Rattlesnake                                   (R)
+     Speed ==1  Level     ==6  Exp ==20
+     AC    ==24  Eye-sight ==6  HD  ==6d7
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by acid.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for poison damage. (2d5)
+
+
+--------------------------------------------
+81  Bloodshot Eye                                   (e)
+     Speed ==1  Level     ==7  Exp ==15
+     AC    ==6  Eye-sight ==2  HD  ==4d8
+     Creature is a monster.
+     Creature harmed by blue light.
+     Creature seen with Infra-Vision.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 7 turns.
+       Drains mana for healing.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Gazes for blindness. (2d6)
+
+
+--------------------------------------------
+82  Red Naga                                   (n)
+     Speed ==1  Level     ==7  Exp ==40
+     AC    ==40  Eye-sight ==20  HD  ==11d8
+     Creature is a monster.
+     Creature is evil.
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature harmed by acid.
+     Creature seen with Infra-Vision.
+     Creature picks up objects.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Crushes you for normal damage. (1d10)
+       Bites for lowering strength. (1d4)
+
+
+--------------------------------------------
+83  Red Jelly                                   (J)
+     Speed ==1  Level     ==7  Exp ==26
+     AC    ==1  Eye-sight ==2  HD  ==26d8
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature harmed by blue light.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Touches for lowering strength. (1d5)
+
+
+--------------------------------------------
+84  Giant Red Frog                                   (f)
+     Speed ==1  Level     ==7  Exp ==16
+     AC    ==16  Eye-sight ==12  HD  ==5d8
+     Creature is a monster.
+     Creature harmed by fire.
+     Creature harmed by acid.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for lowering strength. (2d4)
+
+
+--------------------------------------------
+85  Green Icky-Thing                                   (i)
+     Speed ==1  Level     ==7  Exp ==18
+     AC    ==12  Eye-sight ==14  HD  ==5d8
+     Creature is a monster.
+     Creature harmed by fire.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Touches for corrosion damage. (2d5)
+
+
+--------------------------------------------
+86  Zombie Kobold                                   (z)
+     Speed ==1  Level     ==7  Exp ==14
+     AC    ==14  Eye-sight ==20  HD  ==6d8
+     Creature is a monster.
+     Creature is evil.
+     Creature is undead.
+     Creature harmed by fire.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d2)
+       Hits for normal damage. (1d2)
+
+
+--------------------------------------------
+87  Lost Soul                                   (G)
+     Speed ==1  Level     ==7  Exp ==18
+     AC    ==10  Eye-sight ==4  HD  ==2d8
+     Creature is evil.
+     Creature is undead.
+     Creature cannot be charmed or slept.
+     Creature is invisible.
+     Creature picks up objects.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 15 turns.
+       Can teleport long.
+       Drains mana for healing.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+       40% random movement.
+       Can phase through walls.
+   --Creature attacks ==
+       Hits for normal damage. (2d2)
+       Touches for lose wisdom. (0d0)
+
+
+--------------------------------------------
+88  Greedy little Gnome                                   (p)
+     Speed ==1  Level     ==7  Exp ==13
+     AC    ==14  Eye-sight ==18  HD  ==3d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d7)
+       Touches for stealing object. (0d0)
+
+
+--------------------------------------------
+89  Giant Green Fly                                   (F)
+     Speed ==2  Level     ==7  Exp ==15
+     AC    ==14  Eye-sight ==12  HD  ==3d8
+     Creature is a monster.
+     Creature harmed by fire.
+     Creature harmed by poison.
+   --Movement ==
+       Move and attack normally.
+       75% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d4)
+
+
+--------------------------------------------
+90  Brown Yeek                                   (y)
+     Speed ==1  Level     ==8  Exp ==11
+     AC    ==18  Eye-sight ==18  HD  ==3d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d6)
+
+
+--------------------------------------------
+91  Green Mold                                   (m)
+     Speed ==1  Level     ==8  Exp ==28
+     AC    ==14  Eye-sight ==2  HD  ==21d8
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature cannot be charmed or slept.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Hits for fear. (1d4)
+
+
+--------------------------------------------
+92  Skeleton Orc                                   (s)
+     Speed ==1  Level     ==8  Exp ==26
+     AC    ==36  Eye-sight ==20  HD  ==10d8
+     Creature is evil.
+     Creature is undead.
+     Creature cannot be charmed or slept.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (2d5)
+
+
+--------------------------------------------
+93  Seedy looking Human                                   (p)
+     Speed ==1  Level     ==8  Exp ==22
+     AC    ==26  Eye-sight ==20  HD  ==8d8
+     Creature is evil.
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has 1d2 object(s)/gold.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (3d4)
+
+
+--------------------------------------------
+94  Red Icky-Thing                                   (i)
+     Speed ==2  Level     ==8  Exp ==22
+     AC    ==18  Eye-sight ==14  HD  ==4d8
+     Creature is a monster.
+     Creature harmed by fire.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Touches for normal damage. (1d3)
+       Breathes for acid damage. (1d5)
+
+
+--------------------------------------------
+95  Bandit                                   (p)
+     Speed ==1  Level     ==8  Exp ==26
+     AC    ==24  Eye-sight ==20  HD  ==8d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has 1d2 object(s)/gold.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (2d4)
+       Touches for stealing money. (0d0)
+
+
+--------------------------------------------
+96  Yeti                                   (Y)
+     Speed ==1  Level     ==9  Exp ==30
+     AC    ==24  Eye-sight ==20  HD  ==11d8
+     Creature is evil.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Claws for normal damage. (1d3)
+       Claws for normal damage. (1d3)
+       Bites for normal damage. (1d4)
+
+
+--------------------------------------------
+97  Bloodshot Icky-Thing                                   (i)
+     Speed ==1  Level     ==9  Exp ==24
+     AC    ==18  Eye-sight ==14  HD  ==7d8
+     Creature is a monster.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 11 turns.
+       Drains mana for healing.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Touches for normal damage. (1d4)
+       Breathes for corrosion damage. (2d4)
+
+
+--------------------------------------------
+98  Giant Grey Rat                                   (r)
+     Speed ==1  Level     ==9  Exp ==2
+     AC    ==12  Eye-sight ==10  HD  ==2d3
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature seen with Infra-Vision.
+     Creature multiplies.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for poison damage. (1d4)
+
+
+--------------------------------------------
+99  Black Harpy                                   (h)
+     Speed ==2  Level     ==9  Exp ==19
+     AC    ==22  Eye-sight ==16  HD  ==3d8
+     Creature is a monster.
+     Creature is evil.
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Claws for normal damage. (1d2)
+       Claws for normal damage. (1d2)
+       Bites for normal damage. (1d3)
+
+
+--------------------------------------------
+100  Giant Black Bat                                   (b)
+     Speed ==3  Level     ==9  Exp ==16
+     AC    ==18  Eye-sight ==12  HD  ==2d8
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature seen with Infra-Vision.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d6)
+
+
+--------------------------------------------
+101  Clear Yeek                                   (y)
+     Speed ==1  Level     ==9  Exp ==14
+     AC    ==24  Eye-sight ==18  HD  ==3d6
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature is invisible.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d5)
+
+
+--------------------------------------------
+102  Orc Shaman                                   (o)
+     Speed ==1  Level     ==9  Exp ==30
+     AC    ==15  Eye-sight ==20  HD  ==7d8
+     Creature is a monster.
+     Creature is evil.
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 5 turns.
+       Cause light wounds.
+       Slow person.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d6)
+
+
+--------------------------------------------
+103  Giant Red Ant                                   (a)
+     Speed ==1  Level     ==9  Exp ==22
+     AC    ==34  Eye-sight ==12  HD  ==4d8
+     Creature is a monster.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Bites for normal damage. (1d4)
+       Stings for lowering strength. (1d4)
+
+
+--------------------------------------------
+104  King Cobra                                   (R)
+     Speed ==1  Level     ==9  Exp ==28
+     AC    ==30  Eye-sight ==8  HD  ==8d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by acid.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Spits for blindness. (1d2)
+       Bites for poison damage. (3d4)
+
+
+--------------------------------------------
+105  Clear Mushroom patch                                   (,)
+     Speed ==2  Level     ==10  Exp ==1
+     AC    ==1  Eye-sight ==4  HD  ==1d1
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature is invisible.
+     Creature multiplies.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Shoots spores for normal damage. (1d1)
+
+
+--------------------------------------------
+106  Giant White Tick                                   (t)
+     Speed ==0  Level     ==10  Exp ==27
+     AC    ==40  Eye-sight ==12  HD  ==15d8
+     Creature is a monster.
+     Creature harmed by fire.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for poison damage. (2d6)
+
+
+--------------------------------------------
+107  Hairy Mold                                   (m)
+     Speed ==1  Level     ==10  Exp ==32
+     AC    ==15  Eye-sight ==2  HD  ==15d8
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature cannot be charmed or slept.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Hits for poison damage. (1d3)
+
+
+--------------------------------------------
+108  Disenchanter Mold                                   (m)
+     Speed ==1  Level     ==10  Exp ==40
+     AC    ==20  Eye-sight ==2  HD  ==16d8
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature cannot be charmed or slept.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 11 turns.
+       Drains mana for healing.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Touches for disenchants objects. (1d6)
+
+
+--------------------------------------------
+109  Giant Red Centipede                                   (c)
+     Speed ==2  Level     ==10  Exp ==24
+     AC    ==26  Eye-sight ==12  HD  ==3d8
+     Creature is a monster.
+     Creature harmed by acid.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Bites for normal damage. (1d2)
+       Stings for poison damage. (1d2)
+
+
+--------------------------------------------
+110  Creeping Gold Coins                                   ($)
+     Speed ==0  Level     ==10  Exp ==32
+     AC    ==36  Eye-sight ==5  HD  ==18d8
+     Creature is a monster.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Bites for normal damage. (2d5)
+       Breathes for poison damage. (3d5)
+
+
+--------------------------------------------
+111  Giant Fruit Fly                                   (F)
+     Speed ==2  Level     ==10  Exp ==4
+     AC    ==14  Eye-sight ==8  HD  ==2d2
+     Creature is a monster.
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature multiplies.
+   --Movement ==
+       Move and attack normally.
+       75% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d2)
+
+
+--------------------------------------------
+112  Brigand                                   (p)
+     Speed ==1  Level     ==10  Exp ==35
+     AC    ==32  Eye-sight ==20  HD  ==9d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has 1d2 object(s)/gold.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (2d4)
+       Touches for stealing object. (0d0)
+
+
+--------------------------------------------
+113  Orc Zombie                                   (z)
+     Speed ==1  Level     ==11  Exp ==30
+     AC    ==24  Eye-sight ==20  HD  ==11d8
+     Creature is a monster.
+     Creature is evil.
+     Creature is undead.
+     Creature harmed by fire.
+     Creature cannot be charmed or slept.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d4)
+       Hits for normal damage. (1d4)
+
+
+--------------------------------------------
+114  Orc Warrior                                   (o)
+     Speed ==1  Level     ==11  Exp ==34
+     AC    ==36  Eye-sight ==20  HD  ==11d8
+     Creature is a monster.
+     Creature is evil.
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (2d6)
+
+
+--------------------------------------------
+115  Vorpal Bunny                                   (r)
+     Speed ==2  Level     ==11  Exp ==2
+     AC    ==10  Eye-sight ==8  HD  ==2d3
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature seen with Infra-Vision.
+     Creature multiplies.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d5)
+
+
+--------------------------------------------
+116  Nasty little Gnome                                   (p)
+     Speed ==1  Level     ==11  Exp ==32
+     AC    ==10  Eye-sight ==18  HD  ==4d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 5 turns.
+       Can teleport short.
+       Can teleport long.
+       Cause light wounds.
+       Summon a monster.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d5)
+
+
+--------------------------------------------
+117  Hobgoblin                                   (H)
+     Speed ==1  Level     ==11  Exp ==38
+     AC    ==38  Eye-sight ==20  HD  ==12d8
+     Creature is a monster.
+     Creature is evil.
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d10)
+
+
+--------------------------------------------
+118  Black Mamba                                   (R)
+     Speed ==2  Level     ==12  Exp ==40
+     AC    ==32  Eye-sight ==20  HD  ==10d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by acid.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for poison damage. (4d4)
+
+
+--------------------------------------------
+119  Grape Jelly                                   (J)
+     Speed ==1  Level     ==12  Exp ==60
+     AC    ==1  Eye-sight ==2  HD  ==52d8
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature harmed by blue light.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 11 turns.
+       Drains mana for healing.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Touches for lose experience. (5d8)
+
+
+--------------------------------------------
+120  Master Yeek                                   (y)
+     Speed ==1  Level     ==12  Exp ==28
+     AC    ==24  Eye-sight ==18  HD  ==5d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 8 turns.
+       Can teleport short.
+       Slow person.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d8)
+
+
+--------------------------------------------
+121  Priest                                   (p)
+     Speed ==1  Level     ==12  Exp ==36
+     AC    ==22  Eye-sight ==20  HD  ==7d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has 1d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 5 turns.
+       Cause light wounds.
+       Hold person.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (2d3)
+
+
+--------------------------------------------
+122  Giant Clear Ant                                   (a)
+     Speed ==1  Level     ==12  Exp ==24
+     AC    ==18  Eye-sight ==12  HD  ==3d7
+     Creature is a monster.
+     Creature harmed by blue light.
+     Creature is invisible.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Bites for normal damage. (1d4)
+
+
+--------------------------------------------
+123  Air Spirit                                   (E)
+     Speed ==3  Level     ==12  Exp ==40
+     AC    ==20  Eye-sight ==12  HD  ==5d8
+     Creature harmed by cold.
+     Creature is invisible.
+   --Movement ==
+       Move and attack normally.
+       75% random movement.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d3)
+
+
+--------------------------------------------
+124  Skeleton Human                                   (s)
+     Speed ==1  Level     ==12  Exp ==38
+     AC    ==30  Eye-sight ==20  HD  ==12d8
+     Creature is evil.
+     Creature is undead.
+     Creature cannot be charmed or slept.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d8)
+
+
+--------------------------------------------
+125  Human Zombie                                   (z)
+     Speed ==1  Level     ==12  Exp ==34
+     AC    ==24  Eye-sight ==20  HD  ==11d8
+     Creature is a monster.
+     Creature is evil.
+     Creature is undead.
+     Creature harmed by fire.
+     Creature cannot be charmed or slept.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d4)
+       Hits for normal damage. (1d4)
+
+
+--------------------------------------------
+126  Moaning Spirit                                   (G)
+     Speed ==1  Level     ==12  Exp ==44
+     AC    ==20  Eye-sight ==6  HD  ==4d8
+     Creature is evil.
+     Creature is undead.
+     Creature cannot be charmed or slept.
+     Creature is invisible.
+     Creature picks up objects.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 14 turns.
+       Can teleport long.
+       Drains mana for healing.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+       Can phase through walls.
+   --Creature attacks ==
+       Wails for fear. (0d0)
+       Touches for lose dexterity. (1d8)
+
+
+--------------------------------------------
+127  Swordsman                                   (p)
+     Speed ==1  Level     ==12  Exp ==40
+     AC    ==34  Eye-sight ==20  HD  ==11d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has 1d2 object(s)/gold.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (3d5)
+
+
+--------------------------------------------
+128  Killer Brown Beetle                                   (K)
+     Speed ==1  Level     ==13  Exp ==38
+     AC    ==40  Eye-sight ==10  HD  ==13d8
+     Creature is a monster.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (3d4)
+
+
+--------------------------------------------
+129  Ogre                                   (o)
+     Speed ==1  Level     ==13  Exp ==42
+     AC    ==32  Eye-sight ==20  HD  ==13d8
+     Creature is a monster.
+     Creature is evil.
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (2d8)
+
+
+--------------------------------------------
+130  Giant Red Speckled Frog                                   (f)
+     Speed ==1  Level     ==13  Exp ==32
+     AC    ==20  Eye-sight ==12  HD  ==6d8
+     Creature is a monster.
+     Creature harmed by fire.
+     Creature harmed by acid.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (3d4)
+
+
+--------------------------------------------
+131  Magic User                                   (p)
+     Speed ==1  Level     ==13  Exp ==35
+     AC    ==10  Eye-sight ==20  HD  ==7d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has 1d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 3 turns.
+       Can teleport short.
+       Cause blindness.
+       Summon a monster.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (2d2)
+
+
+--------------------------------------------
+132  Black Orc                                   (o)
+     Speed ==1  Level     ==13  Exp ==40
+     AC    ==36  Eye-sight ==20  HD  ==12d8
+     Creature is a monster.
+     Creature is evil.
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (3d4)
+
+
+--------------------------------------------
+133  Giant Long-Eared Bat                                   (b)
+     Speed ==3  Level     ==13  Exp ==20
+     AC    ==20  Eye-sight ==12  HD  ==5d8
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature harmed by blue light.
+     Creature seen with Infra-Vision.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+       40% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d4)
+       Claws for normal damage. (1d2)
+       Claws for normal damage. (1d2)
+
+
+--------------------------------------------
+134  Giant Gnat                                   (F)
+     Speed ==3  Level     ==13  Exp ==1
+     AC    ==4  Eye-sight ==8  HD  ==1d2
+     Creature is a monster.
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature multiplies.
+   --Movement ==
+       Move and attack normally.
+       75% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d1)
+
+
+--------------------------------------------
+135  Killer Green Beetle                                   (K)
+     Speed ==1  Level     ==14  Exp ==46
+     AC    ==45  Eye-sight ==12  HD  ==16d8
+     Creature is a monster.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (4d4)
+
+
+--------------------------------------------
+136  Giant Flea                                   (F)
+     Speed ==2  Level     ==14  Exp ==1
+     AC    ==25  Eye-sight ==8  HD  ==2d2
+     Creature is a monster.
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature multiplies.
+   --Movement ==
+       Move and attack normally.
+       75% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d2)
+
+
+--------------------------------------------
+137  Giant White Dragon Fly                                   (F)
+     Speed ==1  Level     ==14  Exp ==54
+     AC    ==20  Eye-sight ==20  HD  ==5d8
+     Creature harmed by fire.
+     Creature harmed by poison.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 10 turns.
+       Breathes Frost Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for cold damage. (1d6)
+
+
+--------------------------------------------
+138  Hill Giant                                   (P)
+     Speed ==1  Level     ==14  Exp ==52
+     AC    ==36  Eye-sight ==20  HD  ==16d8
+     Creature is evil.
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (3d6)
+
+
+--------------------------------------------
+139  Skeleton Hobgoblin                                   (s)
+     Speed ==1  Level     ==14  Exp ==46
+     AC    ==34  Eye-sight ==20  HD  ==13d8
+     Creature is evil.
+     Creature is undead.
+     Creature cannot be charmed or slept.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (2d5)
+
+
+--------------------------------------------
+140  Flesh Golem                                   (g)
+     Speed ==1  Level     ==14  Exp ==48
+     AC    ==10  Eye-sight ==12  HD  ==12d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature harmed by blue light.
+     Creature cannot be charmed or slept.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d6)
+       Hits for normal damage. (1d6)
+
+
+--------------------------------------------
+141  White Dragon Bat                                   (b)
+     Speed ==3  Level     ==14  Exp ==40
+     AC    ==20  Eye-sight ==12  HD  ==2d6
+     Creature harmed by cold.
+     Creature harmed by poison.
+     Creature harmed by blue light.
+     Creature seen with Infra-Vision.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 4 turns.
+       Breathes Frost Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for cold damage. (1d3)
+
+
+--------------------------------------------
+142  Giant Black Louse                                   (l)
+     Speed ==2  Level     ==14  Exp ==1
+     AC    ==7  Eye-sight ==6  HD  ==1d1
+     Creature is a monster.
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature harmed by acid.
+     Creature harmed by blue light.
+     Creature multiplies.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d2)
+
+
+--------------------------------------------
+143  Guardian Naga                                   (n)
+     Speed ==1  Level     ==15  Exp ==60
+     AC    ==50  Eye-sight ==20  HD  ==24d8
+     Creature is a monster.
+     Creature is evil.
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature harmed by acid.
+     Creature seen with Infra-Vision.
+     Creature picks up objects.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has 1d2 object(s)/gold.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Crushes you for normal damage. (2d8)
+       Bites for normal damage. (1d8)
+
+
+--------------------------------------------
+144  Giant Grey Bat                                   (b)
+     Speed ==3  Level     ==15  Exp ==22
+     AC    ==22  Eye-sight ==12  HD  ==4d8
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature harmed by blue light.
+     Creature seen with Infra-Vision.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d6)
+       Claws for normal damage. (1d2)
+       Claws for normal damage. (1d2)
+
+
+--------------------------------------------
+145  Giant Clear Centipede                                   (c)
+     Speed ==1  Level     ==15  Exp ==30
+     AC    ==30  Eye-sight ==10  HD  ==5d8
+     Creature is a monster.
+     Creature is invisible.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Bites for normal damage. (2d4)
+       Stings for normal damage. (2d4)
+
+
+--------------------------------------------
+146  Giant Yellow Tick                                   (t)
+     Speed ==0  Level     ==15  Exp ==48
+     AC    ==48  Eye-sight ==12  HD  ==20d8
+     Creature is a monster.
+     Creature harmed by fire.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for poison damage. (3d9)
+
+
+--------------------------------------------
+147  Giant Ebony Ant                                   (a)
+     Speed ==1  Level     ==15  Exp ==3
+     AC    ==24  Eye-sight ==12  HD  ==3d4
+     Creature is a monster.
+     Creature multiplies.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Bites for normal damage. (2d3)
+
+
+--------------------------------------------
+148  Frost Giant                                   (P)
+     Speed ==1  Level     ==15  Exp ==54
+     AC    ==38  Eye-sight ==20  HD  ==17d8
+     Creature is evil.
+     Creature harmed by fire.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for cold damage. (3d6)
+
+
+--------------------------------------------
+149  Clay Golem                                   (g)
+     Speed ==1  Level     ==15  Exp ==50
+     AC    ==20  Eye-sight ==12  HD  ==14d8
+     Creature harmed by Stone-to-Mud.
+     Creature cannot be charmed or slept.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d8)
+       Hits for normal damage. (1d8)
+
+
+--------------------------------------------
+150  Huge White Bat                                   (b)
+     Speed ==2  Level     ==15  Exp ==3
+     AC    ==12  Eye-sight ==7  HD  ==3d8
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature harmed by blue light.
+     Creature seen with Infra-Vision.
+     Creature multiplies.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d6)
+
+
+--------------------------------------------
+151  Giant Tan Bat                                   (b)
+     Speed ==2  Level     ==15  Exp ==18
+     AC    ==18  Eye-sight ==12  HD  ==3d8
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature harmed by blue light.
+     Creature seen with Infra-Vision.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for fear. (1d2)
+       Claws for normal damage. (1d1)
+       Claws for normal damage. (1d1)
+
+
+--------------------------------------------
+152  Violet Mold                                   (m)
+     Speed ==1  Level     ==15  Exp ==50
+     AC    ==15  Eye-sight ==2  HD  ==17d8
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature cannot be charmed or slept.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 9 turns.
+       Drains mana for healing.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Hits for paralyzation. (1d2)
+
+
+--------------------------------------------
+153  Umber Hulk                                   (U)
+     Speed ==1  Level     ==16  Exp ==75
+     AC    ==20  Eye-sight ==20  HD  ==20d8
+     Creature is a monster.
+     Creature is evil.
+     Creature harmed by fire.
+     Creature harmed by blue light.
+     Creature seen with Infra-Vision.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Gazes for confusion. (0d0)
+       Hits for normal damage. (1d6)
+       Hits for normal damage. (1d6)
+       Bites for normal damage. (2d6)
+
+
+--------------------------------------------
+154  Gelatinous Cube                                   (C)
+     Speed ==0  Level     ==16  Exp ==36
+     AC    ==18  Eye-sight ==12  HD  ==45d8
+     Creature Eats/kills other creatures.
+     Creature is a monster.
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature picks up objects.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 2d2 object(s)/gold.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Touches for acid damage. (1d10)
+
+
+--------------------------------------------
+155  Giant Black Rat                                   (r)
+     Speed ==1  Level     ==16  Exp ==3
+     AC    ==16  Eye-sight ==8  HD  ==3d4
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature seen with Infra-Vision.
+     Creature multiplies.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for poison damage. (1d5)
+
+
+--------------------------------------------
+156  Giant Green Dragon Fly                                   (F)
+     Speed ==1  Level     ==16  Exp ==58
+     AC    ==20  Eye-sight ==20  HD  ==5d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by poison.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 10 turns.
+       Breathes Gas Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for poison damage. (1d6)
+
+
+--------------------------------------------
+157  Fire Giant                                   (P)
+     Speed ==1  Level     ==16  Exp ==62
+     AC    ==40  Eye-sight ==20  HD  ==20d8
+     Creature is evil.
+     Creature harmed by cold.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for fire damage. (3d7)
+
+
+--------------------------------------------
+158  Green Dragon Bat                                   (b)
+     Speed ==3  Level     ==16  Exp ==44
+     AC    ==22  Eye-sight ==12  HD  ==2d7
+     Creature harmed by cold.
+     Creature harmed by poison.
+     Creature harmed by blue light.
+     Creature seen with Infra-Vision.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 4 turns.
+       Breathes Gas Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for poison damage. (1d3)
+
+
+--------------------------------------------
+159  Quasit                                   (q)
+     Speed ==1  Level     ==16  Exp ==48
+     AC    ==30  Eye-sight ==20  HD  ==5d8
+     Creature is evil.
+     Creature is invisible.
+     Carries object(s).
+       Has 1d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 10 turns.
+       Can teleport short.
+       Can teleport long.
+       Teleport player to itself.
+       Cause light wounds.
+       Cause fear.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+       Can open doors.
+   --Creature attacks ==
+       Bites for lose dexterity. (1d6)
+       Claws for normal damage. (1d3)
+       Claws for normal damage. (1d3)
+
+
+--------------------------------------------
+160  Troll                                   (T)
+     Speed ==1  Level     ==17  Exp ==64
+     AC    ==40  Eye-sight ==20  HD  ==17d8
+     Creature is a monster.
+     Creature is evil.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d4)
+       Hits for normal damage. (1d4)
+       Bites for normal damage. (1d6)
+
+
+--------------------------------------------
+161  Water Spirit                                   (E)
+     Speed ==2  Level     ==17  Exp ==58
+     AC    ==28  Eye-sight ==12  HD  ==8d8
+     Creature harmed by fire.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Hits for normal damage. (2d4)
+
+
+--------------------------------------------
+162  Giant Brown Scorpion                                   (S)
+     Speed ==1  Level     ==17  Exp ==62
+     AC    ==44  Eye-sight ==14  HD  ==11d8
+     Creature is a monster.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (2d4)
+       Stings for lowering strength. (1d7)
+
+
+--------------------------------------------
+163  Earth Spirit                                   (E)
+     Speed ==1  Level     ==17  Exp ==64
+     AC    ==40  Eye-sight ==10  HD  ==13d8
+     Creature harmed by Stone-to-Mud.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Hits for normal damage. (1d8)
+       Hits for normal damage. (1d8)
+
+
+--------------------------------------------
+164  Fire Spirit                                   (E)
+     Speed ==2  Level     ==18  Exp ==66
+     AC    ==30  Eye-sight ==20  HD  ==10d8
+     Creature harmed by cold.
+     Creature seen with Infra-Vision.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Hits for fire damage. (2d6)
+
+
+--------------------------------------------
+165  Urik-Hai Orc                                   (o)
+     Speed ==1  Level     ==18  Exp ==68
+     AC    ==42  Eye-sight ==20  HD  ==14d8
+     Creature is a monster.
+     Creature is evil.
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (3d5)
+
+
+--------------------------------------------
+166  Stone Giant                                   (P)
+     Speed ==1  Level     ==18  Exp ==80
+     AC    ==40  Eye-sight ==20  HD  ==22d8
+     Creature is evil.
+     Creature harmed by Stone-to-Mud.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (3d8)
+
+
+--------------------------------------------
+167  Stone Golem                                   (g)
+     Speed ==0  Level     ==19  Exp ==100
+     AC    ==75  Eye-sight ==12  HD  ==28d8
+     Creature harmed by Stone-to-Mud.
+     Creature cannot be charmed or slept.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d10)
+       Hits for normal damage. (1d10)
+
+
+--------------------------------------------
+168  Grey Ooze                                   (O)
+     Speed ==1  Level     ==19  Exp ==40
+     AC    ==10  Eye-sight ==15  HD  ==6d8
+     Creature Eats/kills other creatures.
+     Creature is a monster.
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature picks up objects.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Movement ==
+       Move and attack normally.
+       75% random movement.
+       Can open doors.
+   --Creature attacks ==
+       Touches for cold damage. (2d6)
+
+
+--------------------------------------------
+169  Disenchanter Ooze                                   (O)
+     Speed ==1  Level     ==19  Exp ==50
+     AC    ==15  Eye-sight ==15  HD  ==6d8
+     Creature Eats/kills other creatures.
+     Creature is a monster.
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature picks up objects.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Movement ==
+       Move and attack normally.
+       75% random movement.
+       Can open doors.
+   --Creature attacks ==
+       Touches for disenchants objects. (0d0)
+
+
+--------------------------------------------
+170  Giant Spotted Rat                                   (r)
+     Speed ==1  Level     ==19  Exp ==3
+     AC    ==20  Eye-sight ==8  HD  ==4d3
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature seen with Infra-Vision.
+     Creature multiplies.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for poison damage. (1d5)
+
+
+--------------------------------------------
+171  Mummified Kobold                                   (M)
+     Speed ==1  Level     ==19  Exp ==46
+     AC    ==24  Eye-sight ==20  HD  ==13d8
+     Creature is evil.
+     Creature is undead.
+     Creature harmed by fire.
+     Creature cannot be charmed or slept.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d6)
+       Hits for normal damage. (1d6)
+
+
+--------------------------------------------
+172  Killer Black Beetle                                   (K)
+     Speed ==1  Level     ==19  Exp ==75
+     AC    ==46  Eye-sight ==14  HD  ==18d8
+     Creature is a monster.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (4d5)
+
+
+--------------------------------------------
+173  Red Mold                                   (m)
+     Speed ==1  Level     ==19  Exp ==64
+     AC    ==16  Eye-sight ==2  HD  ==17d8
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature cannot be charmed or slept.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Touches for fire damage. (4d4)
+
+
+--------------------------------------------
+174  Quylthulg                                   (Q)
+     Speed ==1  Level     ==20  Exp ==200
+     AC    ==1  Eye-sight ==10  HD  ==4d8
+     Creature cannot be charmed or slept.
+     Creature has MAX hit points.
+     Creature is invisible.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 7 turns.
+       Can teleport short.
+       Summon a monster.
+   --Movement ==
+   --Creature attacks ==
+     **Unknown value** **Unknown value** (0d0)
+
+
+--------------------------------------------
+175  Giant Red Bat                                   (b)
+     Speed ==2  Level     ==20  Exp ==40
+     AC    ==24  Eye-sight ==12  HD  ==5d8
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature seen with Infra-Vision.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d7)
+       Claws for normal damage. (1d3)
+       Claws for normal damage. (1d3)
+
+
+--------------------------------------------
+176  Giant Black Dragon Fly                                   (F)
+     Speed ==1  Level     ==20  Exp ==58
+     AC    ==22  Eye-sight ==20  HD  ==4d8
+     Creature is a monster.
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by poison.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 9 turns.
+       Breathes Acid Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for blindness. (1d6)
+
+
+--------------------------------------------
+177  Cloud Giant                                   (P)
+     Speed ==1  Level     ==20  Exp ==125
+     AC    ==44  Eye-sight ==20  HD  ==24d8
+     Creature is evil.
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by blue light.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for lightning damage. (3d8)
+
+
+--------------------------------------------
+178  Black Dragon Bat                                   (b)
+     Speed ==3  Level     ==21  Exp ==50
+     AC    ==24  Eye-sight ==12  HD  ==2d8
+     Creature harmed by cold.
+     Creature harmed by poison.
+     Creature harmed by blue light.
+     Creature seen with Infra-Vision.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 4 turns.
+       Breathes Acid Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for acid damage. (1d3)
+
+
+--------------------------------------------
+179  Blue Dragon Bat                                   (b)
+     Speed ==3  Level     ==21  Exp ==54
+     AC    ==26  Eye-sight ==12  HD  ==3d6
+     Creature harmed by cold.
+     Creature harmed by poison.
+     Creature harmed by blue light.
+     Creature seen with Infra-Vision.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 4 turns.
+       Breathes Lightning Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for lightning damage. (1d3)
+
+
+--------------------------------------------
+180  Mummified Orc                                   (M)
+     Speed ==1  Level     ==21  Exp ==56
+     AC    ==28  Eye-sight ==20  HD  ==14d8
+     Creature is evil.
+     Creature is undead.
+     Creature harmed by fire.
+     Creature cannot be charmed or slept.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (2d4)
+       Hits for normal damage. (2d4)
+
+
+--------------------------------------------
+181  Killer Boring Beetle                                   (K)
+     Speed ==1  Level     ==21  Exp ==70
+     AC    ==48  Eye-sight ==12  HD  ==18d8
+     Creature is a monster.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Bites for normal damage. (4d5)
+
+
+--------------------------------------------
+182  Killer Stag Beetle                                   (K)
+     Speed ==1  Level     ==22  Exp ==80
+     AC    ==50  Eye-sight ==12  HD  ==20d8
+     Creature is a monster.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (3d4)
+       Hits for normal damage. (1d12)
+
+
+--------------------------------------------
+183  Black Mold                                   (m)
+     Speed ==1  Level     ==22  Exp ==68
+     AC    ==18  Eye-sight ==2  HD  ==15d8
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature cannot be charmed or slept.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Hits for normal damage. (4d3)
+
+
+--------------------------------------------
+184  Iron Golem                                   (g)
+     Speed ==-1  Level     ==22  Exp ==160
+     AC    ==99  Eye-sight ==12  HD  ==80d8
+     Creature harmed by acid.
+     Creature cannot be charmed or slept.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d12)
+       Hits for normal damage. (1d12)
+
+
+--------------------------------------------
+185  Giant Yellow Scorpion                                   (S)
+     Speed ==1  Level     ==22  Exp ==60
+     AC    ==38  Eye-sight ==12  HD  ==12d8
+     Creature is a monster.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d8)
+       Stings for poison damage. (2d5)
+
+
+--------------------------------------------
+186  Green Ooze                                   (O)
+     Speed ==0  Level     ==22  Exp ==6
+     AC    ==5  Eye-sight ==15  HD  ==4d8
+     Creature is a monster.
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature multiplies.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Touches for acid damage. (2d3)
+
+
+--------------------------------------------
+187  Black Ooze                                   (O)
+     Speed ==-1  Level     ==23  Exp ==7
+     AC    ==6  Eye-sight ==10  HD  ==6d8
+     Creature Eats/kills other creatures.
+     Creature is a monster.
+     Creature harmed by cold.
+     Creature harmed by acid.
+     Creature harmed by blue light.
+     Creature picks up objects.
+     Creature multiplies.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 11 turns.
+       Drains mana for healing.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+       Can open doors.
+   --Creature attacks ==
+       Touches for corrosion damage. (2d6)
+
+
+--------------------------------------------
+188  Warrior                                   (p)
+     Speed ==1  Level     ==23  Exp ==60
+     AC    ==40  Eye-sight ==20  HD  ==15d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Creature picks up objects.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has 1d2 object(s)/gold.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (3d5)
+
+
+--------------------------------------------
+189  Red Dragon Bat                                   (b)
+     Speed ==3  Level     ==23  Exp ==60
+     AC    ==28  Eye-sight ==12  HD  ==3d8
+     Creature harmed by cold.
+     Creature harmed by poison.
+     Creature harmed by blue light.
+     Creature seen with Infra-Vision.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 4 turns.
+       Breathes Fire Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for fire damage. (1d3)
+
+
+--------------------------------------------
+190  Killer Blue Beetle                                   (K)
+     Speed ==1  Level     ==23  Exp ==85
+     AC    ==50  Eye-sight ==15  HD  ==20d8
+     Creature is a monster.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (4d5)
+
+
+--------------------------------------------
+191  Giant Silver Ant                                   (a)
+     Speed ==1  Level     ==23  Exp ==45
+     AC    ==38  Eye-sight ==15  HD  ==6d8
+     Creature is a monster.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for acid damage. (4d4)
+
+
+--------------------------------------------
+192  Crimson Mold                                   (m)
+     Speed ==1  Level     ==23  Exp ==65
+     AC    ==18  Eye-sight ==2  HD  ==16d8
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature cannot be charmed or slept.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Hits for normal damage. (1d3)
+       Touches for fear. (0d0)
+
+
+--------------------------------------------
+193  Forest Wight                                   (W)
+     Speed ==1  Level     ==24  Exp ==140
+     AC    ==30  Eye-sight ==20  HD  ==12d8
+     Creature is a monster.
+     Creature is evil.
+     Creature is undead.
+     Creature harmed by fire.
+     Creature harmed by blue light.
+     Creature cannot be charmed or slept.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 15 turns.
+       Cause fear.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Hits for normal damage. (1d6)
+       Hits for normal damage. (1d6)
+       Touches for lose experience. (12d8)
+
+
+--------------------------------------------
+194  Berzerker                                   (p)
+     Speed ==1  Level     ==24  Exp ==65
+     AC    ==20  Eye-sight ==20  HD  ==15d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d8)
+       Hits for normal damage. (1d8)
+
+
+--------------------------------------------
+195  Mummified Human                                   (M)
+     Speed ==1  Level     ==24  Exp ==70
+     AC    ==34  Eye-sight ==20  HD  ==17d8
+     Creature is evil.
+     Creature is undead.
+     Creature harmed by fire.
+     Creature cannot be charmed or slept.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (2d4)
+       Hits for normal damage. (2d4)
+
+
+--------------------------------------------
+196  Banshee                                   (G)
+     Speed ==2  Level     ==24  Exp ==60
+     AC    ==24  Eye-sight ==20  HD  ==6d8
+     Creature is evil.
+     Creature is undead.
+     Creature cannot be charmed or slept.
+     Creature is invisible.
+     Creature picks up objects.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 15 turns.
+       Can teleport long.
+       Drains mana for healing.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+       40% random movement.
+       Can phase through walls.
+   --Creature attacks ==
+       Wails for fear. (0d0)
+       Touches for lose experience. (14d8)
+
+
+--------------------------------------------
+197  Giant Troll                                   (T)
+     Speed ==1  Level     ==25  Exp ==85
+     AC    ==40  Eye-sight ==20  HD  ==19d8
+     Creature is a monster.
+     Creature is evil.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d6)
+       Hits for normal damage. (1d6)
+       Bites for normal damage. (3d4)
+
+
+--------------------------------------------
+198  Giant Brown Tick                                   (t)
+     Speed ==0  Level     ==25  Exp ==70
+     AC    ==50  Eye-sight ==12  HD  ==18d8
+     Creature is a monster.
+     Creature harmed by fire.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for poison damage. (1d10)
+       Stings for blindness. (1d1)
+
+
+--------------------------------------------
+199  Killer Red Beetle                                   (K)
+     Speed ==1  Level     ==25  Exp ==85
+     AC    ==50  Eye-sight ==15  HD  ==20d8
+     Creature is a monster.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for lowering strength. (4d4)
+
+
+--------------------------------------------
+200  Wooden Mold                                   (m)
+     Speed ==1  Level     ==25  Exp ==100
+     AC    ==50  Eye-sight ==2  HD  ==25d8
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature cannot be charmed or slept.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Breathes for poison damage. (2d6)
+
+
+--------------------------------------------
+201  Giant Blue Dragon Fly                                   (F)
+     Speed ==1  Level     ==25  Exp ==75
+     AC    ==24  Eye-sight ==20  HD  ==6d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 9 turns.
+       Breathes Lightning Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d6)
+
+
+--------------------------------------------
+202  Giant Grey Ant Lion                                   (A)
+     Speed ==1  Level     ==26  Exp ==90
+     AC    ==40  Eye-sight ==10  HD  ==19d8
+     Creature Eats/kills other creatures.
+     Creature is a monster.
+     Creature harmed by cold.
+     Creature harmed by fire.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (2d12)
+
+
+--------------------------------------------
+203  Disenchanter Bat                                   (b)
+     Speed ==3  Level     ==26  Exp ==75
+     AC    ==24  Eye-sight ==14  HD  ==4d8
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature seen with Infra-Vision.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Hits for disenchants objects. (0d0)
+
+
+--------------------------------------------
+204  Giant Fire Tick                                   (t)
+     Speed ==1  Level     ==26  Exp ==90
+     AC    ==54  Eye-sight ==14  HD  ==16d8
+     Creature is a monster.
+     Creature harmed by cold.
+     Creature seen with Infra-Vision.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Spits for fire damage. (3d7)
+
+
+--------------------------------------------
+205  White Wraith                                   (W)
+     Speed ==1  Level     ==26  Exp ==165
+     AC    ==40  Eye-sight ==20  HD  ==15d8
+     Creature is a monster.
+     Creature is evil.
+     Creature is undead.
+     Creature harmed by fire.
+     Creature harmed by blue light.
+     Creature cannot be charmed or slept.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d6)
+       Hits for normal damage. (1d6)
+       Touches for lose experience. (15d8)
+
+
+--------------------------------------------
+206  Giant Black Scorpion                                   (S)
+     Speed ==1  Level     ==26  Exp ==85
+     AC    ==50  Eye-sight ==12  HD  ==13d8
+     Creature is a monster.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Bites for normal damage. (1d10)
+       Stings for poison damage. (2d5)
+
+
+--------------------------------------------
+207  Clear Ooze                                   (O)
+     Speed ==1  Level     ==26  Exp ==12
+     AC    ==14  Eye-sight ==10  HD  ==4d8
+     Creature Eats/kills other creatures.
+     Creature is a monster.
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature is invisible.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+       Can open doors.
+   --Creature attacks ==
+       Touches for confusion. (1d8)
+
+
+--------------------------------------------
+208  Killer Fire Beetle                                   (K)
+     Speed ==1  Level     ==27  Exp ==95
+     AC    ==45  Eye-sight ==14  HD  ==13d8
+     Creature is a monster.
+     Creature harmed by cold.
+     Creature seen with Infra-Vision.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (3d4)
+       Spits for fire damage. (4d5)
+
+
+--------------------------------------------
+209  Vampire                                   (V)
+     Speed ==1  Level     ==27  Exp ==175
+     AC    ==45  Eye-sight ==20  HD  ==20d8
+     Creature is a monster.
+     Creature is evil.
+     Creature is undead.
+     Creature harmed by fire.
+     Creature harmed by blue light.
+     Creature cannot be charmed or slept.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has 1d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 9 turns.
+       Hold person.
+       Cause fear.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Hits for normal damage. (1d6)
+       Hits for normal damage. (1d6)
+       Touches for lose experience. (18d8)
+
+
+--------------------------------------------
+210  Giant Red Dragon Fly                                   (F)
+     Speed ==1  Level     ==27  Exp ==75
+     AC    ==24  Eye-sight ==20  HD  ==7d8
+     Creature harmed by cold.
+     Creature harmed by poison.
+     Creature seen with Infra-Vision.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 8 turns.
+       Breathes Fire Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for fear. (1d6)
+
+
+--------------------------------------------
+211  Shimmering Mold                                   (m)
+     Speed ==1  Level     ==27  Exp ==180
+     AC    ==24  Eye-sight ==2  HD  ==32d8
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature cannot be charmed or slept.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move only to attack.
+   --Creature attacks ==
+       Touches for lightning damage. (5d4)
+
+
+--------------------------------------------
+212  Black Knight                                   (p)
+     Speed ==1  Level     ==28  Exp ==140
+     AC    ==60  Eye-sight ==20  HD  ==25d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has 1d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 15 turns.
+       Cause serious wounds.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (5d5)
+
+
+--------------------------------------------
+213  Mage                                   (p)
+     Speed ==1  Level     ==28  Exp ==150
+     AC    ==30  Eye-sight ==20  HD  ==10d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has 1d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 3 turns.
+       Can teleport short.
+       Can teleport long.
+       Teleport player to itself.
+       Cause blindness.
+       Cause confusion.
+       Summon a monster.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (2d5)
+
+
+--------------------------------------------
+214  Ice Troll                                   (T)
+     Speed ==1  Level     ==28  Exp ==160
+     AC    ==46  Eye-sight ==20  HD  ==22d8
+     Creature is a monster.
+     Creature is evil.
+     Creature harmed by fire.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d5)
+       Hits for normal damage. (1d5)
+       Bites for cold damage. (3d6)
+
+
+--------------------------------------------
+215  Giant Purple Worm                                   (w)
+     Speed ==1  Level     ==29  Exp ==400
+     AC    ==65  Eye-sight ==14  HD  ==65d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Hits for normal damage. (1d8)
+       Bites for acid damage. (2d8)
+       Stings for poison damage. (1d8)
+
+
+--------------------------------------------
+216  Young Blue Dragon                                   (d)
+     Speed ==1  Level     ==29  Exp ==300
+     AC    ==50  Eye-sight ==20  HD  ==33d8
+     Creature is a dragon.
+     Creature is evil.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 1d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 11 turns.
+       Cause fear.
+       Breathes Lightning Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Claws for normal damage. (1d4)
+       Claws for normal damage. (1d4)
+       Bites for normal damage. (1d6)
+
+
+--------------------------------------------
+217  Young White Dragon                                   (d)
+     Speed ==1  Level     ==29  Exp ==275
+     AC    ==50  Eye-sight ==20  HD  ==32d8
+     Creature is a dragon.
+     Creature is evil.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 1d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 11 turns.
+       Cause fear.
+       Breathes Frost Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Claws for normal damage. (1d4)
+       Claws for normal damage. (1d4)
+       Bites for normal damage. (1d6)
+
+
+--------------------------------------------
+218  Young Green Dragon                                   (d)
+     Speed ==1  Level     ==29  Exp ==290
+     AC    ==50  Eye-sight ==20  HD  ==32d8
+     Creature is a dragon.
+     Creature is evil.
+     Creature seen with Infra-Vision.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 1d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 11 turns.
+       Cause fear.
+       Breathes Gas Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Claws for normal damage. (1d4)
+       Claws for normal damage. (1d4)
+       Bites for normal damage. (1d6)
+
+
+--------------------------------------------
+219  Giant Fire Bat                                   (b)
+     Speed ==2  Level     ==29  Exp ==85
+     AC    ==30  Eye-sight ==14  HD  ==5d8
+     Creature harmed by cold.
+     Creature harmed by poison.
+     Creature seen with Infra-Vision.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+   --Creature attacks ==
+       Bites for fire damage. (3d6)
+       Claws for normal damage. (1d4)
+       Claws for normal damage. (1d4)
+
+
+--------------------------------------------
+220  Giant Glowing Rat                                   (r)
+     Speed ==1  Level     ==29  Exp ==4
+     AC    ==24  Eye-sight ==8  HD  ==3d3
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by poison.
+     Creature seen with Infra-Vision.
+     Creature multiplies.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for lightning damage. (2d6)
+
+
+--------------------------------------------
+221  Skeleton Troll                                   (s)
+     Speed ==1  Level     ==30  Exp ==225
+     AC    ==55  Eye-sight ==20  HD  ==14d8
+     Creature is evil.
+     Creature is undead.
+     Creature cannot be charmed or slept.
+     Creature has MAX hit points.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d6)
+       Hits for normal damage. (1d6)
+       Bites for normal damage. (3d4)
+
+
+--------------------------------------------
+222  Giant Lightning Bat                                   (b)
+     Speed ==2  Level     ==30  Exp ==80
+     AC    ==34  Eye-sight ==15  HD  ==8d8
+     Creature is a monster.
+     Creature harmed by poison.
+     Creature seen with Infra-Vision.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for lightning damage. (3d8)
+       Claws for normal damage. (1d5)
+       Claws for normal damage. (1d5)
+
+
+--------------------------------------------
+223  Giant Static Ant                                   (a)
+     Speed ==1  Level     ==30  Exp ==80
+     AC    ==40  Eye-sight ==10  HD  ==8d8
+     Creature is a monster.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for lightning damage. (5d5)
+
+
+--------------------------------------------
+224  Grave Wight                                   (W)
+     Speed ==1  Level     ==30  Exp ==325
+     AC    ==35  Eye-sight ==20  HD  ==12d8
+     Creature is a monster.
+     Creature is evil.
+     Creature is undead.
+     Creature harmed by fire.
+     Creature harmed by blue light.
+     Creature cannot be charmed or slept.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 10 turns.
+       Cause serious wounds.
+       Cause confusion.
+       Cause fear.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d7)
+       Hits for normal damage. (1d7)
+       Touches for lose experience. (20d8)
+
+
+--------------------------------------------
+225  Killer Slicer Beetle                                   (K)
+     Speed ==1  Level     ==30  Exp ==200
+     AC    ==55  Eye-sight ==14  HD  ==22d8
+     Creature is a monster.
+     Creature harmed by cold.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (5d8)
+
+
+--------------------------------------------
+226  Giant White Ant Lion                                   (A)
+     Speed ==1  Level     ==30  Exp ==175
+     AC    ==45  Eye-sight ==12  HD  ==20d8
+     Creature Eats/kills other creatures.
+     Creature is a monster.
+     Creature harmed by fire.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for cold damage. (3d10)
+
+
+--------------------------------------------
+227  Ghost                                   (G)
+     Speed ==2  Level     ==31  Exp ==350
+     AC    ==30  Eye-sight ==20  HD  ==13d8
+     Creature is evil.
+     Creature is undead.
+     Creature cannot be charmed or slept.
+     Creature has MAX hit points.
+     Creature is invisible.
+     Creature picks up objects.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has 1d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 15 turns.
+       Can teleport long.
+       Drains mana for healing.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+       Can phase through walls.
+   --Creature attacks ==
+       Gazes for fear. (0d0)
+       Touches for lose experience. (22d8)
+       Claws for lose intelligence. (1d10)
+
+
+--------------------------------------------
+228  Giant Black Ant Lion                                   (A)
+     Speed ==1  Level     ==31  Exp ==170
+     AC    ==45  Eye-sight ==14  HD  ==23d8
+     Creature Eats/kills other creatures.
+     Creature is a monster.
+     Creature harmed by cold.
+     Creature harmed by fire.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (2d12)
+       Spits for acid damage. (3d6)
+
+
+--------------------------------------------
+229  Death Watch Beetle                                   (K)
+     Speed ==1  Level     ==31  Exp ==190
+     AC    ==60  Eye-sight ==16  HD  ==25d8
+     Creature is a monster.
+     Creature harmed by cold.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (5d4)
+       Wails for normal damage. (5d6)
+
+
+--------------------------------------------
+230  Ogre Magi                                   (o)
+     Speed ==1  Level     ==31  Exp ==250
+     AC    ==42  Eye-sight ==20  HD  ==14d8
+     Creature is evil.
+     Creature is undead.
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 6 turns.
+       Can teleport short.
+       Teleport player to itself.
+       Cause serious wounds.
+       Hold person.
+       Summon a monster.
+       Slow person.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (3d6)
+
+
+--------------------------------------------
+231  Crystal Ooze                                   (O)
+     Speed ==-1  Level     ==31  Exp ==8
+     AC    ==30  Eye-sight ==5  HD  ==12d8
+     Creature Eats/kills other creatures.
+     Creature is a monster.
+     Creature harmed by cold.
+     Creature harmed by acid.
+     Creature is invisible.
+     Creature picks up objects.
+     Creature multiplies.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+   --Movement ==
+       Move only to attack.
+       20% random movement.
+   --Creature attacks ==
+       Touches for cold damage. (4d4)
+
+
+--------------------------------------------
+232  Two-Headed Troll                                   (T)
+     Speed ==1  Level     ==32  Exp ==275
+     AC    ==48  Eye-sight ==20  HD  ==14d8
+     Creature is a monster.
+     Creature is evil.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d8)
+       Hits for normal damage. (1d8)
+       Bites for normal damage. (1d6)
+       Bites for normal damage. (1d6)
+
+
+--------------------------------------------
+233  Invisible Stalker                                   (E)
+     Speed ==3  Level     ==32  Exp ==200
+     AC    ==46  Eye-sight ==20  HD  ==19d8
+     Creature is invisible.
+   --Movement ==
+       Move and attack normally.
+       75% random movement.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d6)
+
+
+--------------------------------------------
+234  Giant Hunter Ant                                   (a)
+     Speed ==1  Level     ==32  Exp ==150
+     AC    ==40  Eye-sight ==16  HD  ==12d8
+     Creature is a monster.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Bites for normal damage. (4d8)
+
+
+--------------------------------------------
+235  Ninja                                   (p)
+     Speed ==1  Level     ==32  Exp ==300
+     AC    ==65  Eye-sight ==20  HD  ==15d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for poison damage. (3d4)
+       Hits for lowering strength. (3d4)
+
+
+--------------------------------------------
+236  Barrow Wight                                   (W)
+     Speed ==1  Level     ==33  Exp ==375
+     AC    ==40  Eye-sight ==20  HD  ==13d8
+     Creature is a monster.
+     Creature is evil.
+     Creature is undead.
+     Creature harmed by fire.
+     Creature harmed by blue light.
+     Creature cannot be charmed or slept.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 8 turns.
+       Cause serious wounds.
+       Hold person.
+       Cause fear.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d8)
+       Hits for normal damage. (1d8)
+       Touches for lose experience. (26d8)
+
+
+--------------------------------------------
+237  Skeleton 2-Headed Troll                                   (s)
+     Speed ==1  Level     ==33  Exp ==325
+     AC    ==48  Eye-sight ==20  HD  ==20d8
+     Creature is evil.
+     Creature is undead.
+     Creature cannot be charmed or slept.
+     Creature has MAX hit points.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d9)
+       Hits for normal damage. (1d9)
+       Bites for normal damage. (1d5)
+       Bites for normal damage. (1d5)
+
+
+--------------------------------------------
+238  Water Elemental                                   (E)
+     Speed ==1  Level     ==33  Exp ==325
+     AC    ==36  Eye-sight ==12  HD  ==25d8
+     Creature harmed by fire.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Hits for normal damage. (1d10)
+       Hits for normal damage. (1d10)
+
+
+--------------------------------------------
+239  Fire Elemental                                   (E)
+     Speed ==0  Level     ==33  Exp ==350
+     AC    ==40  Eye-sight ==16  HD  ==25d8
+     Creature Eats/kills other creatures.
+     Creature harmed by cold.
+     Creature seen with Infra-Vision.
+   --Movement ==
+       Move and attack normally.
+       40% random movement.
+       Can open doors.
+   --Creature attacks ==
+       Hits for fire damage. (4d6)
+
+
+--------------------------------------------
+240  Lich                                   (L)
+     Speed ==1  Level     ==34  Exp ==750
+     AC    ==50  Eye-sight ==20  HD  ==25d8
+     Creature is evil.
+     Creature is undead.
+     Creature cannot be charmed or slept.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 1d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 5 turns.
+       Can teleport short.
+       Can teleport long.
+       Teleport player to itself.
+       Cause serious wounds.
+       Hold person.
+       Cause blindness.
+       Cause confusion.
+       Cause fear.
+       Slow person.
+       Drains mana for healing.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Touches for lose dexterity. (2d8)
+       Touches for lose experience. (30d8)
+       Touches for absorbing charges. (0d0)
+
+
+--------------------------------------------
+241  Master Vampire                                   (V)
+     Speed ==1  Level     ==34  Exp ==700
+     AC    ==55  Eye-sight ==20  HD  ==23d8
+     Creature is a monster.
+     Creature is evil.
+     Creature is undead.
+     Creature harmed by fire.
+     Creature harmed by blue light.
+     Creature cannot be charmed or slept.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has 1d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 7 turns.
+       Cause serious wounds.
+       Hold person.
+       Cause fear.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Hits for normal damage. (1d6)
+       Hits for normal damage. (1d6)
+       Touches for lose experience. (32d8)
+
+
+--------------------------------------------
+242  Spirit Troll                                   (T)
+     Speed ==1  Level     ==34  Exp ==425
+     AC    ==56  Eye-sight ==20  HD  ==15d8
+     Creature is a monster.
+     Creature is evil.
+     Creature is undead.
+     Creature harmed by fire.
+     Creature has MAX hit points.
+   --Movement ==
+       Move and attack normally.
+       Can phase through walls.
+   --Creature attacks ==
+       Claws for normal damage. (1d5)
+       Claws for normal damage. (1d5)
+       Bites for normal damage. (1d6)
+
+
+--------------------------------------------
+243  Giant Red Scorpion                                   (S)
+     Speed ==2  Level     ==34  Exp ==275
+     AC    ==50  Eye-sight ==12  HD  ==18d8
+     Creature is a monster.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (1d6)
+       Stings for poison damage. (1d4)
+
+
+--------------------------------------------
+244  Earth Elemental                                   (E)
+     Speed ==0  Level     ==34  Exp ==375
+     AC    ==60  Eye-sight ==10  HD  ==30d8
+     Creature Eats/kills other creatures.
+     Creature harmed by Stone-to-Mud.
+     Creature picks up objects.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (4d6)
+       Hits for normal damage. (4d6)
+
+
+--------------------------------------------
+245  Young Black Dragon                                   (d)
+     Speed ==1  Level     ==35  Exp ==600
+     AC    ==55  Eye-sight ==20  HD  ==32d8
+     Creature is a dragon.
+     Creature is evil.
+     Creature seen with Infra-Vision.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 1d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 11 turns.
+       Cause fear.
+       Breathes Acid Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Claws for normal damage. (1d5)
+       Claws for normal damage. (1d5)
+       Bites for normal damage. (1d6)
+
+
+--------------------------------------------
+246  Young Red Dragon                                   (d)
+     Speed ==1  Level     ==35  Exp ==650
+     AC    ==60  Eye-sight ==20  HD  ==36d8
+     Creature is a dragon.
+     Creature is evil.
+     Creature harmed by cold.
+     Creature seen with Infra-Vision.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 1d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 10 turns.
+       Cause fear.
+       Breathes Fire Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Claws for normal damage. (1d8)
+       Claws for normal damage. (1d8)
+       Bites for normal damage. (2d8)
+
+
+--------------------------------------------
+247  Necromancer                                   (p)
+     Speed ==1  Level     ==35  Exp ==600
+     AC    ==40  Eye-sight ==20  HD  ==17d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has 1d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 2 turns.
+       Can teleport long.
+       Teleport player to itself.
+       Cause serious wounds.
+       Hold person.
+       Cause blindness.
+       Cause fear.
+       Summon an undead.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (2d6)
+
+
+--------------------------------------------
+248  Mummified Troll                                   (M)
+     Speed ==1  Level     ==35  Exp ==400
+     AC    ==38  Eye-sight ==20  HD  ==18d8
+     Creature is evil.
+     Creature is undead.
+     Creature harmed by fire.
+     Creature cannot be charmed or slept.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (2d6)
+       Hits for normal damage. (2d6)
+
+
+--------------------------------------------
+249  Giant Red Ant Lion                                   (A)
+     Speed ==1  Level     ==35  Exp ==350
+     AC    ==48  Eye-sight ==14  HD  ==23d8
+     Creature Eats/kills other creatures.
+     Creature is a monster.
+     Creature harmed by cold.
+     Creature harmed by fire.
+   --Movement ==
+       Move only to attack.
+       20% random movement.
+   --Creature attacks ==
+       Bites for fire damage. (3d12)
+
+
+--------------------------------------------
+250  Mature White Dragon                                   (d)
+     Speed ==1  Level     ==35  Exp ==1000
+     AC    ==65  Eye-sight ==20  HD  ==48d8
+     Creature is a dragon.
+     Creature is evil.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 2d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 10 turns.
+       Cause fear.
+       Breathes Frost Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Claws for normal damage. (1d8)
+       Claws for normal damage. (1d8)
+       Bites for normal damage. (2d8)
+
+
+--------------------------------------------
+251  Xorn                                   (X)
+     Speed ==1  Level     ==36  Exp ==650
+     AC    ==80  Eye-sight ==20  HD  ==20d8
+     Creature harmed by Stone-to-Mud.
+     Creature has MAX hit points.
+     Creature picks up objects.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+       Can phase through walls.
+   --Creature attacks ==
+       Hits for normal damage. (1d6)
+       Hits for normal damage. (1d6)
+       Hits for normal damage. (1d6)
+
+
+--------------------------------------------
+252  Giant Mottled Ant Lion                                   (A)
+     Speed ==2  Level     ==36  Exp ==350
+     AC    ==50  Eye-sight ==14  HD  ==24d8 
+     Creature Eats/kills other creatures.
+     Creature is a monster.
+     Creature harmed by cold.
+     Creature harmed by fire.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (2d10)
+
+
+--------------------------------------------
+253  Grey Wraith                                   (W)
+     Speed ==1  Level     ==36  Exp ==700
+     AC    ==50  Eye-sight ==20  HD  ==23d8
+     Creature is a monster.
+     Creature is evil.
+     Creature is undead.
+     Creature harmed by fire.
+     Creature harmed by blue light.
+     Creature cannot be charmed or slept.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 8 turns.
+       Cause serious wounds.
+       Hold person.
+       Cause fear.
+       Drains mana for healing.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d10)
+       Hits for normal damage. (1d10)
+       Touches for lose experience. (34d8)
+
+
+--------------------------------------------
+254  Young Multi-Hued Dragon                                   (d)
+     Speed ==1  Level     ==36  Exp ==1250
+     AC    ==55  Eye-sight ==20  HD  ==40d8
+     Creature is a dragon.
+     Creature is evil.
+     Creature seen with Infra-Vision.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 1d2 object(s)/gold.
+       Has 2d2 object(s)/gold.
+       Has 4d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 5 turns.
+       Cause fear.
+       Breathes Lightning Dragon Breath.
+       Breathes Gas Dragon Breath.
+       Breathes Acid Dragon Breath.
+       Breathes Frost Dragon Breath.
+       Breathes Fire Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Claws for normal damage. (1d9)
+       Claws for normal damage. (1d9)
+       Bites for normal damage. (2d10)
+
+
+--------------------------------------------
+255  Mature Blue Dragon                                   (d)
+     Speed ==1  Level     ==36  Exp ==1200
+     AC    ==75  Eye-sight ==20  HD  ==48d8
+     Creature is a dragon.
+     Creature is evil.
+     Creature seen with Infra-Vision.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 2d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 9 turns.
+       Cause fear.
+       Breathes Lightning Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Claws for normal damage. (1d8)
+       Claws for normal damage. (1d8)
+       Bites for normal damage. (2d10)
+
+
+--------------------------------------------
+256  Mature Green Dragon                                   (d)
+     Speed ==1  Level     ==36  Exp ==1100
+     AC    ==70  Eye-sight ==20  HD  ==48d8
+     Creature is a dragon.
+     Creature is evil.
+     Creature seen with Infra-Vision.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 1d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 10 turns.
+       Cause fear.
+       Breathes Gas Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Claws for normal damage. (1d4)
+       Claws for normal damage. (1d4)
+       Bites for normal damage. (1d6)
+
+
+--------------------------------------------
+257  Iridescent Beetle                                   (K)
+     Speed ==1  Level     ==37  Exp ==850
+     AC    ==60  Eye-sight ==16  HD  ==32d8
+     Creature is a monster.
+     Creature harmed by cold.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Bites for normal damage. (4d6)
+       Hits for normal damage. (1d12)
+       Gazes for paralyzation. (0d0)
+
+
+--------------------------------------------
+258  King Vampire                                   (V)
+     Speed ==1  Level     ==37  Exp ==1000
+     AC    ==65  Eye-sight ==20  HD  ==38d8
+     Creature is a monster.
+     Creature is evil.
+     Creature is undead.
+     Creature harmed by fire.
+     Creature harmed by blue light.
+     Creature cannot be charmed or slept.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has 1d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 7 turns.
+       Cause serious wounds.
+       Hold person.
+       Cause fear.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Hits for normal damage. (1d6)
+       Hits for normal damage. (1d6)
+       Touches for lose experience. (38d8)
+
+
+--------------------------------------------
+259  King Lich                                   (L)
+     Speed ==1  Level     ==37  Exp ==1400
+     AC    ==65  Eye-sight ==20  HD  ==52d8
+     Creature is evil.
+     Creature is undead.
+     Creature cannot be charmed or slept.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 1d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 3 turns.
+       Can teleport short.
+       Can teleport long.
+       Teleport player to itself.
+       Cause serious wounds.
+       Hold person.
+       Cause blindness.
+       Cause confusion.
+       Cause fear.
+       Slow person.
+       Drains mana for healing.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Touches for lose dexterity. (2d10)
+       Touches for lose experience. (36d8)
+       Touches for absorbing charges. (0d0)
+
+
+--------------------------------------------
+260  Mature Red Dragon                                   (d)
+     Speed ==1  Level     ==37  Exp ==1400
+     AC    ==80  Eye-sight ==20  HD  ==60d8
+     Creature is a dragon.
+     Creature is evil.
+     Creature harmed by cold.
+     Creature seen with Infra-Vision.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 2d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 8 turns.
+       Cause confusion.
+       Cause fear.
+       Breathes Fire Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Claws for normal damage. (1d10)
+       Claws for normal damage. (1d10)
+       Bites for normal damage. (2d12)
+
+
+--------------------------------------------
+261  Mature Black Dragon                                   (d)
+     Speed ==1  Level     ==37  Exp ==1350
+     AC    ==55  Eye-sight ==20  HD  ==58d8
+     Creature is a dragon.
+     Creature is evil.
+     Creature seen with Infra-Vision.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 2d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 9 turns.
+       Cause fear.
+       Breathes Acid Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Claws for normal damage. (1d8)
+       Claws for normal damage. (1d8)
+       Bites for normal damage. (2d10)
+
+
+--------------------------------------------
+262  Mature Multi-Hued Dragon                                   (d)
+     Speed ==1  Level     ==38  Exp ==1650
+     AC    ==65  Eye-sight ==20  HD  ==80d8
+     Creature is a dragon.
+     Creature is evil.
+     Creature seen with Infra-Vision.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 1d2 object(s)/gold.
+       Has 2d2 object(s)/gold.
+       Has 4d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 5 turns.
+       Hold person.
+       Cause confusion.
+       Cause fear.
+       Breathes Lightning Dragon Breath.
+       Breathes Gas Dragon Breath.
+       Breathes Acid Dragon Breath.
+       Breathes Frost Dragon Breath.
+       Breathes Fire Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+   --Creature attacks ==
+       Claws for normal damage. (1d10)
+       Claws for normal damage. (1d10)
+       Bites for normal damage. (2d12)
+
+
+--------------------------------------------
+263  Ancient White Dragon                                   (D)
+     Speed ==2  Level     ==38  Exp ==1500
+     AC    ==80  Eye-sight ==20  HD  ==88d8
+     Creature is a dragon.
+     Creature is evil.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 4d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 8 turns.
+       Hold person.
+       Cause confusion.
+       Cause fear.
+       Breathes Frost Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Claws for normal damage. (1d8)
+       Claws for normal damage. (1d8)
+       Bites for normal damage. (2d8)
+
+
+--------------------------------------------
+264  Emperor Wight                                   (W)
+     Speed ==2  Level     ==38  Exp ==1600
+     AC    ==40  Eye-sight ==20  HD  ==48d8
+     Creature is a monster.
+     Creature is evil.
+     Creature is undead.
+     Creature harmed by fire.
+     Creature harmed by blue light.
+     Creature cannot be charmed or slept.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 90% of time.
+       Has 1d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 6 turns.
+       Cause serious wounds.
+       Hold person.
+       Cause fear.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d12)
+       Hits for normal damage. (1d12)
+       Touches for lose experience. (42d8)
+
+
+--------------------------------------------
+265  Black Wraith                                   (W)
+     Speed ==1  Level     ==38  Exp ==1700
+     AC    ==55  Eye-sight ==20  HD  ==50d8
+     Creature is a monster.
+     Creature is evil.
+     Creature is undead.
+     Creature harmed by fire.
+     Creature harmed by blue light.
+     Creature cannot be charmed or slept.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 1d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 7 turns.
+       Cause serious wounds.
+       Hold person.
+       Cause fear.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (1d12)
+       Hits for normal damage. (1d12)
+       Touches for lose experience. (44d8)
+
+
+--------------------------------------------
+266  Nether Wraith                                   (W)
+     Speed ==1  Level     ==39  Exp ==2100
+     AC    ==55  Eye-sight ==20  HD  ==58d8
+     Creature is a monster.
+     Creature is evil.
+     Creature is undead.
+     Creature harmed by fire.
+     Creature harmed by blue light.
+     Creature cannot be charmed or slept.
+     Creature has MAX hit points.
+     Creature is invisible.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 1d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 6 turns.
+       Can teleport short.
+       Cause serious wounds.
+       Hold person.
+       Cause fear.
+       Summon an undead.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+       Can open doors.
+       Can phase through walls.
+   --Creature attacks ==
+       Hits for normal damage. (1d12)
+       Hits for normal damage. (1d12)
+       Touches for lose experience. (52d8)
+
+
+--------------------------------------------
+267  Sorcerer                                   (p)
+     Speed ==2  Level     ==39  Exp ==2150
+     AC    ==50  Eye-sight ==20  HD  ==30d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature seen with Infra-Vision.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has 1d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 3 turns.
+       Can teleport short.
+       Can teleport long.
+       Teleport player to itself.
+       Cause serious wounds.
+       Hold person.
+       Cause blindness.
+       Cause confusion.
+       Cause fear.
+       Summon a monster.
+       Summon an undead.
+       Slow person.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for normal damage. (2d8)
+
+
+--------------------------------------------
+268  Ancient Blue Dragon                                   (D)
+     Speed ==2  Level     ==39  Exp ==2500
+     AC    ==90  Eye-sight ==20  HD  ==87d8
+     Creature is a dragon.
+     Creature is evil.
+     Creature seen with Infra-Vision.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 4d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 8 turns.
+       Hold person.
+       Cause confusion.
+       Cause fear.
+       Breathes Lightning Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Claws for normal damage. (1d9)
+       Claws for normal damage. (1d9)
+       Bites for normal damage. (2d12)
+
+
+--------------------------------------------
+269  Ancient Green Dragon                                   (D)
+     Speed ==2  Level     ==39  Exp ==2400
+     AC    ==85  Eye-sight ==20  HD  ==90d8
+     Creature is a dragon.
+     Creature is evil.
+     Creature seen with Infra-Vision.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 4d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 9 turns.
+       Hold person.
+       Cause confusion.
+       Cause fear.
+       Breathes Gas Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Claws for normal damage. (1d8)
+       Claws for normal damage. (1d8)
+       Bites for normal damage. (2d10)
+
+
+--------------------------------------------
+270  Ancient Black Dragon                                   (D)
+     Speed ==2  Level     ==39  Exp ==2500
+     AC    ==90  Eye-sight ==20  HD  ==90d8
+     Creature is a dragon.
+     Creature is evil.
+     Creature seen with Infra-Vision.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 4d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 7 turns.
+       Hold person.
+       Cause confusion.
+       Cause fear.
+       Breathes Acid Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Claws for normal damage. (1d9)
+       Claws for normal damage. (1d9)
+       Bites for normal damage. (2d10)
+
+
+--------------------------------------------
+271  Disenchanter Worm                                   (w)
+     Speed ==0  Level     ==40  Exp ==30
+     AC    ==5  Eye-sight ==5  HD  ==10d8
+     Creature harmed by cold.
+     Creature harmed by fire.
+     Creature harmed by acid.
+     Creature harmed by blue light.
+     Creature multiplies.
+   --Movement ==
+       Move and attack normally.
+       75% random movement.
+   --Creature attacks ==
+       Crawls on you for disenchants objects. (1d4)
+
+
+--------------------------------------------
+272  Rotting Quylthulg                                   (Q)
+     Speed ==2  Level     ==40  Exp ==1000
+     AC    ==1  Eye-sight ==20  HD  ==12d8
+     Creature cannot be charmed or slept.
+     Creature has MAX hit points.
+     Creature is invisible.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 4 turns.
+       Can teleport short.
+       Summon an undead.
+   --Movement ==
+   --Creature attacks ==
+     **Unknown value** **Unknown value** (0d0)
+
+
+--------------------------------------------
+273  Ancient Red Dragon                                   (D)
+     Speed ==2  Level     ==40  Exp ==2750
+     AC    ==100  Eye-sight ==20  HD  ==105d8
+     Creature is a dragon.
+     Creature is evil.
+     Creature harmed by cold.
+     Creature seen with Infra-Vision.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 1d2 object(s)/gold.
+       Has 2d2 object(s)/gold.
+       Has 4d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 6 turns.
+       Hold person.
+       Cause blindness.
+       Cause confusion.
+       Cause fear.
+       Breathes Fire Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Claws for normal damage. (1d10)
+       Claws for normal damage. (1d10)
+       Bites for normal damage. (2d14)
+
+
+--------------------------------------------
+274  Death Quasit                                   (q)
+     Speed ==3  Level     ==40  Exp ==1000
+     AC    ==80  Eye-sight ==20  HD  ==55d8
+     Creature is evil.
+     Creature is invisible.
+     Carries object(s).
+       Has 1d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 10 turns.
+       Can teleport short.
+       Can teleport long.
+       Teleport player to itself.
+       Cause light wounds.
+       Cause fear.
+   --Movement ==
+       Move and attack normally.
+       20% random movement.
+       Can open doors.
+   --Creature attacks ==
+       Bites for lose dexterity. (3d6)
+       Claws for normal damage. (3d3)
+       Claws for normal damage. (3d3)
+
+
+--------------------------------------------
+275  Emperor Lich                                   (L)
+     Speed ==2  Level     ==40  Exp ==10000
+     AC    ==75  Eye-sight ==20  HD  ==190d8
+     Creature is evil.
+     Creature is undead.
+     Creature cannot be charmed or slept.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 2d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 2 turns.
+       Can teleport short.
+       Can teleport long.
+       Teleport player to itself.
+       Cause serious wounds.
+       Hold person.
+       Cause blindness.
+       Cause confusion.
+       Cause fear.
+       Slow person.
+       Drains mana for healing.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Touches for lose dexterity. (2d12)
+       Touches for lose experience. (46d8)
+       Touches for absorbing charges. (0d0)
+
+
+--------------------------------------------
+276  Ancient Multi-Hued Dragon                                   (D)
+     Speed ==2  Level     ==40  Exp ==12000
+     AC    ==100  Eye-sight ==20  HD  ==260d8
+     Creature is a dragon.
+     Creature is evil.
+     Creature seen with Infra-Vision.
+     Creature has MAX hit points.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 1d2 object(s)/gold.
+       Has 2d2 object(s)/gold.
+       Has 4d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 5 turns.
+       Hold person.
+       Cause blindness.
+       Cause confusion.
+       Cause fear.
+       Slow person.
+       Breathes Lightning Dragon Breath.
+       Breathes Gas Dragon Breath.
+       Breathes Acid Dragon Breath.
+       Breathes Frost Dragon Breath.
+       Breathes Fire Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+   --Creature attacks ==
+       Claws for normal damage. (1d12)
+       Claws for normal damage. (1d12)
+       Bites for normal damage. (3d12)
+
+
+--------------------------------------------
+277  Evil Iggy                                   (p)
+     Speed ==2  Level     ==50  Exp ==18000
+     AC    ==80  Eye-sight ==20  HD  ==300d8
+     Creature is evil.
+     Creature cannot be charmed or slept.
+     Creature has MAX hit points.
+     Creature is invisible.
+     Creature picks up objects.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 1d2 object(s)/gold.
+       Has 2d2 object(s)/gold.
+       Has 4d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 3 turns.
+       Can teleport short.
+       Cause serious wounds.
+       Hold person.
+       Cause blindness.
+       Cause fear.
+       Summon an undead.
+       Slow person.
+       Drains mana for healing.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+   --Creature attacks ==
+       Hits for lowering strength. (4d6)
+       Insults you for stealing object. (0d0)
+
+
+--------------------------------------------
+278  Balrog                                   (B)
+     Speed ==3  Level     ==100  Exp ==55000
+     AC    ==125  Eye-sight ==20  HD  ==375d8
+     Creature is a ***Win Creature***
+     Creature Eats/kills other creatures.
+     Creature is evil.
+     Creature cannot be charmed or slept.
+     Creature has MAX hit points.
+     Creature is invisible.
+     Creature picks up objects.
+     Carries object(s).
+     Carries gold, gems, etc.
+       Has object/gold 60% of time.
+       Has object/gold 90% of time.
+       Has 1d2 object(s)/gold.
+       Has 2d2 object(s)/gold.
+       Has 4d2 object(s)/gold.
+   --Spells/Dragon Breath ==
+       Casts spells 1 out of 3 turns.
+       Teleport player to itself.
+       Cause serious wounds.
+       Hold person.
+       Cause blindness.
+       Summon an undead.
+       Slow person.
+       Drains mana for healing.
+       Breathes Fire Dragon Breath.
+   --Movement ==
+       Move and attack normally.
+       Can open doors.
+       Can phase through walls.
+   --Creature attacks ==
+       Hits for fire damage. (10d12)
+       Tramples you for normal damage. (8d12)
+       Touches for absorbing charges. (0d0)
+
+

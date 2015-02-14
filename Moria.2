@@ -1,0 +1,66 @@
+
+
+
+MORIA(6)                                                 MORIA(6)
+
+
+
+NAME
+     moria - a dungeon game
+
+SYNOPSIS
+     moria [ -r ] [ -s ] [ savefile ]
+
+DESCRIPTION
+     _M_o_r_i_a plays a dungeon game with you.  It generates a charac-
+     ter for you, lets you buy equipment, and lets you wander in
+     a fathomless dungeon while finding treasure and being
+     attacked by monsters and fellow adventurers.  Typing ? gives
+     you a list of commands.
+
+     The ultimate object of _m_o_r_i_a is to kill the Balrog, which
+     dwells on the 50th level of the dungeon, 2,500 feet under-
+     ground.  Most players never even reach the Balrog, and those
+     that do seldom live to tell about it.
+
+     You move in various directions by pressing the numeric
+     keypad keys, VMS-style.  If you specify -r, you move the
+     same way you do in _r_o_g_u_e(6).
+
+     If you specify -s, _m_o_r_i_a prints a list of the twenty top
+     scorers and exits.
+
+AUTHORS
+     The original version of Moria was written for VMS by Robert
+     Alan Koeneke, Jimmey Wayne Todd, Gary McAdoo, and others at
+     the University of Oklahoma.  This Unix version was written
+     by Jim Wilson (ucbernie!wilson).
+
+BUGS
+     The SYS V version does not lock the scoreboard, if two
+     processes try to modify it at the same time, it may become
+     corrupted.
+
+     Wearing an amulet or ring that would raise a stat over
+     18/100 actually only raises the stat to 18/100.  When the
+     amulet is removed, the stat drops to a value below its ori-
+     ginal value.
+
+     Probably infinite (although countably infinite).
+
+
+
+
+
+
+
+
+
+
+
+
+
+Page 1                                                      Local
+
+
+
