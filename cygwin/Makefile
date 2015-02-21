@@ -73,8 +73,8 @@ install:
 # copy cygwin dependencies
 	cp /usr/bin/cygncursesw-10.dll $(DISTDIR)
 	cp /usr/bin/cygwin1.dll $(DISTDIR)
-	mkdir -p $(DISTDIR)/terminfo/63
-	cp /usr/share/terminfo/63/cygwin $(DISTDIR)/terminfo/63/
+	mkdir -p $(DISTDIR)/terminfo/70
+	cp /usr/share/terminfo/70/pcansi $(DISTDIR)/terminfo/70/
 
 # If you are short on disk space, or aren't interested in debugging moria.
 	strip $(DISTDIR)/moria.exe $(DISTDIR)/*.dll

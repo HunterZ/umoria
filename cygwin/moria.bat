@@ -1,5 +1,6 @@
 @echo off
 set HOME=%cd%
+set TERM=pcansi
 set TERMINFO=.\terminfo
 set PROMPT=Enter 'moria' to play again, or 'exit' (or close the window) to quit^> 
 echo Starting Moria...
