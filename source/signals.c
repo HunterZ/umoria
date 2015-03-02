@@ -122,6 +122,10 @@ struct sigcontext *scp;
   int smask;
 
   smask = sigsetmask(0) | (1 << sig);
+#elif defined(_MSC_VER)
+// Visual Studio gives a warning if this isn't declared just right
+static void signal_handler(int sig)
+{
 #else
 #if defined(__TURBOC__) || defined(AMIGA)
 static void signal_handler(sig)

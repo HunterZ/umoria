@@ -18,13 +18,13 @@
    You should have received a copy of the GNU General Public License 
    along with Umoria.  If not, see <http://www.gnu.org/licenses/>. */
 
-#ifdef __TURBOC__
-#include	<conio.h>
+#if defined(__TURBOC__) || defined(_MSC_VER)
+#include	<conio.h> /* Visual Studio needs this for kbhit() */
 #endif /* __TURBOC__ */
 
 #include	<stdio.h>
 #include	<stdlib.h>
- 
+
 #include "config.h"
 #include "constant.h"
 #include "types.h"
@@ -934,7 +934,7 @@ void dungeon()
 			  i = 0;
 			  while (TRUE)
 			    {
-			      if (command == DELETE || command == CTRL('H'))
+			      if (command == MORIA_DELETE || command == CTRL('H'))
 				{
 				  i = i / 10;
 				  (void) sprintf(tmp, "%d", i);
@@ -1775,7 +1775,14 @@ char com_val;
 	}
       else
 	{
-	  prt("Type '?' for help.", 0, 0);
+#ifdef _MSC_VER
+      /* attempt to print out command */
+      char tmpmsg[] = { "Unknown command: ' '. Type '?' for help." };
+      tmpmsg[18] = com_val;
+      prt(tmpmsg, 0, 0);
+#else
+      prt("Type '?' for help.", 0, 0);
+#endif
 	  free_turn_flag = TRUE;
 	}
     }

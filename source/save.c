@@ -27,10 +27,10 @@
 
 #include <stdio.h>
 
-#ifdef __TURBOC__
+#if defined(__TURBOC__) || defined(_MSC_VER)
 #include	<io.h>
 #endif /* __TURBOC__ */
- 
+
 #include "config.h"
 #include "constant.h"
 #include "types.h"
@@ -45,19 +45,17 @@
 #ifdef VMS
 #include <string.h>
 #include <file.h>
+#elif defined(USG)
+#ifdef ATARIST_MWC
+#include "string.h"
 #else
-#ifdef USG
-#ifndef ATARIST_MWC
 #include <string.h>
 #ifndef ATARIST_TC
 #include <fcntl.h>
 #endif
-#else
-#include "string.h"
 #endif
 #else
 #include <strings.h>
-#endif
 #endif
 
 /* This must be included after fcntl.h, which has a prototype for `open'

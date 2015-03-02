@@ -38,7 +38,7 @@
 #endif
 #endif
 
-#if !defined(ATARIST_MWC) && !defined(MAC) && !defined(VMS) && !defined(AMIGA)
+#if !defined(ATARIST_MWC) && !defined(MAC) && !defined(VMS) && !defined(AMIGA) && !defined(_MSC_VER)
 long time();
 #endif
 struct tm *localtime();
@@ -52,10 +52,14 @@ static void compact_objects(void);
 void init_seeds(seed)
 int32u seed;
 {
+#ifdef _MSC_VER
+  register time_t clock_var;
+#else
   register int32u clock_var;
+#endif
 
   if (seed == 0)
-#ifdef MAC
+#if defined(MAC) || defined(_MSC_VER)
     clock_var = time((time_t *)0);
 #else
     clock_var = time((long *)0);

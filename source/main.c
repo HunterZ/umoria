@@ -61,13 +61,13 @@
 /*                                 grabiner@alumni.princeton.edu         */
 /*                                                                       */
 
-#ifdef __TURBOC__
+#if defined(__TURBOC__) || defined(_MSC_VER)
 #include	<io.h>
 #endif /* __TURBOC__ */
 
 #include	<stdio.h>
 #include	<stdlib.h>
- 
+
 #include "config.h"
 #include "constant.h"
 #include "types.h"
@@ -96,15 +96,11 @@
 #include <time.h>
 #endif
 
-#ifndef VMS
-#ifndef MAC
-#ifndef GEMDOS
-#ifndef AMIGA
+#if !defined(VMS) && !defined(MAC) && !defined(_MSC_VER)
+# if !defined(GEMDOS) && !defined(AMIGA)
 long time();
-#endif
-#endif
+# endif
 char *getenv();
-#endif
 #endif
 
 #ifndef MAC
@@ -368,7 +364,7 @@ char *argv[];
   else
     {	  /* Create character	   */
       create_character();
-#ifdef MAC
+#if defined(MAC) || defined(_MSC_VER)
       birth_date = time ((time_t *)0);
 #else
       birth_date = time ((long *)0);

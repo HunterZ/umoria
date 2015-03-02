@@ -50,7 +50,7 @@ extern char *sprintf();
 #endif
 
 /* to avoid 'psect' problem with VMS declaration of errno */
-#ifndef VMS
+#if !defined(VMS) && !defined(_MSC_VER)
 extern int errno;
 #endif
 
@@ -583,11 +583,15 @@ void warn(char *, ...);
 void msdos_init(void);
 void msdos_raw(void);
 void msdos_noraw(void);
+#ifndef _MSC_VER
 int bios_getch(void);
+#endif
 int msdos_getch(void);
+#ifndef _MSC_VER
 void bios_clear(void);
 void msdos_intro(void);
 void bios_clear(void);
+#endif
 #endif
 
 /* potions.c */
@@ -1096,11 +1100,15 @@ void warn (char *fmt, ...);
 void msdos_init();
 void msdos_raw();
 void msdos_noraw();
+#ifndef _MSC_VER
 int bios_getch();
+#endif
 int msdos_getch();
+#ifndef _MSC_VER
 void bios_clear();
 void msdos_intro();
 void bios_clear();
+#endif
 #endif
 
 /* potions.c */

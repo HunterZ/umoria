@@ -246,7 +246,7 @@ some of the system defines set up there.
 /* some systems have a non-ANSI definition of this, so undef it first */
 #undef CTRL
 #define CTRL(x)		(x & 0x1F)
-#define DELETE		0x7f
+#define MORIA_DELETE		0x7f
 #ifdef VMS
 #define ESCAPE        '\032'	/* Use CTRL-Z instead of ESCAPE.  */
 #else

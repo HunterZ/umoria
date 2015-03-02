@@ -39,9 +39,9 @@ some of the system defines set up here.
    more than one machine access a file at a time; then define this.  */
 /* #define APOLLO */
 
-/* If compiling on Debian (also works on other versions of Linux), 
+/* If compiling on Debian (also works on other versions of Linux),
    define this. */
-#define DEBIAN_LINUX
+/* #define DEBIAN_LINUX */
 
 /* If you are compiling on an ultrix/4.2BSD/Dynix/etc. version of UNIX,
    define this.  It is not needed for SUNs.  */
@@ -91,6 +91,12 @@ some of the system defines set up here.
 
 /* If you are compiling under VMS, define this.  */
 /* #define VMS */
+
+/* Microsoft Visual Studio (i.e., Windows) */
+#ifdef _MSC_VER
+// use MSDOS code as the base
+#define MSDOS
+#endif
 
 /* If you are using the tcio.c file instead of io.c, then define this.
    The tcio.c file uses TURBO C builtin functions instead of curses library

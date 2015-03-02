@@ -1,0 +1,38 @@
+# Configuration file for VS2013 Windows MORIA 5.6
+#
+# All lines that have the # character as the first character are
+# comment lines.  Blank lines are totally ignored.
+
+##################################################################
+###                  Configuration                             ###
+##################################################################
+
+# You can specify a fixed path to your saved/score data. If you leave
+# these settings commented out, MORIA will attempt to create the files
+# in the directory from which the game is run.
+
+#################### 1 hard disk systems #########################
+#
+# Create a C:\games subdirectory on your hard disk and put C:\games
+# on your PATH.  Copy MORIA.EXE and MORIA.CNF to C:\games.
+#
+#SAVE c:\games\moria.sav
+#SCORE c:\games\moria.scr
+
+##################################################################
+###                  Other OPTIONS                             ###
+##################################################################
+
+# Here you can specify the 8-bit DOS/Extended ASCII (code page 437)
+# values to be used for the wall and floor tiles, respectively.
+# See http://en.wikipedia.org/wiki/Code_page_437 or asciitable.com.
+# The default values are a shaded box and a centered dot, while the
+# commented out values are what the Unix version uses (# and .).
+GRAPHICS 177 249
+#GRAPHICS 35 46
+
+# MORIA has two predetermined sets of key bindings. The roguelike set
+# is selected here by default because it allows for slightly enhanced
+# numeric keypad functionality.
+KEYBOARD ROGUE
+#KEYBOARD VMS

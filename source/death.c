@@ -131,25 +131,21 @@ static void kingly(void);
 #include <stdlib.h>
 #endif
 
-#ifndef VMS
-#ifndef MAC
-#if !defined(ATARIST_MWC) && !defined(AMIGA)
+#if !defined(VMS) && !defined(MAC) && !defined(ATARIST_MWC) && !defined(AMIGA) && !defined(_MSC_VER)
 long time();
-#endif
-#endif
 #endif
 
 static void date(day)
 char *day;
 {
   register char *tmp;
-#ifdef MAC
+#if defined(MAC) || defined(_MSC_VER)
   time_t clockvar;
 #else
   long clockvar;
 #endif
 
-#ifdef MAC
+#if defined(MAC) || defined(_MSC_VER)
   clockvar = time((time_t *) 0);
 #else
   clockvar = time((long *) 0);
@@ -229,7 +225,11 @@ int f, l;
       if (stat(lockname, &sbuf) < 0)
 	return -1;
       /* Locks which last more than 10 seconds get deleted. */
+#ifdef _MSC_VER
+      if (time(NULL) - sbuf.st_mtime > 10)
+#else
       if (time((long *)0) - sbuf.st_mtime > 10)
+#endif
 	{
 	  if (unlink(lockname) < 0)
 	    return -1;

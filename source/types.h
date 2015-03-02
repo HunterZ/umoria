@@ -348,28 +348,38 @@ typedef struct cave_type
   int8u tptr;
   int8u fval;
 #endif
-#if !defined(MSDOS) && !defined(ATARIST_MWC)
-  unsigned int lr : 1;  /* room should be lit with perm light, walls with
-			   this set should be perm lit after tunneled out */
-  unsigned int fm : 1;	/* field mark, used for traps/doors/stairs, object is
-			   hidden if fm is FALSE */
-  unsigned int pl : 1;	/* permanent light, used for walls and lighted rooms */
-  unsigned int tl : 1;	/* temporary light, used for player's lamp light,etc.*/
-#else
-#ifndef __TURBOC__
-  /* this is not legal ANSI C, this is a MSC extension, which will use 1 byte
-     for the bitfields whereas MSC uses 2 bytes for the bitfields above */
-  /* this is also a MWC extension on the Atari ST */
-  unsigned char lr : 1;
-  unsigned char fm : 1;
-  unsigned char pl : 1;
-  unsigned char tl : 1;
-#else
+#if defined(MSDOS) || defined(ATARIST_MWC)
+# ifdef __TURBOC__
   unsigned lr : 1;
   unsigned fm : 1;
   unsigned pl : 1;
   unsigned tl : 1;
-#endif
+# else
+  /* this is not legal ANSI C, this is a MSC extension, which will use 1 byte
+     for the bitfields whereas MSC uses 2 bytes for the bitfields above */
+  /* this is also a MWC extension on the Atari ST */
+
+  /* room should be lit with perm light
+     walls with this set should be perm lit after tunneled out */
+  unsigned char lr : 1;
+  /* field mark
+     used for traps/doors/stairs
+     object is hidden if fm is FALSE */
+  unsigned char fm : 1;
+  /* permanent light
+     used for walls and lighted rooms */
+  unsigned char pl : 1;
+  /* temporary light
+     used for player's lamp light, etc.*/
+  unsigned char tl : 1;
+# endif
+#else
+  unsigned int lr : 1; /* room should be lit with perm light, walls with
+                          this set should be perm lit after tunneled out */
+  unsigned int fm : 1; /* field mark, used for traps/doors/stairs, object is
+                          hidden if fm is FALSE */
+  unsigned int pl : 1; /* permanent light, used for walls and lighted rooms */
+  unsigned int tl : 1; /* temporary light, used for player's lamp light,etc.*/
 #endif
 } cave_type;
 

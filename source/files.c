@@ -13,11 +13,11 @@
 #include <errno.h>
 #endif
 
-#ifdef __TURBOC__
+#if defined(__TURBOC__) || defined(_MSC_VER)
 #include	<io.h>
 #include	<stdlib.h>
 #endif /* __TURBOC__ */
- 
+
 #include "config.h"
 #include "constant.h"
 #include "types.h"
@@ -82,21 +82,25 @@ void init_scorefile()
 #endif
 
   if (highscore_fp == NULL)
-    {
-#ifdef MAC
-      highscore_fp = fopen (MORIA_TOP, "wb");	/* Create it if not there.  */
-      if (highscore_fp == NULL)
-	{
-	  ParamText ("\pCan't create score file!", NULL, NULL, NULL);
-	  DoScreenALRT (GNRL_ALRT, akStop, fixHalf, fixThird);
-	  ExitToShell ();
-	}
-      setfileinfo (MORIA_TOP, currentdirectory (), SCORE_FTYPE);
-#else
-      (void) fprintf (stderr, "Can't open score file \"%s\"\n", MORIA_TOP);
-      exit(1);
+  {
+#if defined(MAC) || defined(_MSC_VER)
+    highscore_fp = fopen (MORIA_TOP, "wb");	/* Create it if not there.  */
+    if (highscore_fp == NULL)
 #endif
+#ifdef MAC
+    {
+      ParamText ("\pCan't create score file!", NULL, NULL, NULL);
+      DoScreenALRT (GNRL_ALRT, akStop, fixHalf, fixThird);
+      ExitToShell ();
     }
+    setfileinfo (MORIA_TOP, currentdirectory (), SCORE_FTYPE);
+#else
+    {
+      (void)fprintf(stderr, "Can't open score file \"%s\"\n", MORIA_TOP);
+      exit(1);
+    }
+#endif
+  }
 #if defined(MSDOS) || defined(VMS) || defined(MAC) || defined(APOLLO)
   /* can't leave it open, since this causes problems on networked PCs and VMS,
      we DO want to check to make sure we can open the file, though */

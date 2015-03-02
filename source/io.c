@@ -47,28 +47,30 @@ char *_procname = "Moria";
 #undef NLS
 #endif
 
-#if !defined(GEMDOS)
 #ifdef MAC
-#ifdef THINK_C
-#include "ScrnMgr.h"
-#else
-#include <scrnmgr.h>
-#endif
-#else
-#include <ncurses.h>
-#endif
-#else	/* GEMDOS i.e. Atari ST */
-#include "curses.h"
+# ifdef THINK_C
+#  include "ScrnMgr.h"
+# else
+#  include <scrnmgr.h>
+# endif
+#elif defined(GEMDOS) /* Atari ST */
+# include "curses.h"
 long wgetch();
-#ifdef ATARIST_TC
-#include <tos.h>	/* TC */
-#include <ext.h>
-#else
-#include <osbind.h>	/* MWC */
-#endif
+# ifdef ATARIST_TC
+#  include <tos.h>	/* TC */
+#  include <ext.h>
+# else
+#  include <osbind.h>	/* MWC */
+# endif
 char *getenv();
+#elif defined(_MSC_VER) /* MS Visual Studio  */
+# include <curses.h>
+# ifdef PDC_WIDE
+# include "cp437utf.h"
+# endif
+#else /* everything else */
+# include <ncurses.h>
 #endif
-
 
 #include <ctype.h>
 
@@ -134,7 +136,7 @@ typedef struct { int stuff; } fpvmach;
 #endif
 
 #if defined(unix) || defined(__linux__) || defined(DEBIAN_LINUX)
-#include <unistd.h> /* prototype for execl */ 
+#include <unistd.h> /* prototype for execl */
 #endif
 
 /* These are included after other includes (particularly curses.h)
@@ -301,7 +303,9 @@ void init_curses()
 }
 #else
 {
+#if 0
   int i, y, x;
+#endif
 
 #ifdef AMIGA
   if (opentimer() == 0)
@@ -336,9 +340,13 @@ void init_curses()
       (void) printf("Error allocating screen in curses package.\n");
       exit(1);
     }
+#ifdef _MSC_VER
+  resize_term(24, 80);
+  curs_set(1);
+#endif
   if (LINES < 24 || COLS < 80)	 /* Check we have enough screen. -CJS- */
     {
-      (void) printf("Screen too small for moria.\n");
+      (void) printf("Screen too small for moria (need 80x24, got %lux%lu).\n", COLS, LINES);
       exit (1);
     }
 #ifdef SIGTSTP
@@ -420,25 +428,21 @@ void moriaterm()
   curses_on = TRUE;
 #ifndef BSD4_3
   use_value crmode();
-#else
-#ifdef VMS
+#elif defined(VMS)
   use_value vms_crmode ();
 #else
   use_value cbreak();
-#endif
 #endif
   use_value noecho();
   /* can not use nonl(), because some curses do not handle it correctly */
 #ifdef MSDOS
   msdos_raw();
-#else
-#ifdef AMIGA
+#elif defined(AMIGA)
   init_color (0,   0,   0,   0);	/* pen 0 - black */
   init_color (1,1000,1000,1000);	/* pen 1 - white */
   init_color (2,   0, 300, 700);	/* pen 2 - blue */
   init_color (3,1000, 500,   0);	/* pen 3 - orange */
-#else
-#if !defined(ATARI_ST) && !defined(VMS)
+#elif !defined(ATARI_ST) && !defined(VMS)
 #ifdef USG
   (void) ioctl(0, TCGETA, (char *)&tbuf);
   /* disable all of the normal special control characters */
@@ -481,8 +485,6 @@ void moriaterm()
   (void) ioctl(0, TIOCSETC, (char *)&buf);
 #endif
 #endif
-#endif
-#endif
 
 #ifdef ATARIST_TC
   raw ();
@@ -518,7 +520,7 @@ int row, col;
       /* clear msg_flag to avoid problems with unflushed messages */
       msg_flag = 0;
       (void) sprintf(tmp_str, "error in put_buffer, row = %d col = %d\n",
-		     row, col);
+                     row, col);
       prt(tmp_str, 0, 0);
       bell();
       /* wait so user can see error */
@@ -541,12 +543,8 @@ void put_qio()
 
 /* Put the terminal in the original mode.			   -CJS- */
 void restore_term()
-#ifdef MAC
-/* Nothing to do on Mac */
 {
-}
-#else
-{
+#ifndef MAC /* Nothing to do on Mac */
 #ifdef AMIGA
   closetimer ();
 #endif
@@ -570,10 +568,8 @@ void restore_term()
 #endif
   /* restore the saved values of the special chars */
 #ifdef USG
-#if !defined(MSDOS) && !defined(ATARI_ST) && !defined(VMS)
-#ifndef AMIGA
+#if !defined(MSDOS) && !defined(ATARI_ST) && !defined(VMS) && !defined(AMIGA)
   (void) ioctl(0, TCSETA, (char *)&save_termio);
-#endif
 #endif
 #else
   (void) ioctl(0, TIOCSLTC, (char *)&save_special_chars);
@@ -584,8 +580,8 @@ void restore_term()
 #endif
 #endif
   curses_on = FALSE;
-}
 #endif
+}
 
 
 void shell_out()
@@ -714,26 +710,24 @@ void shell_out()
   /* would call nl() here if could use nl()/nonl(), see moriaterm() */
 #ifndef BSD4_3
   use_value nocrmode();
-#else
-#ifdef VMS
+#elif defined(VMS)
   use_value vms_nocrmode ();
 #else
   use_value nocbreak();
 #endif
-#endif
 #ifdef MSDOS
-  use_value msdos_noraw();
+  msdos_noraw();
 #endif
   use_value echo();
   ignore_signals();
 #ifdef MSDOS		/*{*/
   if ((comspec = getenv("COMSPEC")) == CNIL
   ||  spawnl(P_WAIT, comspec, comspec, CNIL) < 0) {
-	clear_screen();	/* BOSS key if shell failed */
-	put_buffer("M:\\> ", 0, 0);
-	do {
-	  key = inkey();
-	} while (key != '!');
+    clear_screen();	/* BOSS key if shell failed */
+    put_buffer("M:\\> ", 0, 0);
+    do {
+      key = inkey();
+    } while (key != '!');
   }
 
 #else		/* MSDOS }{*/
@@ -789,12 +783,10 @@ void shell_out()
   restore_screen();
 #ifndef BSD4_3
   use_value crmode();
-#else
-#ifdef VMS
+#elif defined(VMS)
   use_value vms_crmode ();
 #else
   use_value cbreak();
-#endif
 #endif
   use_value noecho();
   /* would call nonl() here if could use nl()/nonl(), see moriaterm() */
@@ -1005,18 +997,16 @@ char inkeydir()
 
 /* Flush the buffer					-RAK-	*/
 void flush()
-#ifdef MAC
 {
+#ifdef MAC
 /* Removed put_qio() call.  Reduces flashing.  Doesn't seem to hurt. */
   FlushScreenKeys();
-}
-#else
-{
-#if defined(MSDOS)
+#elif defined(_MSC_VER)
+  flushinp();
+#elif defined(MSDOS)
   while (kbhit())
 	(void) getch();
-#else
-#ifdef VMS
+#elif defined(VMS)
   while (kbhit ())
     (void) vms_getch();
 #else
@@ -1028,11 +1018,8 @@ void flush()
   if (!eof_flag)
     while (check_input(0));
 #endif
-#endif
-
   /* used to call put_qio() here to drain output, but it is not necessary */
 }
-#endif
 
 
 /* Clears given line of text				-RAK-	*/
@@ -1114,7 +1101,12 @@ int row;
 /* Outputs a char to a given interpolated y, x position	-RAK-	*/
 /* sign bit of a character used to indicate standout mode. -CJS */
 void print(ch, row, col)
+#ifdef _MSC_VER
+/* PDCurses needs unsigned, or else higher values are corruped */
+unsigned char ch;
+#else
 char ch;
+#endif
 int row;
 int col;
 #ifdef MAC
@@ -1138,18 +1130,22 @@ int col;
 
   row -= panel_row_prt;/* Real co-ords convert to screen positions */
   col -= panel_col_prt;
+#if defined(_MSC_VER) && defined(PDC_WIDE)
+  if (mvadd_wch(row, col, &cp437utf[ch]) == ERR)
+#else
   if (mvaddch (row, col, ch) == ERR)
-    {
-      abort();
-      /* clear msg_flag to avoid problems with unflushed messages */
-      msg_flag = 0;
-      (void) sprintf(tmp_str, "error in print, row = %d col = %d\n",
-		     row, col);
-      prt(tmp_str, 0, 0);
-      bell ();
-      /* wait so user can see error */
-      (void) sleep(2);
-    }
+#endif
+  {
+    abort();
+    /* clear msg_flag to avoid problems with unflushed messages */
+    msg_flag = 0;
+    (void) sprintf(tmp_str, "error in print, row = %d col = %d\n",
+                   row, col);
+    prt(tmp_str, 0, 0);
+    bell();
+    /* wait so user can see error */
+    (void) sleep(2);
+  }
 }
 #endif
 
@@ -1264,7 +1260,7 @@ char *str_buff;
       /* If the new message and the old message are short enough, we want
 	 display them together on the same line.  So we don't flush the old
 	 message in this case.  */
-	 
+	
       if (str_buff)
 	new_len = strlen (str_buff);
       else
@@ -1312,7 +1308,7 @@ char *str_buff;
 
       /* If the new message and the old message are short enough, display
 	 them on the same line.  */
-      
+
       if (combine_messages)
 	{
 	  put_buffer (str_buff, MSG_LINE, old_len + 2);
@@ -1444,7 +1440,11 @@ int row, column, slen;
 #else
   (void) move(row, column);
   for (i = slen; i > 0; i--)
+#if defined(_MSC_VER) && defined(PDC_WIDE)
+    add_wch(&cp437utf[' ']);
+#else
     (void) addch(' ');
+#endif
   (void) move(row, column);
 #endif
   start_col = column;
@@ -1456,43 +1456,44 @@ int row, column, slen;
     }
   p = in_str;
   do
+  {
+    i = inkey();
+    switch(i)
     {
-      i = inkey();
-      switch(i)
-	{
-	case ESCAPE:
-	  aborted = TRUE;
-	  break;
-	case CTRL('J'): case CTRL('M'):
-	  flag	= TRUE;
-	  break;
-	case DELETE: case CTRL('H'):
-	  if (column > start_col)
-	    {
-	      column--;
-	      put_buffer(" ", row, column);
-	      move_cursor(row, column);
-	      *--p = '\0';
-	    }
-	  break;
-	default:
-	  if (!isprint(i) || column > end_col)
-	    bell();
-	  else
-	    {
+    case ESCAPE:
+      aborted = TRUE;
+      break;
+    case CTRL('J'): case CTRL('M'):
+      flag = TRUE;
+      break;
+    case MORIA_DELETE: case CTRL('H'):
+      if (column > start_col)
+      {
+        column--;
+        put_buffer(" ", row, column);
+        move_cursor(row, column);
+        *--p = '\0';
+      }
+      break;
+    default:
+      if (!isprint(i) || column > end_col)
+        bell();
+      else
+      {
 #ifdef MAC
-	      DSetScreenCursor(column, row);
-	      DWriteScreenCharAttr((char) i, ATTR_NORMAL);
+        DSetScreenCursor(column, row);
+        DWriteScreenCharAttr((char) i, ATTR_NORMAL);
+#elif defined(_MSC_VER) && defined(PDC_WIDE)
+        mvadd_wch(row, column, &cp437utf[(char)i]);
 #else
-	      use_value2 mvaddch(row, column, (char)i);
+        use_value2 mvaddch(row, column, (char)i);
 #endif
-	      *p++ = i;
-	      column++;
-	    }
-	  break;
-	}
+        *p++ = i;
+        column++;
+      }
+      break;
     }
-  while ((!flag) && (!aborted));
+  } while (!flag && !aborted);
   if (aborted)
     return(FALSE);
   /* Remove trailing blanks	*/
@@ -1577,6 +1578,8 @@ void bell()
 
 #ifdef MAC
   mac_beep();
+#elif defined(_MSC_VER)
+  beep();
 #else
   (void) write(1, "\007", 1);
 #endif
@@ -1616,7 +1619,10 @@ void screen_map()
   int8u tmp;
   int priority[256];
   int row, orow, col, myrow, mycol = 0;
-#ifndef MAC
+#if defined(_MSC_VER) && defined(PDC_WIDE)
+  register int k;
+  wchar_t wprntscrnbuf[80];
+#elif !defined(MAC)
   char prntscrnbuf[80];
 #endif
 
@@ -1648,62 +1654,85 @@ void screen_map()
     DWriteScreenCharAttr(CH(HE), ATTR_NORMAL);
   DWriteScreenCharAttr(CH(TR), ATTR_NORMAL);
 #else
+#if defined(_MSC_VER) && defined(PDC_WIDE)
+  mvadd_wch(0, 0, &cp437utf[CH(TL)]);
+#else
   use_value2 mvaddch(0, 0, CH(TL));
+#endif
   for (i = 0; i < MAX_WIDTH / RATIO; i++)
+#if defined(_MSC_VER) && defined(PDC_WIDE)
+    add_wch(&cp437utf[CH(HE)]);
+  add_wch(&cp437utf[CH(TR)]);
+#else
     (void) addch(CH(HE));
   (void) addch(CH(TR));
+#endif
 #endif
   orow = -1;
   map[MAX_WIDTH / RATIO] = '\0';
   for (i = 0; i < MAX_HEIGHT; i++)
+  {
+    row = i / RATIO;
+    if (row != orow)
     {
-      row = i / RATIO;
-      if (row != orow)
-	{
-	  if (orow >= 0)
-	    {
+      if (orow >= 0)
+      {
 #ifdef MAC
-	      DSetScreenCursor(0, orow+1);
-	      DWriteScreenCharAttr(CH(VE), ATTR_NORMAL);
-	      DWriteScreenString((char *) map);
-	      DWriteScreenCharAttr(CH(VE), ATTR_NORMAL);
+        DSetScreenCursor(0, orow+1);
+        DWriteScreenCharAttr(CH(VE), ATTR_NORMAL);
+        DWriteScreenString((char *) map);
+        DWriteScreenCharAttr(CH(VE), ATTR_NORMAL);
+#elif defined(_MSC_VER) && defined(PDC_WIDE)
+        wprntscrnbuf[0] = cp437utf[CH(VE)];
+        for (k = 0; k < MAX_WIDTH / RATIO; ++k)
+          wprntscrnbuf[k + 1] = cp437utf[map[k]];
+        wprntscrnbuf[MAX_WIDTH / RATIO + 1] = cp437utf[CH(VE)];
+        wprntscrnbuf[MAX_WIDTH / RATIO + 2] = 0;
+        mvaddwstr(orow + 1, 0, wprntscrnbuf);
 #else
-	      /* can not use mvprintw() on ibmpc, because PC-Curses is horribly
-		 written, and mvprintw() causes the fp emulation library to be
-		 linked with PC-Moria, makes the program 10K bigger */
-	      (void) sprintf(prntscrnbuf,"%c%s%c",CH(VE), map, CH(VE));
-	      use_value2 mvaddstr(orow+1, 0, prntscrnbuf);
+     /* can not use mvprintw() on ibmpc, because PC-Curses is horribly
+        written, and mvprintw() causes the fp emulation library to be
+        linked with PC-Moria, makes the program 10K bigger */
+        (void) sprintf(prntscrnbuf,"%c%s%c",CH(VE), map, CH(VE));
+        use_value2 mvaddstr(orow + 1, 0, prntscrnbuf);
 #endif
-	    }
-	  for (j = 0; j < MAX_WIDTH / RATIO; j++)
-	    map[j] = ' ';
-	  orow = row;
-	}
-      for (j = 0; j < MAX_WIDTH; j++)
-	{
-	  col = j / RATIO;
-	  tmp = loc_symbol(i, j);
-	  if (priority[map[col]] < priority[tmp])
-	    map[col] = tmp;
-	  if (map[col] == '@')
-	    {
-	      mycol = col + 1; /* account for border */
-	      myrow = row + 1;
-	    }
-	}
+      }
+      for (j = 0; j < MAX_WIDTH / RATIO; j++)
+        map[j] = ' ';
+      orow = row;
     }
+    for (j = 0; j < MAX_WIDTH; j++)
+    {
+      col = j / RATIO;
+      tmp = loc_symbol(i, j);
+      if (priority[map[col]] < priority[tmp])
+        map[col] = tmp;
+      if (map[col] == '@')
+      {
+        mycol = col + 1; /* account for border */
+        myrow = row + 1;
+      }
+    }
+  }
   if (orow >= 0)
-    {
+  {
 #ifdef MAC
-      DSetScreenCursor(0, orow+1);
-      DWriteScreenCharAttr(CH(VE), ATTR_NORMAL);
-      DWriteScreenString((char *) map);
-      DWriteScreenCharAttr(CH(VE), ATTR_NORMAL);
+    DSetScreenCursor(0, orow+1);
+    DWriteScreenCharAttr(CH(VE), ATTR_NORMAL);
+    DWriteScreenString((char *) map);
+    DWriteScreenCharAttr(CH(VE), ATTR_NORMAL);
+#elif defined(_MSC_VER) && defined(PDC_WIDE)
+    wprntscrnbuf[0] = cp437utf[CH(VE)];
+    for (k = 0; k < MAX_WIDTH / RATIO; ++k)
+      wprntscrnbuf[k+1] = cp437utf[map[k]];
+    wprntscrnbuf[MAX_WIDTH / RATIO + 1] = cp437utf[CH(VE)];
+    wprntscrnbuf[MAX_WIDTH / RATIO + 2] = 0;
+    mvaddwstr(orow + 1, 0, wprntscrnbuf);
 #else
-      (void) sprintf(prntscrnbuf,"%c%s%c",CH(VE), map, CH(VE));
-      use_value2 mvaddstr(orow+1, 0, prntscrnbuf);
+    (void) sprintf(prntscrnbuf,"%c%s%c",CH(VE), map, CH(VE));
+    use_value2 mvaddstr(orow + 1, 0, prntscrnbuf);
 #endif
-    }
+  }
 #ifdef MAC
   DSetScreenCursor(0, orow + 2);
   DWriteScreenCharAttr(CH(BL), ATTR_NORMAL);
@@ -1711,10 +1740,19 @@ void screen_map()
     DWriteScreenCharAttr(CH(HE), ATTR_NORMAL);
   DWriteScreenCharAttr(CH(BR), ATTR_NORMAL);
 #else
+#if defined(_MSC_VER) && defined(PDC_WIDE)
+  mvadd_wch(orow + 2, 0, &cp437utf[CH(BL)]);
+#else
   use_value2 mvaddch(orow + 2, 0, CH(BL));
+#endif
   for (i = 0; i < MAX_WIDTH / RATIO; i++)
+#if defined(_MSC_VER) && defined(PDC_WIDE)
+    add_wch(&cp437utf[CH(HE)]);
+  add_wch(&cp437utf[CH(BR)]);
+#else
     (void) addch(CH(HE));
   (void) addch(CH(BR));
+#endif
 #endif
 
 #ifdef MAC
