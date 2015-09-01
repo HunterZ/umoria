@@ -10,3 +10,4 @@ windows/scores
 windows/vs2013/Debug
 windows/vs2013/packages
 windows/vs2013/Release
+windows/mingw/dist
