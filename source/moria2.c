@@ -352,18 +352,19 @@ int dir, y, x;
 
   if (!mmove(dir, &y, &x))	/* check to see if movement there possible */
     return TRUE;
+
+  c = loc_symbol(y, x);
 #ifdef MSDOS
-  else if ((c = loc_symbol(y, x)) == wallsym || c == '%')
+  if (c == wallsym
+#elif defined(ATARI_ST)
+  if (c == (unsigned char)240
 #else
-#ifdef ATARI_ST
-  else if ((c = loc_symbol(y, x)) == (unsigned char)240 || c == '%')
-#else
-  else if ((c = loc_symbol(y, x)) == '#' || c == '%')
+  if (c == '#'
 #endif
-#endif
+   || c == '%')
     return TRUE;
-  else
-    return FALSE;
+
+  return FALSE;
 }
 
 /* Do we see anything? Used in running.		-CJS- */
@@ -372,10 +373,11 @@ int dir, y, x;
 {
   if (!mmove(dir, &y, &x))	/* check to see if movement there possible */
     return FALSE;
-  else if (loc_symbol(y, x) == ' ')
+
+  if (loc_symbol(y, x) == ' ')
     return TRUE;
-  else
-    return FALSE;
+
+  return FALSE;
 }
 
 
