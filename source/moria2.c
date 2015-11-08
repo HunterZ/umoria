@@ -348,7 +348,7 @@ void end_find()
 static int see_wall(dir, y, x)
 int dir, y, x;
 {
-  char c;
+  unsigned char c;
 
   if (!mmove(dir, &y, &x))	/* check to see if movement there possible */
     return TRUE;
