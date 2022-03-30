@@ -1,21 +1,21 @@
 /* source/misc1.c: misc utility and initialization code, magic objects code
 
-   Copyright (C) 1989-2008 James E. Wilson, Robert A. Koeneke, 
+   Copyright (C) 1989-2008 James E. Wilson, Robert A. Koeneke,
                            David J. Grabiner
 
    This file is part of Umoria.
 
-   Umoria is free software; you can redistribute it and/or modify 
+   Umoria is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation, either version 3 of the License, or
    (at your option) any later version.
 
    Umoria is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of 
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
    GNU General Public License for more details.
 
-   You should have received a copy of the GNU General Public License 
+   You should have received a copy of the GNU General Public License
    along with Umoria.  If not, see <http://www.gnu.org/licenses/>. */
 
 #include "config.h"
@@ -38,7 +38,7 @@
 #endif
 #endif
 
-#if !defined(ATARIST_MWC) && !defined(MAC) && !defined(VMS) && !defined(AMIGA) && !defined(_MSC_VER)
+#if !defined(ATARIST_MWC) && !defined(MAC) && !defined(VMS) && !defined(AMIGA) && !defined(_MSC_VER) && !defined(__MINGW32__)
 long time();
 #endif
 struct tm *localtime();
@@ -52,14 +52,14 @@ static void compact_objects(void);
 void init_seeds(seed)
 int32u seed;
 {
-#ifdef _MSC_VER
+#if defined(_MSC_VER) || defined(__MINGW32__)
   register time_t clock_var;
 #else
   register int32u clock_var;
 #endif
 
   if (seed == 0)
-#if defined(MAC) || defined(_MSC_VER)
+#if defined(MAC) || defined(_MSC_VER) || defined(__MINGW32__)
     clock_var = time((time_t *)0);
 #else
     clock_var = time((long *)0);

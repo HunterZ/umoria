@@ -4,41 +4,52 @@
 
    This file is part of Umoria.
 
-   Umoria is free software; you can redistribute it and/or modify 
+   Umoria is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation, either version 3 of the License, or
    (at your option) any later version.
 
    Umoria is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of 
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
    GNU General Public License for more details.
 
-   You should have received a copy of the GNU General Public License 
+   You should have received a copy of the GNU General Public License
    along with Umoria.  If not, see <http://www.gnu.org/licenses/>. */
 
-#include <pdcwin.h> // this brings in Sleep() from Windows.h without generating warnings
-#define strcmpi _strcmpi // eliminates an ISO error
+#ifdef _MSC_VER
+# include <curses.h>
+#else
+# include <pdcurses.h>
+#endif
+
+#ifdef _MSC_VER
+# include <pdcwin.h> // this brings in Sleep() from Windows.h without generating warnings
+# define strcmpi _strcmpi // eliminates an ISO error
+#else
+# include <stdlib.h> /* getenv() */
+# include <unistd.h> /* sleep() */
+#endif
 
 #include <string.h>
 #include <ctype.h>
 #include <time.h>
 #include <fcntl.h>
 #include <stdio.h>
+#include <stdarg.h>
 
 #include "config.h"
 #include "constant.h"
 #include "types.h"
 #include "externs.h"
 
-#include <curses.h>
-#include <stdarg.h>
-
+#ifndef __MINGW32__
 void exit();
 static unsigned int ioctl();
 extern char *getenv();
+#endif
 
-#define PATHLEN 80
+#define PATHLEN 260 /* was 80, but windows supports 260 */
 char moriatop[PATHLEN];
 char moriasav[PATHLEN];
 int  saveprompt = TRUE;
@@ -53,21 +64,33 @@ void user_name(char* buf)
 
 char* getlogin()
 {
-  char* cp = getenv("USER");
-
+  /* try to only do this once per run */
+  static char* cp = NULL;
   if (cp == NULL)
-    cp = "player";
+  {
+    /* try windows %USERNAME% first */
+    cp = getenv("USERNAME");
+    if (cp == NULL)
+    {
+      /* fall back to canned string */
+      static char* player = "player";
+      cp = player;
+    }
+  }
 
   return cp;
 }
 
+#ifdef _MSC_VER
 /* CPU-friendly sleep */
 unsigned int sleep(unsigned int secs)
 {
   Sleep(secs * 1000);
   return 0;
 }
+#endif
 
+/* this doesn't seem to be used anywhere */
 void error(char *fmt, ...)
 {
   va_list p_arg;
@@ -94,7 +117,7 @@ void warn(char *fmt, ...)
  */
 static FILE* fopenp(char* name, char* mode, char directory[])
 {
-  char *dp, *pathp, *getenv(), lastch;
+  char *dp, *pathp, lastch;
   FILE *fp;
 
   /* Try the default directory first.  If the file can't be opened,
@@ -219,11 +242,8 @@ void msdos_noraw() { noraw(); }
  */
 #undef CTRL
 #define CTRL(x) (x - '@')
-typedef struct {
-  char normal, shift, numlock;
-} KEY;
-
-static const KEY roguekeypad[] = {
+typedef char KEYPADMAP[13][3];
+static const KEYPADMAP roguekeypad = {
   {'y', 'Y', CTRL('Y')},             /* 7 */
   {'k', 'K', CTRL('K')},             /* 8 */
   {'u', 'U', CTRL('U')},             /* 9 */
@@ -239,7 +259,7 @@ static const KEY roguekeypad[] = {
   {'.', '.', '.'}                    /* Del */
 };
 
-static const KEY originalkeypad[] = {
+static const KEYPADMAP originalkeypad = {
   {'7', '7', '7'},                   /* 7 */
   {'8', '8', '8'},                   /* 8 */
   {'9', '9', '9'},                   /* 9 */
@@ -255,162 +275,195 @@ static const KEY originalkeypad[] = {
   {'.', '.', '.'}                    /* Del */
 };
 
+/* make an enum value for each keypad row index
+   this is for readability */
+typedef enum
+{
+  KE_7 =  0,
+  KE_8 =  1,
+  KE_9 =  2,
+  KE_M =  3,
+  KE_4 =  4,
+  KE_5 =  5,
+  KE_6 =  6,
+  KE_P =  7,
+  KE_1 =  8,
+  KE_2 =  9,
+  KE_3 = 10,
+  KE_I = 11,
+  KE_D = 12
+} KeypadEnum;
+
+/* and another for each keypad column index */
+typedef enum
+{
+  ME_NORMAL  = 0,
+  ME_SHIFT   = 1,
+  ME_NUMLOCK = 2
+} ModifierEnum;
+
 /* use PDCurses keypad handling */
 int pdcurses_getch()
 {
-    int ch = 0; /* return value for non-keypad keys */
-    int keypad_index = -1; /* index into keypad arrays */
-    unsigned long modifier_mask = 0; /* PDC_get_key_modifiers() value */
-    const KEY* kp = (rogue_like_commands ? roguekeypad : originalkeypad); /* pointer to active array */
+  int ch = 0; /* return value for non-keypad keys */
+  int keypad_index = -1; /* index into keypad arrays */
+  unsigned long modifier_mask = 0; /* PDC_get_key_modifiers() value */
+  const KEYPADMAP* kp = (rogue_like_commands ? &roguekeypad : &originalkeypad); /* pointer to active array */
+  ModifierEnum modifier = ME_NORMAL;
+  char msgbuf[80];
 
-    /* enable PDC_KEY_MODIFIER_* return values for PDC_get_key_modifiers() */
-    PDC_save_key_modifiers(TRUE);
+  /* enable PDC_KEY_MODIFIER_* return values for PDC_get_key_modifiers() */
+  PDC_save_key_modifiers(TRUE);
 
-    /* enable special return values for keypad keys */
-    keypad(stdscr, TRUE);
+  /* enable special return values for keypad keys */
+  keypad(stdscr, TRUE);
 
-    /* get input */
-    ch = getch();
+  /* get input */
+  while (KEY_RESIZE == (ch = getch()))
+  {
+    /* attempt to enforce fixed console size
+       doesn't seem to actually work though */
+    resize_term(24, 80);
+  }
 
-    /* save modifier mask */
-    modifier_mask = PDC_get_key_modifiers();
+  /* save modifier mask */
+  modifier_mask = PDC_get_key_modifiers();
 
-    /* translate keypad inputs to equivalent key inputs */
-    switch(ch)
-    {
-        case KEY_DOWN:      keypad_index = 9;  break;
-        case KEY_UP:        keypad_index = 1;  break;
-        case KEY_LEFT:      keypad_index = 4;  break;
-        case KEY_RIGHT:     keypad_index = 6;  break;
-        case KEY_HOME:      keypad_index = 0;  break;
-        case KEY_DC:        keypad_index = 12; break;
-        case KEY_IC:        keypad_index = 11; break;
-        case KEY_NPAGE:     keypad_index = 10; break;
-        case KEY_PPAGE:     keypad_index = 2;  break;
-        case KEY_END:       keypad_index = 8;  break;
-        case KEY_SDC:       keypad_index = 12; break;
-        case KEY_SEND:      keypad_index = 8;  break;
-        case KEY_SHOME:     keypad_index = 0;  break;
-        case KEY_SIC:       keypad_index = 11; break;
-        case KEY_SLEFT:     keypad_index = 4;  break;
-        case KEY_SNEXT:     keypad_index = 10; break;
-        case KEY_SPREVIOUS: keypad_index = 2;  break;
-        case KEY_SRIGHT:    keypad_index = 6;  break;
-        case CTL_LEFT:      keypad_index = 4;  break;
-        case CTL_RIGHT:     keypad_index = 6;  break;
-        case CTL_PGUP:      keypad_index = 2;  break;
-        case CTL_PGDN:      keypad_index = 10; break;
-        case CTL_HOME:      keypad_index = 0;  break;
-        case CTL_END:       keypad_index = 8;  break;
-        case KEY_A1:        keypad_index = 0;  break;
-        case KEY_A2:        keypad_index = 1;  break;
-        case KEY_A3:        keypad_index = 2;  break;
-        case KEY_B1:        keypad_index = 4;  break;
-        case KEY_B2:        keypad_index = 5;  break;
-        case KEY_B3:        keypad_index = 6;  break;
-        case KEY_C1:        keypad_index = 8;  break;
-        case KEY_C2:        keypad_index = 9;  break;
-        case KEY_C3:        keypad_index = 10; break;
-        case PADSTOP:       keypad_index = 12; break;
-        case PADMINUS:      keypad_index = 3;  break;
-        case PADPLUS:       keypad_index = 7;  break;
-        case CTL_PADSTOP:   keypad_index = 12; break;
-        case CTL_PADPLUS:   keypad_index = 7;  break;
-        case CTL_PADMINUS:  keypad_index = 3;  break;
-        case CTL_INS:       keypad_index = 11; break;
-        case CTL_UP:        keypad_index = 1;  break;
-        case CTL_DOWN:      keypad_index = 9;  break;
-        case PAD0:          keypad_index = 11; break;
-        case CTL_PAD0:      keypad_index = 11; break;
-        case CTL_PAD1:      keypad_index = 8;  break;
-        case CTL_PAD2:      keypad_index = 9;  break;
-        case CTL_PAD3:      keypad_index = 10; break;
-        case CTL_PAD4:      keypad_index = 4;  break;
-        case CTL_PAD5:      keypad_index = 5;  break;
-        case CTL_PAD6:      keypad_index = 6;  break;
-        case CTL_PAD7:      keypad_index = 0;  break;
-        case CTL_PAD8:      keypad_index = 1;  break;
-        case CTL_PAD9:      keypad_index = 2;  break;
-        case CTL_DEL:       keypad_index = 12; break;
-        case SHF_PADPLUS:   keypad_index = 7;  break;
-        case SHF_PADMINUS:  keypad_index = 3;  break;
-        case KEY_SUP:       keypad_index = 1;  break;
-        case KEY_SDOWN:     keypad_index = 9;  break;
-        default:
-            ;
-    }
-
-    if (keypad_index == -1 &&
-        (modifier_mask & PDC_KEY_MODIFIER_SHIFT ||
-         modifier_mask & PDC_KEY_MODIFIER_NUMLOCK))
-    {
-        /* special case: if shift+number is pressed,
-           then it's actually shift+keypad */
-        /* also err on the side of interpreting numbers
-           as keypad keys when numlock is enabled */
-        switch (ch)
-        {
-            case '.': keypad_index = 12; break;
-            case '0': keypad_index = 11; break;
-            case '1': keypad_index = 8;  break;
-            case '2': keypad_index = 9;  break;
-            case '3': keypad_index = 10; break;
-            case '4': keypad_index = 4;  break;
-            case '5': keypad_index = 5;  break;
-            case '6': keypad_index = 6;  break;
-            case '7': keypad_index = 0;  break;
-            case '8': keypad_index = 1;  break;
-            case '9': keypad_index = 2;  break;
-            default:
-                ;
-        }
-    }
-
-    /* handle modifiers on keypad keys
-       I could have gleaned this from key codes in many cases,
-       but it saves code to just do check modifiers separately */
-    if (keypad_index >= 0)
-    {
-        /* treating CTRL as equivalent to NUMLOCK
-           allows CTRL+direction to work per the in-game help */
-        if (modifier_mask & PDC_KEY_MODIFIER_NUMLOCK ||
-            modifier_mask & PDC_KEY_MODIFIER_CONTROL)
-        {
-            return kp[keypad_index].numlock;
-        }
-        else if (modifier_mask & PDC_KEY_MODIFIER_SHIFT)
-        {
-            return kp[keypad_index].shift;
-        }
-        else
-        {
-            return kp[keypad_index].normal;
-        }
-    }
-
-    /* special case: handle additional keypad keys */
+  /* translate keypad inputs to equivalent key inputs
+     also glean what we can of modifier states */
+  switch(ch)
+  {
+    case KEY_DOWN:      keypad_index = KE_2; modifier = ME_NORMAL;  break;
+    case KEY_UP:        keypad_index = KE_8; modifier = ME_NORMAL;  break;
+    case KEY_LEFT:      keypad_index = KE_4; modifier = ME_NORMAL;  break;
+    case KEY_RIGHT:     keypad_index = KE_6; modifier = ME_NORMAL;  break;
+    case KEY_HOME:      keypad_index = KE_7; modifier = ME_NORMAL;  break;
+    case KEY_DC:        keypad_index = KE_D; modifier = ME_NORMAL;  break;
+    case KEY_IC:        keypad_index = KE_I; modifier = ME_NORMAL;  break;
+    case KEY_NPAGE:     keypad_index = KE_3; modifier = ME_NORMAL;  break;
+    case KEY_PPAGE:     keypad_index = KE_9; modifier = ME_NORMAL;  break;
+    case KEY_END:       keypad_index = KE_1; modifier = ME_NORMAL;  break;
+    case KEY_SDC:       keypad_index = KE_D; modifier = ME_SHIFT;   break;
+    case KEY_SEND:      keypad_index = KE_1; modifier = ME_SHIFT;   break;
+    case KEY_SHOME:     keypad_index = KE_7; modifier = ME_SHIFT;   break;
+    case KEY_SIC:       keypad_index = KE_I; modifier = ME_SHIFT;   break;
+    case KEY_SLEFT:     keypad_index = KE_4; modifier = ME_SHIFT;   break;
+    case KEY_SNEXT:     keypad_index = KE_3; modifier = ME_SHIFT;   break;
+    case KEY_SPREVIOUS: keypad_index = KE_9; modifier = ME_SHIFT;   break;
+    case KEY_SRIGHT:    keypad_index = KE_6; modifier = ME_SHIFT;   break;
+    case CTL_LEFT:      keypad_index = KE_4; modifier = ME_NUMLOCK; break;
+    case CTL_RIGHT:     keypad_index = KE_6; modifier = ME_NUMLOCK; break;
+    case CTL_PGUP:      keypad_index = KE_9; modifier = ME_NUMLOCK; break;
+    case CTL_PGDN:      keypad_index = KE_3; modifier = ME_NUMLOCK; break;
+    case CTL_HOME:      keypad_index = KE_7; modifier = ME_NUMLOCK; break;
+    case CTL_END:       keypad_index = KE_1; modifier = ME_NUMLOCK; break;
+    case KEY_A1:        keypad_index = KE_7; modifier = ME_NORMAL;  break;
+    case KEY_A2:        keypad_index = KE_8; modifier = ME_NORMAL;  break;
+    case KEY_A3:        keypad_index = KE_9; modifier = ME_NORMAL;  break;
+    case KEY_B1:        keypad_index = KE_4; modifier = ME_NORMAL;  break;
+    case KEY_B2:        keypad_index = KE_5; modifier = ME_NORMAL;  break;
+    case KEY_B3:        keypad_index = KE_6; modifier = ME_NORMAL;  break;
+    case KEY_C1:        keypad_index = KE_1; modifier = ME_NORMAL;  break;
+    case KEY_C2:        keypad_index = KE_2; modifier = ME_NORMAL;  break;
+    case KEY_C3:        keypad_index = KE_3; modifier = ME_NORMAL;  break;
+    case PADSTOP:       keypad_index = KE_D; modifier = ME_NORMAL;  break;
+    case PADMINUS:      keypad_index = KE_M; modifier = ME_NORMAL;  break;
+    case PADPLUS:       keypad_index = KE_P; modifier = ME_NORMAL;  break;
+    case CTL_PADSTOP:   keypad_index = KE_D; modifier = ME_NUMLOCK; break;
+    case CTL_PADPLUS:   keypad_index = KE_P; modifier = ME_NUMLOCK; break;
+    case CTL_PADMINUS:  keypad_index = KE_M; modifier = ME_NUMLOCK; break;
+    case CTL_INS:       keypad_index = KE_I; modifier = ME_NUMLOCK; break;
+    case CTL_UP:        keypad_index = KE_8; modifier = ME_NUMLOCK; break;
+    case CTL_DOWN:      keypad_index = KE_2; modifier = ME_NUMLOCK; break;
+    case PAD0:          keypad_index = KE_I; modifier = ME_NORMAL;  break;
+    case CTL_PAD0:      keypad_index = KE_I; modifier = ME_NUMLOCK; break;
+    case CTL_PAD1:      keypad_index = KE_1; modifier = ME_NUMLOCK; break;
+    case CTL_PAD2:      keypad_index = KE_2; modifier = ME_NUMLOCK; break;
+    case CTL_PAD3:      keypad_index = KE_3; modifier = ME_NUMLOCK; break;
+    case CTL_PAD4:      keypad_index = KE_4; modifier = ME_NUMLOCK; break;
+    case CTL_PAD5:      keypad_index = KE_5; modifier = ME_NUMLOCK; break;
+    case CTL_PAD6:      keypad_index = KE_6; modifier = ME_NUMLOCK; break;
+    case CTL_PAD7:      keypad_index = KE_7; modifier = ME_NUMLOCK; break;
+    case CTL_PAD8:      keypad_index = KE_8; modifier = ME_NUMLOCK; break;
+    case CTL_PAD9:      keypad_index = KE_9; modifier = ME_NUMLOCK; break;
+    case CTL_DEL:       keypad_index = KE_D; modifier = ME_NUMLOCK; break;
+    case SHF_PADPLUS:   keypad_index = KE_P; modifier = ME_SHIFT;   break;
+    case SHF_PADMINUS:  keypad_index = KE_M; modifier = ME_SHIFT;   break;
+    case SHF_UP:        keypad_index = KE_8; modifier = ME_SHIFT;   break;
+    case SHF_DOWN:      keypad_index = KE_2; modifier = ME_SHIFT;   break;
+    case SHF_IC:        keypad_index = KE_I; modifier = ME_SHIFT;   break;
+    case SHF_DC:        keypad_index = KE_D; modifier = ME_SHIFT;   break;
+    case KEY_SUP:       keypad_index = KE_8; modifier = ME_SHIFT;   break;
+    case KEY_SDOWN:     keypad_index = KE_2; modifier = ME_SHIFT;   break;
+    default:
+      ;
+  }
+  /* special case: if shift+number is pressed, assume it's actually
+     shift+keypad, as this can happen in some curses implementations */
+  if (keypad_index < 0 &&
+      modifier_mask & PDC_KEY_MODIFIER_SHIFT)
+  {
     switch (ch)
     {
-        case PADSLASH:     return '/'; break;
-        case PADENTER:     return CTRL('M'); break;
-        case CTL_PADENTER: return CTRL('M'); break;
-        case ALT_PADENTER: return CTRL('M'); break;
-        case PADSTAR:      return '*'; break;
-        case CTL_PADSLASH: return '/'; break;
-        case CTL_PADSTAR:  return '*'; break;
-        case ALT_PADSLASH: return '/'; break;
-        case ALT_PADSTAR:  return '*'; break;
-        case SHF_PADENTER: return CTRL('M'); break;
-        case SHF_PADSLASH: return '/'; break;
-        case SHF_PADSTAR:  return '*'; break;
-        default:
-            ;
+      case '.': keypad_index = KE_D; break;
+      case '0': keypad_index = KE_I; break;
+      case '1': keypad_index = KE_1; break;
+      case '2': keypad_index = KE_2; break;
+      case '3': keypad_index = KE_3; break;
+      case '4': keypad_index = KE_4; break;
+      case '5': keypad_index = KE_5; break;
+      case '6': keypad_index = KE_6; break;
+      case '7': keypad_index = KE_7; break;
+      case '8': keypad_index = KE_8; break;
+      case '9': keypad_index = KE_9; break;
+      default:
+        ;
+    }
+  }
+
+  /* return final determination for keypad keys */
+  if (keypad_index >= 0)
+  {
+    /* if no modifier assigned by keyboard mapper,
+       check PDCurses modifier mask just in case
+       note that this is unreliable */
+    if (ME_NORMAL == modifier)
+    {
+      switch (modifier_mask)
+      {
+        case PDC_KEY_MODIFIER_SHIFT:   modifier = ME_SHIFT;   break;
+        case PDC_KEY_MODIFIER_CONTROL: modifier = ME_NUMLOCK; break;
+        case PDC_KEY_MODIFIER_NUMLOCK: modifier = ME_NUMLOCK; break;
+        default: ;
+      }
     }
 
-    return ch;
+    return (*kp)[keypad_index][modifier];
+  }
+
+  /* special case: handle additional keypad keys */
+  switch (ch)
+  {
+    case PADSLASH:     return '/';       break;
+    case PADENTER:     return CTRL('M'); break;
+    case CTL_PADENTER: return CTRL('M'); break;
+//    case ALT_PADENTER: return CTRL('M'); break;
+    case PADSTAR:      return '*';       break;
+    case CTL_PADSLASH: return '/';       break;
+    case CTL_PADSTAR:  return '*';       break;
+//    case ALT_PADSLASH: return '/';       break;
+//    case ALT_PADSTAR:  return '*';       break;
+    case SHF_PADENTER: return CTRL('M'); break;
+    case SHF_PADSLASH: return '/';       break;
+    case SHF_PADSTAR:  return '*';       break;
+    default:
+      ;
+  }
+
+  return ch;
 }
 
 int msdos_getch()
 {
-    return pdcurses_getch();
+  return pdcurses_getch();
 }

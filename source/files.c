@@ -13,7 +13,7 @@
 #include <errno.h>
 #endif
 
-#if defined(__TURBOC__) || defined(_MSC_VER)
+#if defined(__TURBOC__) || defined(_MSC_VER) || defined(__MINGW32__)
 #include	<io.h>
 #include	<stdlib.h>
 #endif /* __TURBOC__ */
@@ -83,7 +83,7 @@ void init_scorefile()
 
   if (highscore_fp == NULL)
   {
-#if defined(MAC) || defined(_MSC_VER)
+#if defined(MAC) || defined(_MSC_VER) || defined(__MINGW32__)
     highscore_fp = fopen (MORIA_TOP, "wb");	/* Create it if not there.  */
     if (highscore_fp == NULL)
 #endif
@@ -292,7 +292,7 @@ void print_objects()
 	      j = popt();
 	      for (i = 0; i < nobj; i++)
 		{
-		  invcopy(&t_list[j], 
+		  invcopy(&t_list[j],
 			  sorted_objects[get_obj_num(level,small)]);
 		  magic_treasure(j, level);
 		  i_ptr = &t_list[j];

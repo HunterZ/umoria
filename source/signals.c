@@ -1,21 +1,21 @@
 /* source/signals.c: signal handlers
 
-   Copyright (C) 1989-2008 James E. Wilson, Robert A. Koeneke, 
+   Copyright (C) 1989-2008 James E. Wilson, Robert A. Koeneke,
                            David J. Grabiner
 
    This file is part of Umoria.
 
-   Umoria is free software; you can redistribute it and/or modify 
+   Umoria is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation, either version 3 of the License, or
    (at your option) any later version.
 
    Umoria is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of 
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
    GNU General Public License for more details.
 
-   You should have received a copy of the GNU General Public License 
+   You should have received a copy of the GNU General Public License
    along with Umoria.  If not, see <http://www.gnu.org/licenses/>. */
 
 /* This signal package was brought to you by		-JEW-  */
@@ -95,15 +95,13 @@ typedef struct { int stuff; } fpvmach;
 #include <strings.h>
 #endif
 
-#ifndef VMS
-#ifdef USG
+#if !defined(VMS) && defined(USG)
 void exit();
-#ifdef __TURBOC__
+# ifdef __TURBOC__
 void sleep();
-#else
+# elif !defined(MSDOS) /* this isn't needed at all */
 unsigned sleep();
-#endif
-#endif
+# endif
 #endif
 
 static int error_sig = -1;
@@ -127,11 +125,11 @@ struct sigcontext *scp;
 static void signal_handler(int sig)
 {
 #else
-#if defined(__TURBOC__) || defined(AMIGA)
+# if defined(__TURBOC__) || defined(AMIGA) || defined(__MINGW32__)
 static void signal_handler(sig)
-#else
+# else
 static int signal_handler(sig)
-#endif
+# endif
 int sig;
 {
 #endif

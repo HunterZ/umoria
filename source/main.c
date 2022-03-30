@@ -1,21 +1,21 @@
 /* UNIX Moria Version 5.x
    source/main.c: initialization, main() function and main loop
-   Copyright (C) 1989-2008 James E. Wilson, Robert A. Koeneke, 
+   Copyright (C) 1989-2008 James E. Wilson, Robert A. Koeneke,
                            David J. Grabiner
 
    This file is part of Umoria.
 
-   Umoria is free software; you can redistribute it and/or modify 
+   Umoria is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation, either version 3 of the License, or
    (at your option) any later version.
 
    Umoria is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of 
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
    GNU General Public License for more details.
 
-   You should have received a copy of the GNU General Public License 
+   You should have received a copy of the GNU General Public License
    along with Umoria.  If not, see <http://www.gnu.org/licenses/>. */
 
 
@@ -61,7 +61,7 @@
 /*                                 grabiner@alumni.princeton.edu         */
 /*                                                                       */
 
-#if defined(__TURBOC__) || defined(_MSC_VER)
+#if defined(__TURBOC__) || defined(_MSC_VER) || defined(__MINGW32__)
 #include	<io.h>
 #endif /* __TURBOC__ */
 
@@ -96,7 +96,7 @@
 #include <time.h>
 #endif
 
-#if !defined(VMS) && !defined(MAC) && !defined(_MSC_VER)
+#if !defined(VMS) && !defined(MAC) && !defined(_MSC_VER) && !defined(__MINGW32__)
 # if !defined(GEMDOS) && !defined(AMIGA)
 long time();
 # endif
@@ -364,7 +364,7 @@ char *argv[];
   else
     {	  /* Create character	   */
       create_character();
-#if defined(MAC) || defined(_MSC_VER)
+#if defined(MAC) || defined(_MSC_VER) || defined(__MINGW32__)
       birth_date = time ((time_t *)0);
 #else
       birth_date = time ((long *)0);
@@ -471,7 +471,7 @@ static void init_m_level()
     m_level[c_list[i].level]++;
 
   for (i = 1; i <= MAX_MONS_LEVEL; i++)
-#if defined(AMIGA) && !defined(LATTICE) 
+#if defined(AMIGA) && !defined(LATTICE)
     /* fix a stupid MANX Aztec C 5.0 bug again */
     m_level[i] = m_level[i] + m_level[i-1];
 #else
@@ -491,7 +491,7 @@ static void init_t_level()
   for (i = 0; i < MAX_DUNGEON_OBJ; i++)
     t_level[object_list[i].level]++;
   for (i = 1; i <= MAX_OBJ_LEVEL; i++)
-#if defined(AMIGA) && !defined(LATTICE) 
+#if defined(AMIGA) && !defined(LATTICE)
     /* fix a stupid MANX Aztec C 5.0 bug again */
     t_level[i] = t_level[i] + t_level[i-1];
 #else

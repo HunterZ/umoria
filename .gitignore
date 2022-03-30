@@ -5,6 +5,12 @@
 *.sdf
 *.suo
 *.user
+/.vscode
+build/*.cmake
+build/CMake*
+build/windows
+build/*ninja*
+build/*.json
 windows/dist
 windows/scores
 windows/vs2013/Debug

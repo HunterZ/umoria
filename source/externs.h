@@ -1,21 +1,21 @@
 /* source/externs.h: declarations for global variables and initialized data
 
-   Copyright (C) 1989-2008 James E. Wilson, Robert A. Koeneke, 
+   Copyright (C) 1989-2008 James E. Wilson, Robert A. Koeneke,
                            David J. Grabiner
 
    This file is part of Umoria.
 
-   Umoria is free software; you can redistribute it and/or modify 
+   Umoria is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation, either version 3 of the License, or
    (at your option) any later version.
 
    Umoria is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of 
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
    GNU General Public License for more details.
 
-   You should have received a copy of the GNU General Public License 
+   You should have received a copy of the GNU General Public License
    along with Umoria.  If not, see <http://www.gnu.org/licenses/>. */
 
 #include<stdio.h>
@@ -50,7 +50,7 @@ extern char *sprintf();
 #endif
 
 /* to avoid 'psect' problem with VMS declaration of errno */
-#if !defined(VMS) && !defined(_MSC_VER)
+#if !defined(VMS) && !defined(_MSC_VER) && !defined(__MINGW32__)
 extern int errno;
 #endif
 
@@ -1083,32 +1083,29 @@ void bash();
 /* ms_misc.c */
 void user_name();
 char *getlogin();
-#ifdef __TURBOC__
+# ifdef __TURBOC__
 void sleep();
-#else
+# elif !defined(__MINGW32__)
 unsigned int sleep();
-#endif
-#if 0
+# endif
+# if 0
 void error();
 void warn();
-#else
+# else
 /* Because an empty parameter list in a declaration can not match a parameter
    list with an elipsis in a definition.  */
 void error (char *fmt, ...);
 void warn (char *fmt, ...);
-#endif
+# endif
 void msdos_init();
 void msdos_raw();
 void msdos_noraw();
-#ifndef _MSC_VER
-int bios_getch();
-#endif
 int msdos_getch();
-#ifndef _MSC_VER
+# if !defined(_MSC_VER) && !defined(__MINGW32__)
+int bios_getch();
 void bios_clear();
 void msdos_intro();
-void bios_clear();
-#endif
+# endif
 #endif
 
 /* potions.c */

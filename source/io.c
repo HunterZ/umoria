@@ -1,21 +1,21 @@
 /* source/io.c: terminal I/O code, uses the curses package
 
-   Copyright (C) 1989-2008 James E. Wilson, Robert A. Koeneke, 
+   Copyright (C) 1989-2008 James E. Wilson, Robert A. Koeneke,
                            David J. Grabiner
 
    This file is part of Umoria.
 
-   Umoria is free software; you can redistribute it and/or modify 
+   Umoria is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation, either version 3 of the License, or
    (at your option) any later version.
 
    Umoria is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of 
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
    GNU General Public License for more details.
 
-   You should have received a copy of the GNU General Public License 
+   You should have received a copy of the GNU General Public License
    along with Umoria.  If not, see <http://www.gnu.org/licenses/>. */
 
 #include <stdio.h>
@@ -32,6 +32,9 @@
 
 #ifdef MSDOS
 #include <process.h>
+# ifdef __MINGW32__
+#  include <unistd.h> /* sleep() */
+# endif
 #endif
 
 #ifdef AMIGA
@@ -47,7 +50,7 @@ char *_procname = "Moria";
 #undef NLS
 #endif
 
-#ifdef MAC
+#ifdef MAC /* Mac */
 # ifdef THINK_C
 #  include "ScrnMgr.h"
 # else
@@ -63,12 +66,16 @@ long wgetch();
 #  include <osbind.h>	/* MWC */
 # endif
 char *getenv();
-#elif defined(_MSC_VER) /* MS Visual Studio  */
-# include <curses.h>
-# ifdef PDC_WIDE
-# include "cp437utf.h"
+#elif defined(_MSC_VER) || defined(__MINGW32__) /* Windows */
+# ifdef _MSC_VER /* Visual Studio */
+#  include <curses.h>
+# else
+#  include <pdcurses.h> /* MinGW32 etc. */
 # endif
-#else /* everything else */
+# ifdef PDC_WIDE
+#  include "cp437utf.h"
+# endif
+#else /* everything else (*nix etc.) */
 # include <ncurses.h>
 #endif
 
@@ -196,17 +203,13 @@ int Use_value2;
 char *getenv();
 #endif
 
-#ifndef VMS
-#ifdef USG
+#if !defined(VMS) && defined(USG)
 void exit();
-#if defined(__TURBOC__)
+# if defined(__TURBOC__)
 void sleep();
-#else
-#ifndef AMIGA
+# elif !defined(AMIGA) && !defined(MSDOS) /* MSDOS already declares this in externs.h */
 unsigned sleep();
-#endif
-#endif
-#endif
+# endif
 #endif
 
 #ifdef ultrix
@@ -340,7 +343,7 @@ void init_curses()
       (void) printf("Error allocating screen in curses package.\n");
       exit(1);
     }
-#ifdef _MSC_VER
+#if defined(_MSC_VER) || defined(__MINGW32__)
   resize_term(24, 80);
   curs_set(1);
 #endif
@@ -1001,7 +1004,7 @@ void flush()
 #ifdef MAC
 /* Removed put_qio() call.  Reduces flashing.  Doesn't seem to hurt. */
   FlushScreenKeys();
-#elif defined(_MSC_VER)
+#elif defined(_MSC_VER) || defined(__MINGW32__)
   flushinp();
 #elif defined(MSDOS)
   while (kbhit())
@@ -1101,9 +1104,9 @@ int row;
 /* Outputs a char to a given interpolated y, x position	-RAK-	*/
 /* sign bit of a character used to indicate standout mode. -CJS */
 void print(ch, row, col)
-#ifdef _MSC_VER
-/* PDCurses needs unsigned, or else higher values are corruped */
-unsigned char ch;
+#if defined(_MSC_VER) || defined(__MINGW32__)
+/* Use int to avoid corrupting high cp437 values */
+int ch;
 #else
 char ch;
 #endif
@@ -1127,11 +1130,15 @@ int col;
 #else
 {
   vtype tmp_str;
+#ifdef PDC_WIDE
+  /* translate CP437 to UTF equivalents when using PDCurses in wide character mode */
+  const cchar_t wch = ToUTF(ch);
+#endif
 
   row -= panel_row_prt;/* Real co-ords convert to screen positions */
   col -= panel_col_prt;
-#if defined(_MSC_VER) && defined(PDC_WIDE)
-  if (mvadd_wch(row, col, &cp437utf[ch]) == ERR)
+#if defined(PDC_WIDE)
+  if (mvadd_wch(row, col, &wch) == ERR)
 #else
   if (mvaddch (row, col, ch) == ERR)
 #endif
@@ -1148,7 +1155,6 @@ int col;
   }
 }
 #endif
-
 
 /* Moves the cursor to a given interpolated y, x position	-RAK-	*/
 void move_cursor_relative(row, col)
@@ -1260,7 +1266,7 @@ char *str_buff;
       /* If the new message and the old message are short enough, we want
 	 display them together on the same line.  So we don't flush the old
 	 message in this case.  */
-	
+
       if (str_buff)
 	new_len = strlen (str_buff);
       else
@@ -1427,6 +1433,10 @@ int row, column, slen;
 #ifdef MAC
   Rect area;
 #endif
+#ifdef PDC_WIDE
+  /* translate CP437 to UTF equivalents when using PDCurses in wide character mode */
+  cchar_t wch;
+#endif
 
   aborted = FALSE;
   flag	= FALSE;
@@ -1440,7 +1450,7 @@ int row, column, slen;
 #else
   (void) move(row, column);
   for (i = slen; i > 0; i--)
-#if defined(_MSC_VER) && defined(PDC_WIDE)
+#if defined(PDC_WIDE)
     add_wch(&cp437utf[' ']);
 #else
     (void) addch(' ');
@@ -1483,8 +1493,9 @@ int row, column, slen;
 #ifdef MAC
         DSetScreenCursor(column, row);
         DWriteScreenCharAttr((char) i, ATTR_NORMAL);
-#elif defined(_MSC_VER) && defined(PDC_WIDE)
-        mvadd_wch(row, column, &cp437utf[(char)i]);
+#elif defined(PDC_WIDE) /* convert UTF to CP437 equivalents in PDCurses wide character mode */
+        wch = ToUTF(i);
+        mvadd_wch(row, column, &wch);
 #else
         use_value2 mvaddch(row, column, (char)i);
 #endif
@@ -1578,7 +1589,7 @@ void bell()
 
 #ifdef MAC
   mac_beep();
-#elif defined(_MSC_VER)
+#elif defined(_MSC_VER) || defined(__MINGW32__)
   beep();
 #else
   (void) write(1, "\007", 1);
@@ -1619,7 +1630,7 @@ void screen_map()
   int8u tmp;
   int priority[256];
   int row, orow, col, myrow, mycol = 0;
-#if defined(_MSC_VER) && defined(PDC_WIDE)
+#if defined(PDC_WIDE)
   register int k;
   wchar_t wprntscrnbuf[80];
 #elif !defined(MAC)
@@ -1654,19 +1665,19 @@ void screen_map()
     DWriteScreenCharAttr(CH(HE), ATTR_NORMAL);
   DWriteScreenCharAttr(CH(TR), ATTR_NORMAL);
 #else
-#if defined(_MSC_VER) && defined(PDC_WIDE)
+# if defined(PDC_WIDE)
   mvadd_wch(0, 0, &cp437utf[CH(TL)]);
-#else
+# else
   use_value2 mvaddch(0, 0, CH(TL));
-#endif
+# endif
   for (i = 0; i < MAX_WIDTH / RATIO; i++)
-#if defined(_MSC_VER) && defined(PDC_WIDE)
+# if defined(PDC_WIDE)
     add_wch(&cp437utf[CH(HE)]);
   add_wch(&cp437utf[CH(TR)]);
-#else
+# else
     (void) addch(CH(HE));
   (void) addch(CH(TR));
-#endif
+# endif
 #endif
   orow = -1;
   map[MAX_WIDTH / RATIO] = '\0';
@@ -1682,12 +1693,12 @@ void screen_map()
         DWriteScreenCharAttr(CH(VE), ATTR_NORMAL);
         DWriteScreenString((char *) map);
         DWriteScreenCharAttr(CH(VE), ATTR_NORMAL);
-#elif defined(_MSC_VER) && defined(PDC_WIDE)
+#elif defined(PDC_WIDE)
         wprntscrnbuf[0] = cp437utf[CH(VE)];
         for (k = 0; k < MAX_WIDTH / RATIO; ++k)
-          wprntscrnbuf[k + 1] = cp437utf[map[k]];
+          wprntscrnbuf[k + 1] = ToUTF(map[k]);
         wprntscrnbuf[MAX_WIDTH / RATIO + 1] = cp437utf[CH(VE)];
-        wprntscrnbuf[MAX_WIDTH / RATIO + 2] = 0;
+        wprntscrnbuf[MAX_WIDTH / RATIO + 2] = '\0';
         mvaddwstr(orow + 1, 0, wprntscrnbuf);
 #else
      /* can not use mvprintw() on ibmpc, because PC-Curses is horribly
@@ -1721,12 +1732,12 @@ void screen_map()
     DWriteScreenCharAttr(CH(VE), ATTR_NORMAL);
     DWriteScreenString((char *) map);
     DWriteScreenCharAttr(CH(VE), ATTR_NORMAL);
-#elif defined(_MSC_VER) && defined(PDC_WIDE)
+#elif defined(PDC_WIDE)
     wprntscrnbuf[0] = cp437utf[CH(VE)];
     for (k = 0; k < MAX_WIDTH / RATIO; ++k)
-      wprntscrnbuf[k+1] = cp437utf[map[k]];
+      wprntscrnbuf[k+1] = ToUTF(map[k]);
     wprntscrnbuf[MAX_WIDTH / RATIO + 1] = cp437utf[CH(VE)];
-    wprntscrnbuf[MAX_WIDTH / RATIO + 2] = 0;
+    wprntscrnbuf[MAX_WIDTH / RATIO + 2] = '\0';
     mvaddwstr(orow + 1, 0, wprntscrnbuf);
 #else
     (void) sprintf(prntscrnbuf,"%c%s%c",CH(VE), map, CH(VE));
@@ -1740,13 +1751,13 @@ void screen_map()
     DWriteScreenCharAttr(CH(HE), ATTR_NORMAL);
   DWriteScreenCharAttr(CH(BR), ATTR_NORMAL);
 #else
-#if defined(_MSC_VER) && defined(PDC_WIDE)
+#if defined(PDC_WIDE)
   mvadd_wch(orow + 2, 0, &cp437utf[CH(BL)]);
 #else
   use_value2 mvaddch(orow + 2, 0, CH(BL));
 #endif
   for (i = 0; i < MAX_WIDTH / RATIO; i++)
-#if defined(_MSC_VER) && defined(PDC_WIDE)
+#if defined(PDC_WIDE)
     add_wch(&cp437utf[CH(HE)]);
   add_wch(&cp437utf[CH(BR)]);
 #else

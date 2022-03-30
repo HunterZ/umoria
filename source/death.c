@@ -1,21 +1,21 @@
 /* source/death.c: code executed when player dies
 
-   Copyright (C) 1989-2008 James E. Wilson, Robert A. Koeneke, 
+   Copyright (C) 1989-2008 James E. Wilson, Robert A. Koeneke,
                            David J. Grabiner
 
    This file is part of Umoria.
 
-   Umoria is free software; you can redistribute it and/or modify 
+   Umoria is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation, either version 3 of the License, or
    (at your option) any later version.
 
    Umoria is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of 
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
    GNU General Public License for more details.
 
-   You should have received a copy of the GNU General Public License 
+   You should have received a copy of the GNU General Public License
    along with Umoria.  If not, see <http://www.gnu.org/licenses/>. */
 
 /* Must read this before externs.h, as some global declarations use FILE. */
@@ -46,6 +46,9 @@
 
 #ifdef MSDOS
 #include <io.h>
+# ifdef __MINGW32__
+#  include <unistd.h> /* sleep() */
+# endif
 #else
 #if !defined(ATARIST_MWC) && !defined(MAC) && !defined(AMIGA)
 #if !defined(ATARIST_TC)
@@ -131,7 +134,8 @@ static void kingly(void);
 #include <stdlib.h>
 #endif
 
-#if !defined(VMS) && !defined(MAC) && !defined(ATARIST_MWC) && !defined(AMIGA) && !defined(_MSC_VER)
+#if !defined(VMS) && !defined(MAC) && !defined(ATARIST_MWC) \
+ && !defined(AMIGA) && !defined(_MSC_VER) && !defined(__MINGW32__)
 long time();
 #endif
 
@@ -139,13 +143,13 @@ static void date(day)
 char *day;
 {
   register char *tmp;
-#if defined(MAC) || defined(_MSC_VER)
+#if defined(MAC) || defined(_MSC_VER) || defined(__MINGW32__)
   time_t clockvar;
 #else
   long clockvar;
 #endif
 
-#if defined(MAC) || defined(_MSC_VER)
+#if defined(MAC) || defined(_MSC_VER) || defined(__MINGW32__)
   clockvar = time((time_t *) 0);
 #else
   clockvar = time((long *) 0);
@@ -225,7 +229,7 @@ int f, l;
       if (stat(lockname, &sbuf) < 0)
 	return -1;
       /* Locks which last more than 10 seconds get deleted. */
-#ifdef _MSC_VER
+#if defined(_MSC_VER) || defined(__MINGW32__)
       if (time(NULL) - sbuf.st_mtime > 10)
 #else
       if (time((long *)0) - sbuf.st_mtime > 10)
