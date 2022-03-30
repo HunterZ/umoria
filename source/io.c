@@ -72,6 +72,7 @@ char *getenv();
 # else
 #  include <pdcurses.h> /* MinGW32 etc. */
 # endif
+
 # ifdef PDC_WIDE
 #  include "cp437utf.h"
 # endif
@@ -142,7 +143,7 @@ typedef struct { int stuff; } fpvmach;
 #include <termios.h>
 #endif
 
-#if defined(unix) || defined(__linux__) || defined(DEBIAN_LINUX)
+#if defined(unix) || defined(__linux__) || defined(DEBIAN_LINUX) || defined(__CYGWIN__)
 #include <unistd.h> /* prototype for execl */
 #endif
 
@@ -220,7 +221,7 @@ void sleep();
 #if !defined(MAC) && !defined(MSDOS) && !defined(ATARI_ST) && !defined(VMS)
 #ifndef AMIGA
 #ifdef USG
-#ifdef __linux__
+#if defined(__linux__) || defined(__CYGWIN__)
 static struct termios save_termio;
 #else
 static struct termio save_termio;
@@ -416,7 +417,7 @@ void moriaterm()
 #if !defined(MSDOS) && !defined(ATARI_ST) && !defined(VMS)
 #ifndef AMIGA
 #ifdef USG
-#ifdef __linux__
+#if defined(__linux__) || defined(__CYGWIN__)
   struct termios tbuf;
 #else
   struct termio tbuf;
@@ -563,7 +564,12 @@ void restore_term()
   pause_line(15);
 #endif
   /* this moves curses to bottom right corner */
+#ifdef __CYGWIN__
+  /* https://www.cygwin.com/ml/cygwin/2010-05/msg00500.html */
+  mvcur(getcury(stdscr), getcurx(stdscr), LINES-1, 0);
+#else
   mvcur(stdscr->_cury, stdscr->_curx, LINES-1, 0);
+#endif
   endwin();  /* exit curses */
   (void) fflush (stdout);
 #ifdef MSDOS
@@ -665,7 +671,7 @@ void shell_out()
 {
 #ifdef USG
 #if !defined(MSDOS) && !defined(ATARI_ST) && !defined(AMIGA)
-#ifdef __linux__
+#if defined(__linux__) || defined(__CYGWIN__)
   struct termios tbuf;
 #else
   struct termio tbuf;
@@ -1021,6 +1027,7 @@ void flush()
   if (!eof_flag)
     while (check_input(0));
 #endif
+
   /* used to call put_qio() here to drain output, but it is not necessary */
 }
 
@@ -1155,6 +1162,7 @@ int col;
   }
 }
 #endif
+
 
 /* Moves the cursor to a given interpolated y, x position	-RAK-	*/
 void move_cursor_relative(row, col)

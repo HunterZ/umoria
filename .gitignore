@@ -11,6 +11,7 @@ build/CMake*
 build/windows
 build/*ninja*
 build/*.json
+cygwin/dist
 windows/dist
 windows/scores
 windows/vs2013/Debug

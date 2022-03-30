@@ -106,7 +106,7 @@ char *getenv();
 #ifndef MAC
 #ifndef AMIGA
 #ifdef USG
-#if !defined(MSDOS) && !defined(ATARIST_TC)
+#if !defined(MSDOS) && !defined(ATARIST_TC) && !defined(__CYGWIN__)
 unsigned short getuid(), getgid();
 #endif
 #else
