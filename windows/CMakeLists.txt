@@ -88,6 +88,17 @@ target_link_libraries(moria
   pdcurses_wincon
   winmm
 )
+# assemble the binary path+name programmatically so we can get it ASAP
+# yes, this is probably hacky and fragile
+get_target_property(UMORIA_BINARY_NAME moria NAME)
+set(UMORIA_BINARY_NAME "${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_EXECUTABLE_PREFIX}${UMORIA_BINARY_NAME}${CMAKE_EXECUTABLE_SUFFIX}")
+# strip release build binary
+add_custom_command(
+  TARGET moria POST_BUILD
+  DEPENDS "${UMORIA_BINARY_NAME}"
+  COMMAND $<$<CONFIG:release>:${CMAKE_STRIP}>
+  ARGS "${UMORIA_BINARY_NAME}"
+)
 # copy files needed for running into the binary dir as a post-build step
 # this is provided as a convenience for launching the game from an IDE
 file(GLOB UMORIA_RUN_FILES
@@ -110,10 +121,6 @@ endforeach()
 # - computers are fast enough now that it's easy to just clean rebuild as needed
 
 # stuff that goes directly in dist/
-# assemble the binary path+name programmatically so we can get it ASAP
-# yes, this is probably hacky and fragile
-get_target_property(UMORIA_BINARY_NAME moria NAME)
-set(UMORIA_BINARY_NAME "${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_EXECUTABLE_PREFIX}${UMORIA_BINARY_NAME}${CMAKE_EXECUTABLE_SUFFIX}")
 set(UMORIA_DIST_FILES
 #  $<TARGET_FILE:moria>
   "${UMORIA_BINARY_NAME}"
